@@ -1,0 +1,18 @@
+h1 .header-link {
+  visibility: hidden;
+}
+h1:hover .header-link {
+  visibility: inherit;
+}
+h2 .header-link {
+  visibility: hidden;
+}
+h2:hover .header-link {
+  visibility: inherit;
+}
+h3 .header-link {
+  visibility: hidden;
+}
+h3:hover .header-link {
+  visibility: inherit;
+}

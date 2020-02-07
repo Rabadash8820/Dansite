@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%= require("html-loader!./head.html") %>
+    <%= require("html-loader!./vendor-styles.html") %>
+    <title><%= htmlWebpackPlugin.options.title %>About</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <%= require("html-loader!./navbar.html") %>
+
+      <br />
+      <div class="row">
+        <div class="col">
+
+          
+
+        </div>
+      </div>
+
+      <%= require("html-loader!./footer.html") %>
+
+    </div>
+
+    <%= require("html-loader!./vendor-scripts.html") %>
+  </body>
+</html>
