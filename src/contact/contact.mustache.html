@@ -1,0 +1,67 @@
+<form class="contact-form" novalidate>
+  {{#fields}}
+
+    <div class="row">
+
+      <div class="col">
+        <div class="form-group">
+          {{# firstName}}
+            {{> fieldLabel}}
+            <input type="text" class="form-control" id="{{fieldId}}" {{#required}}required{{/required}}>
+            <div class="invalid-feedback">
+              Please provide your first name, so I know what to call you!
+            </div>
+          {{/ firstName}}
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          {{# lastName}}
+            {{> fieldLabel}}
+            <input type="text" class="form-control" id="{{fieldId}}" {{#required}}required{{/required}}>
+          {{/ lastName}}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      {{# email}}
+        {{> fieldLabel}}
+        <input type="email" class="form-control" id="{{fieldId}}" {{#required}}required{{/required}}>
+        <div class="invalid-feedback">
+          Please provide a valid email, so I can get back to you
+        </div>
+      {{/ email}}
+    </div>
+
+    <div class="form-group">
+      {{# referral}}
+        {{> fieldLabel}}
+        <textarea class="form-control" id="{{fieldId}}" rows="3" {{#required}}required{{/required}}></textarea>
+      {{/ referral}}
+    </div>
+
+    <div class="form-group">
+      {{# message}}
+        {{> fieldLabel}}
+        <textarea class="form-control" id="{{fieldId}}" rows="3" {{#required}}required{{/required}}></textarea>
+        <div class="invalid-feedback">
+          Please enter a message, so we have something to talk about!
+        </div>
+      {{/ message}}
+    </div>
+
+  {{/fields}}
+
+  <button type="submit" class="btn btn-primary">Send</button>
+
+  <div class="row">
+    <div class="col">
+      <p class="msg-success" hidden>Success! Thanks for reaching out!</p>
+    </div>
+  </div>
+</form>
+
+<br/>
