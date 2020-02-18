@@ -5,6 +5,8 @@ import skillGroups from "./data/skills.js"
 
 import SiteBuilder from "./models/SiteBuilder.js"
 import SiteComponent from "./models/SiteComponent.js"
+import htmlMinifier from "./models/htmlMinifier.rc.js"
+import cleanCss from "./models/cleanCss.rc.js"
 
 const PageId = {
     About: 0,
@@ -27,6 +29,8 @@ const siteOptions = {
         { id: PageId.Projects, label: "Projects", href: "/projects" + SiteBuilder.MarkupExtension },
         { id: PageId.Contact, label: "Contact", href: "/contact" + SiteBuilder.MarkupExtension },
     ],
+    htmlMinifier: htmlMinifier,
+    cleanCss: cleanCss,
     pages: [
         {
             id: PageId.About,
