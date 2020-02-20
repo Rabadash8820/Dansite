@@ -7,11 +7,10 @@ export default {
 
     collapseInlineTagWhitespace: true,
     collapseWhitespace: true,
-    conservativeCollapse: false,
+    conservativeCollapse: true,
 
     removeComments: true,
     removeEmptyAttributes: true,
-    removeEmptyElements: true,
     removeRedundantAttributes: true,
     removeScriptTypeAttributes: true,
     removeStyleLinkTypeAttributes: true,
