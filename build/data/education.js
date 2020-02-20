@@ -1,4 +1,4 @@
-import formatDate from "./formatDate.js"
+import formatDate from "../models/formatDate.js"
 
 export default [
     {
