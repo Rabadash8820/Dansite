@@ -1,3 +1,6 @@
+import path from "path"
+import { fileURLToPath } from "url"
+
 import contactInfo from "./data/contactInfo.js"
 import projectGroups from "./data/projects.js"
 import education from "./data/education.js"
@@ -8,14 +11,15 @@ import SiteComponent from "./models/SiteComponent.js"
 import htmlMinifier from "./models/htmlMinifier.rc.js"
 import cleanCss from "./models/cleanCss.rc.js"
 
+const BUILD_DIR = path.dirname(fileURLToPath(import.meta.url)) + "/"
+const SRC_DIR = path.normalize(BUILD_DIR + "../src/")
+const OUT_DIR = path.normalize(BUILD_DIR + "../dist/")
+
 const PageId = {
     About: 0,
     Projects: 1,
     Contact: 2,
 }
-
-const SRC_DIR = "./src/"
-const OUT_DIR = "./dist/"
 
 const siteOptions = {
     siteTitle: "The Dansite",
