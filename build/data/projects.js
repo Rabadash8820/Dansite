@@ -1,4 +1,3 @@
-import feather from "feather-icons"
 import formatDate from "../models/formatDate.js"
 
 const GITHUB_USER_URL = "https://github.com/Rabadash8820/"
@@ -27,17 +26,16 @@ export default [
                     {
                         text: "Source code",
                         href: GITHUB_USER_URL + "WaveAnalysisScripts",
-                        icon: feather.icons["github"].toSvg()
+                        icon: "github"
                     },
                     {
                         text: "Renna lab",
                         href: "https://rennalab.uakron.edu",
-                        icon: feather.icons["globe"].toSvg()
                     },
                     {
                         text: "Publication",
                         href: "https://www.ncbi.nlm.nih.gov/pubmed/28617242",
-                        icon: feather.icons["file-text"].toSvg()
+                        icon: "file-text"
                     },
                 ],
                 readMore: {

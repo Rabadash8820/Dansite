@@ -108,14 +108,17 @@ async function getAboutViewModels() {
 }
 async function getProjectsViewModels() {
     const partialPromises = projectGroups.flatMap(g => {
-        g.projects.map(p => {
-            if (p.readMore) {
-                const readMorePartialPath = PROJECT_PARTIALS_DIR + p.readMore.partial + SiteComponent.TemplateExtension
+        g.projects.map(project => {
+            if (project.links)
+                project.links.forEach(link => link.icon = feather.icons[link.icon || "external-link"].toSvg())
+
+            if (project.readMore) {
+                const readMorePartialPath = PROJECT_PARTIALS_DIR + project.readMore.partial + SiteComponent.TemplateExtension
                 return fs.promises
                     .readFile(readMorePartialPath, "utf8")
-                    .then(value => p.readMore.content = Mustache.render(value, p))
+                    .then(value => project.readMore.content = Mustache.render(value, project))
                     .catch(e => { if (e.code !== "ENOENT") console.warn(`'Read more' partial file '${readMorePartialPath}' could not be read: ${JSON.stringify(reason)}`); })
-                    .then(() => p.readMore.icon = feather.icons[p.readMore.icon || "chevron-down"].toSvg())
+                    .then(() => project.readMore.icon = feather.icons[project.readMore.icon || "chevron-down"].toSvg())
             }
             else
                 return Promise.resolve()
