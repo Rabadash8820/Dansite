@@ -1,3 +1,6 @@
+import feather from "feather-icons"
+import formatDate from "../models/formatDate.js"
+
 const GITHUB_USER_URL = "https://github.com/Rabadash8820/"
 const GITHUB_DERPLOID_URL = "https://github.com/DerploidEntertainment/"
 
@@ -10,9 +13,37 @@ export default [
         },
         projects: [
             {
-                name: "WaveAnalysisScripts",
-                description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "WaveAnalysisScripts",
+                name: "Wave Analysis Scripts",
+                description: "I built these scripts while working as a research assistant at the University of Akron. Check out Dr. Jordan Renna's lab page for description of the work.",
+                image: {
+                    src: "",
+                    alt: "",
+                },
+                dates: {
+                    start: formatDate({ year: 2014, descriptor: "Spring" }),
+                    end: formatDate({ year: 2016, month: 12 }),
+                },
+                links: [
+                    {
+                        text: "Source code",
+                        href: GITHUB_USER_URL + "WaveAnalysisScripts",
+                        icon: feather.icons["github"].toSvg()
+                    },
+                    {
+                        text: "Renna lab",
+                        href: "https://rennalab.uakron.edu",
+                        icon: feather.icons["globe"].toSvg()
+                    },
+                    {
+                        text: "Publication",
+                        href: "https://www.ncbi.nlm.nih.gov/pubmed/28617242",
+                        icon: feather.icons["file-text"].toSvg()
+                    },
+                ],
+                readMore: {
+                    id: "wave-analysis-scripts",
+                    partial: "WaveAnalysisScripts",
+                }
             },
             {
                 name: "HardyWeinberg",

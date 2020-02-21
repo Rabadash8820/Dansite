@@ -1,5 +1,9 @@
+import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
+
+import feather from "feather-icons"
+import Mustache from "mustache"
 
 import contactInfo from "./data/contactInfo.js"
 import projectGroups from "./data/projects.js"
@@ -13,6 +17,8 @@ import cleanCss from "./models/cleanCss.rc.js"
 
 const BUILD_DIR = path.dirname(fileURLToPath(import.meta.url)) + "/"
 const SRC_DIR = path.normalize(BUILD_DIR + "../src/")
+const DATA_DIR = BUILD_DIR + "data/"
+const PROJECT_PARTIALS_DIR = DATA_DIR + "project-partials/"
 const OUT_DIR = path.normalize(BUILD_DIR + "../dist/")
 
 const PageId = {
@@ -101,9 +107,26 @@ async function getAboutViewModels() {
     })
 }
 async function getProjectsViewModels() {
-    return await Promise.resolve({
-        projectGroups: projectGroups
+    const partialPromises = projectGroups.flatMap(g => {
+        g.projects.map(p => {
+            if (p.readMore) {
+                const readMorePartialPath = PROJECT_PARTIALS_DIR + p.readMore.partial + SiteComponent.TemplateExtension
+                return fs.promises
+                    .readFile(readMorePartialPath, "utf8")
+                    .then(value => p.readMore.content = Mustache.render(value, p))
+                    .catch(e => { if (e.code !== "ENOENT") console.warn(`'Read more' partial file '${readMorePartialPath}' could not be read: ${JSON.stringify(reason)}`); })
+                    .then(() => p.readMore.icon = feather.icons[p.readMore.icon || "chevron-down"].toSvg())
+            }
+            else
+                return Promise.resolve()
+        })
     })
+
+    await Promise.all(partialPromises);
+
+    return {
+        projectGroups: projectGroups
+    }
 }
 async function getContactViewModels() {
     return await Promise.resolve({

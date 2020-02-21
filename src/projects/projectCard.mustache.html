@@ -1,8 +1,29 @@
 <div class="card">
-  <img src="{{imageSrc}}" class="card-img-top education-img" alt="{{imageAlt}}">
+
+  {{#image}}
+    <img src="{{src}}" class="card-img-top" alt="{{alt}}">
+  {{/image}}
+
   <div class="card-body">
     <h3 class="card-title">{{name}}</h3>
-    <p class="card-text">{{description}}</p>
-    <a href="{{href}}" class="btn btn-primary stretched-link">See more</a>
+
+    {{#dates}}
+      <p class="text-muted">{{start}} - {{end}}</p>
+    {{/dates}}
+
+    <ul class="list-inline">
+      {{#links}}
+        <li class="list-inline-item">
+          <a href="{{href}}" class="btn btn-primary">{{{icon}}} {{text}}</a>
+        </li>
+      {{/links}}
+    </ul>
+
+    <p>{{description}}</p>
+
+    {{#readMore}}
+      {{> readMoreCollapse}}
+    {{/readMore}}
   </div>
+
 </div>
