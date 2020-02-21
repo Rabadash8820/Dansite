@@ -37,7 +37,7 @@ async function renderPageAsync(options, siteOptions) {
         contactInfo: siteOptions.contactInfo,
         currentYear: siteOptions.currentYear,
     }
-    const fullViewModel = Object.assign(options.viewModelFactory(), sharedViewModel)
+    const fullViewModel = Object.assign(await options.viewModelFactory(), sharedViewModel)
 
     // Load templates
     const indexComponent = await SiteComponent.fromPathsAsync(options.indexComponentDirectory, options.bodyTemplatePath)

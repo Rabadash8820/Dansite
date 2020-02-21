@@ -46,7 +46,7 @@ const siteOptions = {
             id: PageId.Projects,
             title: "Projects",
             heading: "Projects",
-            viewModelFactory: () => ({ projectGroups: projectGroups }),
+            viewModelFactory: getProjectsViewModels,
             indexComponentDirectory: SRC_DIR + "projects/",
             bodyTemplatePath: "projects" + SiteComponent.TemplateExtension,
             subComponentDirectories: [ SRC_DIR + "shared/", SRC_DIR + "headingLink/" ],
@@ -71,8 +71,8 @@ const siteOptions = {
 
 })()
 
-function getAboutViewModels() {
-    return {
+async function getAboutViewModels() {
+    return await Promise.resolve({
         aboutSection: {
             id: "about",
             heading: "Who is Dan?",
@@ -94,10 +94,15 @@ function getAboutViewModels() {
             },
             education: education,
         },
-    }
+    })
 }
-function getContactViewModels() {
-    return {
+async function getProjectsViewModels() {
+    return await Promise.resolve({
+        projectGroups: projectGroups
+    })
+}
+async function getContactViewModels() {
+    return await Promise.resolve({
         fields: {
             firstName: {
                 fieldId: "firstName",
@@ -125,5 +130,5 @@ function getContactViewModels() {
                 required: true,
             },
         }
-    }
+    })
 }
