@@ -1,18 +1,20 @@
 
-<div class="list-group-item">
-  <div class="media bg-dark">
-    {{#image}}<img src="{{src}}" class="mr-3" width="200" height="200" alt="{{alt}}">{{/image}}
-    <div class="media-body">
+<div class="list-group-item bg-dark">
+  <div class="row">
+
+    <div class="col-lg-4">
+      {{#image}}<img src="{{src}}" class="mr-3" width="200" height="200" alt="{{alt}}">{{/image}}
       <h3 class="mt-0">{{name}}</h3>
-
-        {{#positionText}}<h4>{{text}}</h4>{{/positionText}}
-        {{#whereWhenText}}<p class="text-muted">{{text}}</p>{{/whereWhenText}}
-        <ul>
-          {{#activities}}
-            <li>{{activity}}</li>
-          {{/activities}}
-        </ul>
-
     </div>
+    <div class="col-lg-8">
+      {{#positionText}}<h4>{{text}}</h4>{{/positionText}}
+      {{#whereWhenText}}<p class="text-muted">{{text}}</p>{{/whereWhenText}}
+      <ul>
+        {{#activities}}
+          <li>{{activity}}</li>
+        {{/activities}}
+      </ul>
+    </div>
+
   </div>
 </div>
