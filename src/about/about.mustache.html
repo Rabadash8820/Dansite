@@ -48,6 +48,21 @@
 
 <br/>
 
+{{#jobsSection}}
+  <section>
+    {{#heading}}
+      {{> headingLink}}
+    {{/heading}}
+    <ul class="list-group">
+      {{#jobs}}
+        {{> jobCard}}
+      {{/jobs}}
+    </ul>
+  </section>
+{{/jobsSection}}
+
+<br/>
+
 {{#educationSection}}
   <section>
     {{#heading}}

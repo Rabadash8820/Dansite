@@ -1,6 +1,9 @@
 export default function(dateObject) {
     let dateStr = ""
 
+    if (!dateObject)
+        return ""
+
     if (dateObject.year) {
         if (dateObject.month) {
             dateStr = dateObject.date
