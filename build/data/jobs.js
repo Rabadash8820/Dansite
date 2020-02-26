@@ -1,7 +1,33 @@
 export default [
     {
+        name: "Summit Racing Equipment",
+        location: {
+            streetNum: 1200,
+            streetName: "Southeast Ave",
+            city: "Tallmadge",
+            state: "OH",
+            zip: "44278",
+            country: "United States"
+        },
+        position: {
+            start: "Web Developer",
+        },
+        dates: {
+            start: { year: 2020, month: 1 },
+            end: { descriptor: "present" }
+        },
+        activities: [
+            { activity: "Worked primarily on back-end systems for our flagship apps Libby and Sora, using the Microsoft Stack (C#, .NET Core, ASP.NET Core, EntityFramework Core, SQL Server), and AWS EC2 for service hosting" },
+            { activity: "In particular, developed a system for decoding and boosting the volume of MP3 files to satisfy user complaints about quiet audiobooks, as well as the system that sends push notifications and emails to users in response to circulation activity (reads activity off Apache Kafka, deduplicates with a Redis cache, provides templating via Mustache syntax, and sends to devices through APNs, Firbase Cloud Messaging, and SendGrid for email)" },
+            { activity: "Also maintained several legacy projects built with Ruby on Rails, including backend and frontend work" },
+            { activity: "Project management was done using JIRA for issue tracking, Confluence for wikis, Git for version control (with GitKraken for a GUI client), GitHub for code hosting, Visual Studio and VS Code for editing" },
+            { activity: "Also organized meetings and coordinated with stakeholders as needed, defining specs/response plans" },
+        ]
+    },
+    {
         name: "Rakuten OverDrive, Inc.",
         location: {
+            streetNum: 1,
             streetName: "Overdrive Way",
             city: "Cleveland",
             state: "OH",
@@ -13,7 +39,7 @@ export default [
         },
         dates: {
             start: { year: 2018, month: 10 },
-            end: { descriptor: "present" }
+            end: { year: 2019, month: 11 }
         },
         activities: [
             { activity: "Worked primarily on back-end systems for our flagship apps Libby and Sora, using the Microsoft Stack (C#, .NET Core, ASP.NET Core, EntityFramework Core, SQL Server), and AWS EC2 for service hosting" },
