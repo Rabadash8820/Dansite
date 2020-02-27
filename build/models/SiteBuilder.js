@@ -54,7 +54,7 @@ async function renderPageAsync(options, siteOptions) {
     )
     const allPartialTemplates = Object.assign.apply(null,
         [ {} ]
-        .concat([ indexComponent.templates] )
+        .concat([ indexComponent.templates ])
         .concat(components.map(c => c.templates))
     )   // Equivalent to calling Object.assign({}, indexComponent.templates, component1.templates, component2.templates, ...)
 
@@ -67,7 +67,6 @@ async function renderPageAsync(options, siteOptions) {
         .minify(css)
         .catch(e => console.error(`Error while minifying CSS from directory ${options.indexComponentDirectory}: ${e}`))
     allPartialTemplates.pageStyles = cleanCssOutput.styles
-    console.error
 
     // Create a partial template for the concatenated scripts
     const allScriptPaths = components.flatMap(c => c.scriptPaths).concat(indexComponent.scriptPaths)
@@ -90,8 +89,9 @@ async function renderPageAsync(options, siteOptions) {
         allImagePaths.map(p =>
             SiteComponent.readFileAsync(p, null)
             .then(imageContents => {
-                const relPath = path.relative(siteOptions.sourceDir, p)
-                SiteComponent.writeFileAsync(siteOptions.outDir + relPath, imageContents, null)
+                const outPath = siteOptions.outDir + path.relative(siteOptions.sourceDir, p)
+                return fs.promises.mkdir(path.dirname(outPath), { recursive: true })
+                    .then(() => SiteComponent.writeFileAsync(outPath, imageContents, null))
             })
         )
     )
