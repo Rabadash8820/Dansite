@@ -19,6 +19,7 @@ import cleanCss from "./models/cleanCss.rc.js"
 
 const BUILD_DIR = path.dirname(fileURLToPath(import.meta.url)) + "/"
 const SRC_DIR = path.normalize(BUILD_DIR + "../src/")
+const SHARED_DIR = SRC_DIR + "shared/"
 const DATA_DIR = BUILD_DIR + "data/"
 const PROJECT_PARTIALS_DIR = DATA_DIR + "project-partials/"
 const OUT_DIR = path.normalize(BUILD_DIR + "../dist/")
@@ -51,7 +52,7 @@ const siteOptions = {
             viewModelFactory: getAboutViewModels,
             indexComponentDirectory: SRC_DIR + "about/",
             bodyTemplatePath: "about" + SiteComponent.TemplateExtension,
-            subComponentDirectories: [ SRC_DIR + "shared/", SRC_DIR + "headingLink/" ],
+            subComponentDirectories: [ SHARED_DIR, SRC_DIR + "headingLink/" ],
             outPath: OUT_DIR + "about/",
         },
         {
@@ -61,7 +62,7 @@ const siteOptions = {
             viewModelFactory: getProjectsViewModels,
             indexComponentDirectory: SRC_DIR + "projects/",
             bodyTemplatePath: "projects" + SiteComponent.TemplateExtension,
-            subComponentDirectories: [ SRC_DIR + "shared/", SRC_DIR + "headingLink/" ],
+            subComponentDirectories: [ SHARED_DIR, SRC_DIR + "headingLink/" ],
             outPath: OUT_DIR + "projects/",
         },
         {
@@ -71,7 +72,7 @@ const siteOptions = {
             viewModelFactory: getContactViewModels,
             indexComponentDirectory: SRC_DIR + "contact/",
             bodyTemplatePath: "contact" + SiteComponent.TemplateExtension,
-            subComponentDirectories: [ SRC_DIR + "shared/" ],
+            subComponentDirectories: [ SHARED_DIR ],
             outPath: OUT_DIR + "contact/",
         }
     ]
