@@ -23,31 +23,28 @@ export default class SiteBuilder {
 
 SiteBuilder.MarkupExtension = ".html"
 
-async function renderPageAsync(options, siteOptions) {
+async function renderPageAsync(pageOptions, siteOptions) {
     // Build view model
     const sharedViewModel  = {
-        siteTitle: siteOptions.siteTitle,
-        pageTitle: options.title,
+        pageTitle: pageOptions.title,
         navbarLinks: siteOptions.navbarLinks.map(x => ({
-            active: (options.id === x.id),
+            active: (pageOptions.id === x.id),
             label: x.label,
             href: x.href
         })),
-        pageHeading: options.heading,
-        contactInfo: siteOptions.contactInfo,
-        currentYear: siteOptions.currentYear,
+        pageHeading: pageOptions.heading,
     }
-    const fullViewModel = Object.assign(await options.viewModelFactory(), sharedViewModel)
+    const fullViewModel = Object.assign(await pageOptions.viewModelFactory(), siteOptions, pageOptions, sharedViewModel)
 
     // Load templates
-    const indexComponent = await SiteComponent.fromPathsAsync(options.indexComponentDirectory, options.bodyTemplatePath)
-        .catch(reason => console.error(`Error loading index component from directory '${options.indexComponentDirectory}': ${reason}`))
+    const indexComponent = await SiteComponent.fromPathsAsync(pageOptions.indexComponentDirectory, pageOptions.bodyTemplatePath)
+        .catch(reason => console.error(`Error loading index component from directory '${pageOptions.indexComponentDirectory}': ${reason}`))
     if (!indexComponent.templates.body) {
-        console.error(`Body template of index component not found (expected at '${options.indexComponentDirectory + options.bodyTemplatePath}')`)
+        console.error(`Body template of index component not found (expected at '${pageOptions.indexComponentDirectory + pageOptions.bodyTemplatePath}')`)
         return
     }
     const components = await Promise.all(
-        options.subComponentDirectories.map(d =>
+        pageOptions.subComponentDirectories.map(d =>
             SiteComponent.fromPathsAsync(d, null)
                 .catch(reason => console.error(`Error loading component from directory ${d}: ${reason}`))
         )
@@ -65,7 +62,7 @@ async function renderPageAsync(options, siteOptions) {
     ).reduce((previousValue, currentValue) => previousValue + currentValue, "")
     const cleanCssOutput = await _cleanCss
         .minify(css)
-        .catch(e => console.error(`Error while minifying CSS from directory ${options.indexComponentDirectory}: ${e}`))
+        .catch(e => console.error(`Error while minifying CSS from directory ${pageOptions.indexComponentDirectory}: ${e}`))
     allPartialTemplates.pageStyles = cleanCssOutput.styles
 
     // Create a partial template for the concatenated scripts
@@ -74,13 +71,13 @@ async function renderPageAsync(options, siteOptions) {
         await Promise.all(allScriptPaths.map(p => SiteComponent.readFileAsync(p)))
     ).reduce((previousValue, currentValue) => previousValue + currentValue, "")
 
-    await fs.promises.mkdir(options.outPath)
+    await fs.promises.mkdir(pageOptions.outPath)
 
     // Render page template with all partials
     const indexTemplate = await SiteComponent.readFileAsync(siteOptions.indexTemplatePath)
     const html = Mustache.render(indexTemplate, fullViewModel, allPartialTemplates)
     const minifiedHtml = htmlMinifier.minify(html, siteOptions.htmlMinifier)
-    const htmlFilePath = options.outPath.substring(0, options.outPath.length - 1) + SiteBuilder.MarkupExtension
+    const htmlFilePath = pageOptions.outPath.substring(0, pageOptions.outPath.length - 1) + SiteBuilder.MarkupExtension
     await SiteComponent.writeFileAsync(htmlFilePath, minifiedHtml)
 
     // Output images from all components
