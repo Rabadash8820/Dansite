@@ -19,9 +19,10 @@ import cleanCss from "./models/cleanCss.rc.js"
 
 const BUILD_DIR = path.dirname(fileURLToPath(import.meta.url)) + "/"
 const SRC_DIR = path.normalize(BUILD_DIR + "../src/")
-const SHARED_DIR = SRC_DIR + "shared/"
-const DATA_DIR = BUILD_DIR + "data/"
-const PROJECT_PARTIALS_DIR = DATA_DIR + "project-partials/"
+const SHARED_DIR_NAME = "shared/"
+const SHARED_DIR = path.normalize(SRC_DIR + SHARED_DIR_NAME)
+const DATA_DIR = path.normalize(BUILD_DIR + "data/")
+const PROJECT_PARTIALS_DIR = path.normalize(DATA_DIR + "project-partials/")
 const OUT_DIR = path.normalize(BUILD_DIR + "../dist/")
 
 const PageId = {
@@ -34,13 +35,13 @@ const siteOptions = {
     siteTitle: "The Dansite",
     sourceDir: SRC_DIR,
     outDir: OUT_DIR,
-    indexTemplatePath: SRC_DIR + "index" + SiteComponent.TemplateExtension,
+    indexTemplatePath: SRC_DIR + "index" + SiteComponent.MarkupTemplateExtension,
     contactInfo: contactInfo,
     currentYear: new Date().getFullYear(),
     navbarLinks: [
-        { id: PageId.About, label: "About", href: "/about" + SiteBuilder.MarkupExtension },
-        { id: PageId.Projects, label: "Projects", href: "/projects" + SiteBuilder.MarkupExtension },
-        { id: PageId.Contact, label: "Contact", href: "/contact" + SiteBuilder.MarkupExtension },
+        { id: PageId.About, label: "About", href: "/about" + SiteComponent.MarkupExtension },
+        { id: PageId.Projects, label: "Projects", href: "/projects" + SiteComponent.MarkupExtension },
+        { id: PageId.Contact, label: "Contact", href: "/contact" + SiteComponent.MarkupExtension },
     ],
     htmlMinifier: htmlMinifier,
     cleanCss: cleanCss,
@@ -50,30 +51,38 @@ const siteOptions = {
             title: "About",
             heading: "Who is Dan?",
             viewModelFactory: getAboutViewModels,
-            indexComponentDirectory: SRC_DIR + "about/",
-            bodyTemplatePath: "about" + SiteComponent.TemplateExtension,
-            subComponentDirectories: [ SHARED_DIR, SRC_DIR + "headingLink/" ],
-            outPath: OUT_DIR + "about/",
+            bodyPartial: "about",
+            componentDirectories: [
+                path.normalize(SRC_DIR + "about/"),
+                SHARED_DIR,
+                path.normalize(SRC_DIR + "headingLink/")
+            ],
+            outPath: path.normalize(OUT_DIR + "about/"),
         },
         {
             id: PageId.Projects,
             title: "Projects",
             heading: "Projects",
             viewModelFactory: getProjectsViewModels,
-            indexComponentDirectory: SRC_DIR + "projects/",
-            bodyTemplatePath: "projects" + SiteComponent.TemplateExtension,
-            subComponentDirectories: [ SHARED_DIR, SRC_DIR + "headingLink/" ],
-            outPath: OUT_DIR + "projects/",
+            bodyPartial: "projects",
+            componentDirectories: [
+                path.normalize(SRC_DIR + "projects/"),
+                SHARED_DIR,
+                path.normalize(SRC_DIR + "headingLink/")
+            ],
+            outPath: path.normalize(OUT_DIR + "projects/"),
         },
         {
             id: PageId.Contact,
             title: "Contact",
             heading: "Contact",
             viewModelFactory: getContactViewModels,
-            indexComponentDirectory: SRC_DIR + "contact/",
-            bodyTemplatePath: "contact" + SiteComponent.TemplateExtension,
-            subComponentDirectories: [ SHARED_DIR ],
-            outPath: OUT_DIR + "contact/",
+            bodyPartial: "contact",
+            componentDirectories: [
+                path.normalize(SRC_DIR + "contact/"),
+                SHARED_DIR
+            ],
+            outPath: path.normalize(OUT_DIR + "contact/"),
         }
     ]
 };   // Apparently some weird TypeError results if the statement before the async IIFE doesn't have a semicolon
@@ -139,7 +148,7 @@ async function getProjectsViewModels() {
                 project.links.forEach(link => link.icon = feather.icons[link.icon || "external-link"].toSvg())
 
             if (project.readMore) {
-                const readMorePartialPath = PROJECT_PARTIALS_DIR + project.readMore.partial + SiteComponent.TemplateExtension
+                const readMorePartialPath = PROJECT_PARTIALS_DIR + project.readMore.partial + SiteComponent.MarkupTemplateExtension
                 return fs.promises
                     .readFile(readMorePartialPath, "utf8")
                     .then(value => project.readMore.content = Mustache.render(value, project))
