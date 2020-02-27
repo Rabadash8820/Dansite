@@ -1,18 +1,18 @@
-h1 .heading-link {
+h1 .dan-heading-link {
   visibility: hidden;
 }
-h1:hover .heading-link {
+h1:hover .dan-heading-link {
   visibility: inherit;
 }
-h2 .heading-link {
+h2 .dan-heading-link {
   visibility: hidden;
 }
-h2:hover .heading-link {
+h2:hover .dan-heading-link {
   visibility: inherit;
 }
-h3 .heading-link {
+h3 .dan-heading-link {
   visibility: hidden;
 }
-h3:hover .heading-link {
+h3:hover .dan-heading-link {
   visibility: inherit;
 }
