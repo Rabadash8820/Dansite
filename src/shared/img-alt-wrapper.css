@@ -1,0 +1,6 @@
+.dan-img-alt-wrapper {
+  overflow: hidden;
+}
+.navbar-brand .dan-img-alt-wrapper {
+  width: 64px;  /* Should be same as img width in navbar */
+}
