@@ -1,5 +1,3 @@
-import formatDate from "../models/formatDate.js"
-
 const GITHUB_USER_URL = "https://github.com/Rabadash8820/"
 const GITHUB_DERPLOID_URL = "https://github.com/DerploidEntertainment/"
 
@@ -17,10 +15,12 @@ export default [
                 image: {
                     src: "",
                     alt: "",
+                    width: 200,
+                    height: 200,
                 },
                 dates: {
-                    start: formatDate({ year: 2014, descriptor: "Spring" }),
-                    end: formatDate({ year: 2016, month: 12 }),
+                    start: { year: 2014, descriptor: "Spring" },
+                    end: { year: 2016, month: 12 },
                 },
                 links: [
                     {

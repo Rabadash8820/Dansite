@@ -1,5 +1,3 @@
-import formatDate from "../models/formatDate.js"
-
 export default [
     {
         name: "University of Akron",
@@ -14,7 +12,7 @@ export default [
             src: "about/ua-seal-500x500.jpg",
             alt: "Seal of the University of Akron",
         },
-        graduationDate: formatDate({ year: 2015, month: 5 }),
+        graduationDate: { year: 2015, month: 5 },
         degree: "B.S. in Biology with minors in Mathematics, Chemistry, and Computer Science",
         distinction: "Honors diploma, Magna Cum Laude",
         gpa: 3.7
@@ -34,7 +32,7 @@ export default [
             src: "about/chs-seal-165x163.png",
             alt: "Seal of Centerville High School",
         },
-        graduationDate: formatDate({ year: 2011, month: 5 }),
+        graduationDate: { year: 2011, month: 5 },
         distinction: "Honors diploma",
         gpa: 3.6
     },

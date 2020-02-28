@@ -152,7 +152,10 @@ async function getAboutViewModels() {
                 heading: "Where I Got Learned",
                 level: "2"
             },
-            education: education,
+            education: education.map(edu => {
+                edu.graduationDate = formatDate(edu.graduationDate)
+                return edu
+            }),
         },
     })
 }
@@ -161,6 +164,14 @@ async function getProjectsViewModels() {
         g.projects.map(project => {
             if (project.links)
                 project.links.forEach(link => link.icon = feather.icons[link.icon || "external-link"].toSvg())
+
+            const dates = project.dates
+            if (dates) {
+                if (dates.start)
+                    dates.start = formatDate(dates.start)
+                if (dates.end)
+                    dates.end = formatDate(dates.end)
+            }
 
             if (project.readMore) {
                 const readMorePartialPath = PROJECT_PARTIALS_DIR + project.readMore.partial + SiteComponent.MarkupTemplateExtension
