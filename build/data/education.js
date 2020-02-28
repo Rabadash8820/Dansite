@@ -11,6 +11,8 @@ export default [
         image: {
             src: "about/ua-seal-500x500.jpg",
             alt: "Seal of the University of Akron",
+            width: 500,
+            height: 500,
         },
         graduationDate: { year: 2015, month: 5 },
         degree: "B.S. in Biology with minors in Mathematics, Chemistry, and Computer Science",
@@ -31,6 +33,8 @@ export default [
         image: {
             src: "about/chs-seal-165x163.png",
             alt: "Seal of Centerville High School",
+            width: 165,
+            height: 163,
         },
         graduationDate: { year: 2011, month: 5 },
         distinction: "Honors diploma",
