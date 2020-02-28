@@ -1,6 +1,12 @@
 export default [
     {
         name: "Summit Racing Equipment",
+        image: {
+            src: "about/job-logos/summitRacing-logo-400.jpg",
+            alt: "",
+            width: 400,
+            height: 400,
+        },
         location: {
             streetNum: 1200,
             streetName: "Southeast Ave",
@@ -26,6 +32,12 @@ export default [
     },
     {
         name: "Rakuten OverDrive, Inc.",
+        image: {
+            src: "about/job-logos/overdrive-logo-220.jpg",
+            alt: "",
+            width: 220,
+            height: 220,
+        },
         location: {
             streetNum: 1,
             streetName: "Overdrive Way",
@@ -51,6 +63,13 @@ export default [
     },
     {
         name: "Supply Technologies, LLC",
+        image: {
+            src: "about/job-logos/supplyTech-logo-512x256.png",
+            alt: "",
+            width: 512,
+            height: 256,
+            rectangular: true,
+        },
         location: {
             streetNum: 6065,
             streetName: "Parkland Blvd",
@@ -76,6 +95,12 @@ export default [
     },
     {
         name: "AmTrust Financial Services, Inc.",
+        image: {
+            src: "about/job-logos/amtrust-logo-416.jpg",
+            alt: "",
+            width: 416,
+            height: 416,
+        },
         location: {
             streetNum: 800,
             streetName: "Superior Ave",
@@ -100,6 +125,12 @@ export default [
     },
     {
         name: "University of Akron, Department of Biology",
+        image: {
+            src: "about/education-seals/ua-seal-500.jpg",
+            alt: "",
+            width: 500,
+            height: 500,
+        },
         location: {
             city: "Akron",
             state: "OH",
@@ -121,6 +152,12 @@ export default [
     },
     {
         name: "University of Akron, Department of Biology",
+        image: {
+            src: "about/education-seals/ua-seal-500.jpg",
+            alt: "",
+            width: 500,
+            height: 500,
+        },
         location: {
             city: "Akron",
             state: "OH",
@@ -143,6 +180,13 @@ export default [
     },
     {
         name: "Davey Tree Expert Company",
+        image: {
+            src: "about/job-logos/daveyTree-logo-400x200.jpg",
+            alt: "",
+            width: 400,
+            height: 200,
+            rectangular: true,
+        },
         location: {
             streetNum: 1500,
             streetName: "N Mantua St",
@@ -169,6 +213,13 @@ export default [
     },
     {
         name: "Cuyahoga Falls Parks & Recreation Department",
+        image: {
+            src: "about/job-logos/cfParksRec-logo-950x425.png",
+            alt: "",
+            width: 950,
+            height: 425,
+            rectangular: true,
+        },
         location: {
             streetNum: 2310,
             streetName: "Second St.",
@@ -188,6 +239,12 @@ export default [
     },
     {
         name: "Insomnia Cookies",
+        image: {
+            src: "about/job-logos/insomnia-logo-329.jpg",
+            alt: "",
+            width: 329,
+            height: 329,
+        },
         location: {
             streetNum: 367,
             streetName: "South Main St",
@@ -210,6 +267,12 @@ export default [
     },
     {
         name: "Jimmy John's",
+        image: {
+            src: "about/job-logos/jimmyJohns-logo-800.png",
+            alt: "",
+            width: 800,
+            height: 800,
+        },
         location: {
             streetNum: 371,
             streetName: "South Main St",
@@ -232,6 +295,13 @@ export default [
     },
     {
         name: "University of Akron, Department of Student Life",
+        image: {
+            src: "about/job-logos/uaSource-logo-1200x600.png",
+            alt: "",
+            width: 1200,
+            height: 600,
+            rectangular: true,
+        },
         location: {
             streetNum: 303,
             streetName: "East Carroll St",
@@ -254,6 +324,12 @@ export default [
     },
     {
         name: "Centerville-Washington Township Rec Center",
+        image: {
+            src: "about/job-logos/recCenter-logo-387.png",
+            alt: "",
+            width: 387,
+            height: 387,
+        },
         location: {
             streetNum: 895,
             streetName: "Miamisburg Centerville Rd",
@@ -277,6 +353,13 @@ export default [
     },
     {
         name: "Centerville Pizza and BBQ",
+        image: {
+            src: "about/job-logos/centervillePizza-logo-480x240.png",
+            alt: "",
+            width: 480,
+            height: 240,
+            rectangular: true,
+        },
         location: {
             streetNum: 9470,
             streetName: "Dayton-Lebanon Pk",
@@ -301,6 +384,13 @@ export default [
     },
     {
         name: "Arby's & Lee's Famous Recipe Chicken",
+        image: {
+            src: "about/job-logos/arbysLees-logo-600x300.png",
+            alt: "",
+            width: 600,
+            height: 300,
+            rectangular: true,
+        },
         location: {
             streetNum: 5940,
             streetName: "Far Hills Ave",

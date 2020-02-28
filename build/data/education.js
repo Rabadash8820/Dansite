@@ -9,7 +9,7 @@ export default [
             country: "United States"
         },
         image: {
-            src: "about/ua-seal-500x500.jpg",
+            src: "about/education-seals/ua-seal-500.jpg",
             alt: "Seal of the University of Akron",
             width: 500,
             height: 500,
@@ -31,10 +31,10 @@ export default [
             country: "United States"
         },
         image: {
-            src: "about/chs-seal-165x163.png",
+            src: "about/education-seals/chs-seal-164.png",
             alt: "Seal of Centerville High School",
-            width: 165,
-            height: 163,
+            width: 164,
+            height: 164,
         },
         graduationDate: { year: 2011, month: 5 },
         distinction: "Honors diploma",
