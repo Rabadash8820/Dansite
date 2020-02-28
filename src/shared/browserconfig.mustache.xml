@@ -1,0 +1,18 @@
+<!-- Syntax described here: https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/dn320426(v=vs.85) -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      {{#favicons}}
+        {{#ieMeta}}
+          {{#11}}
+            <square70x70logo src="{{{square70x70logoSrc}}}"/>
+            <square150x150logo src="{{{square150x150logoSrc}}}"/>
+          {{/11}}
+          <TileColor>{{tileColor}}</TileColor>
+        {{/ieMeta}}
+      {{/favicons}}
+    </tile>
+  </msapplication>
+</browserconfig>

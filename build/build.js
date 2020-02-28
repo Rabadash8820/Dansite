@@ -38,6 +38,21 @@ const siteOptions = {
     indexTemplatePath: SRC_DIR + "index" + SiteComponent.MarkupTemplateExtension,
     contactInfo: contactInfo,
     currentYear: new Date().getFullYear(),
+    favicons: {
+        general: [ 57, 76, 96, 128, 192, 228 ].map(getFaviconBySize),
+        androidShortcut: getFaviconBySize(196),
+        appleTouchIcons: [ 120, 152, 180 ].map(getFaviconBySize),
+        ieMeta: {
+            tileColor: "#FFFFFF",
+            10: {
+                tileImage: getFaviconBySize(144).href,
+            },
+            11: {
+                square70x70logoSrc: getFaviconBySize(76).href,
+                square150x150logoSrc: getFaviconBySize(228).href
+            }
+        }
+    },
     navbarLinks: [
         { id: PageId.About, label: "About", href: "/about" + SiteComponent.MarkupExtension },
         { id: PageId.Projects, label: "Projects", href: "/projects" + SiteComponent.MarkupExtension },
@@ -196,4 +211,11 @@ async function getContactViewModels() {
             },
         }
     })
+}
+
+function getFaviconBySize(squareSize) {
+    return {
+        href: `${SHARED_DIR_NAME}favicons/favicon-${squareSize}.png`,
+        squareSize: squareSize
+    }
 }

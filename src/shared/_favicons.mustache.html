@@ -1,0 +1,26 @@
+<!-- Inspired by this article: https://www.emergeinteractive.com/insights/detail/the-essentials-of-favicons/ -->
+
+<!-- General -->
+{{#general}}
+  <link rel="icon" href="{{href}}" sizes="{{squareSize}}x{{squareSize}}">
+{{/general}}
+
+<!-- Android -->
+{{#androidShortcut}}
+  <link rel="icon" href="{{href}}" sizes="{{squareSize}}x{{squareSize}}">
+{{/androidShortcut}}
+
+<!-- iOS -->
+{{#appleTouchIcons}}
+  <link rel="icon" href="{{href}}" sizes="{{squareSize}}x{{squareSize}}">
+{{/appleTouchIcons}}
+
+<!-- DAMN TO THE DEPTHS WHATEVER MUTTONHEAD USES IE -->
+{{#ieMeta}}
+  <!-- Windows 8 + IE10 -->
+  <meta name="msapplication-TileColor" content="{{tileColor}}">
+  {{#10}}<meta name="msapplication-TileImage" content="{{tileImage}}">{{/10}}
+
+  <!-- Windows 8.1 + IE11 -->
+  <meta name="msapplication-config" content="/shared/browserconfig.xml" />
+{{/ieMeta}}
