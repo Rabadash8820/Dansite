@@ -2,12 +2,18 @@
 <div class="dan-job-item list-group-item bg-dark">
   <div class="row">
 
-    <div class="col-lg-4">
-      {{#image}}<img src="{{src}}" class="mr-3 mb-3 {{#rectangular}}rectangular{{/rectangular}}" width="{{width}}" height="{{height}}" alt="{{alt}}">{{/image}}
+    <!--
+      Colums are sized like so:
+        Square image: 3 for image, 9 for text
+        Rectangular image: 4 for image, 8 for text
+    -->
+    <!--
+      Below the lg breakpoint, image column always comes first (on top)
+      At lg breakpoint or above, image column order determined by the isFirst variable
+    -->
+    <div class="order-1 col{{#image}}-lg-{{#rectangular}}8{{/rectangular}}{{^rectangular}}9{{/rectangular}}{{/image}}">
       <h3 class="mt-0">{{name}}</h3>
-    </div>
-    <div class="col-lg-8">
-      {{#positionText}}<h4>{{text}}</h4>{{/positionText}}
+      {{#positionText}}<h4 class="">{{text}}</h4>{{/positionText}}
       {{#whereWhenText}}<p class="text-muted">{{text}}</p>{{/whereWhenText}}
       <ul>
         {{#activities}}
@@ -15,6 +21,12 @@
         {{/activities}}
       </ul>
     </div>
+
+    {{#image}}
+      <div class="col-lg-{{#rectangular}}4{{/rectangular}}{{^rectangular}}3{{/rectangular}} order-xs-first {{#isFirst}}order-lg-first{{/isFirst}} {{^isFirst}}order-lg-2{{/isFirst}}">
+        <img src="{{src}}" class="mr-3 mb-3 {{#rectangular}}rectangular{{/rectangular}}" width="{{width}}" height="{{height}}" alt="{{alt}}">
+      </div>
+    {{/image}}
 
   </div>
 </div>

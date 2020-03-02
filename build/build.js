@@ -129,8 +129,8 @@ async function getAboutViewModels() {
                 heading: "Where I've Worked",
                 level: "2"
             },
-            jobs: jobs.map(job => {
-                const vmHash = {}
+            jobs: jobs.map((job, j) => {
+                const vmHash = job
 
                 const whereWhenText = [
                     job.location ? [ job.location.city, job.location.state ].filter(x => x).join(', ') : "",
@@ -139,11 +139,14 @@ async function getAboutViewModels() {
                 if (whereWhenText !== "")
                     vmHash.whereWhenText = { text: whereWhenText }
 
+                if (vmHash.image)
+                    vmHash.image.isFirst = j % 2 === 0
+
                 const positionText = job.position ? [ job.position.start, job.position.end ].filter(x => x).join(" - ") : ""
                 if (positionText !== "")
                     vmHash.positionText = { text: positionText }
 
-                return Object.assign(vmHash, job)
+                return vmHash
             }),
         },
         educationSection: {
