@@ -9,7 +9,7 @@ export default [
             country: "United States"
         },
         image: {
-            src: "about/education-seals/ua-seal-500.jpg",
+            src: "about/education-seals/ua-seal-500-v1.jpg",
             alt: "Seal of the University of Akron",
             width: 500,
             height: 500,
@@ -31,7 +31,7 @@ export default [
             country: "United States"
         },
         image: {
-            src: "about/education-seals/chs-seal-164.png",
+            src: "about/education-seals/chs-seal-164-v1.png",
             alt: "Seal of Centerville High School",
             width: 164,
             height: 164,

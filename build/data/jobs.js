@@ -2,7 +2,7 @@ export default [
     {
         name: "Summit Racing Equipment",
         image: {
-            src: "about/job-logos/summitRacing-logo-400.jpg",
+            src: "about/job-logos/summitRacing-logo-400-v1.jpg",
             alt: "",
             width: 400,
             height: 400,
@@ -33,7 +33,7 @@ export default [
     {
         name: "Rakuten OverDrive, Inc.",
         image: {
-            src: "about/job-logos/overdrive-logo-220.jpg",
+            src: "about/job-logos/overdrive-logo-220-v1.jpg",
             alt: "",
             width: 220,
             height: 220,
@@ -64,7 +64,7 @@ export default [
     {
         name: "Supply Technologies, LLC",
         image: {
-            src: "about/job-logos/supplyTech-logo-512x256.png",
+            src: "about/job-logos/supplyTech-logo-512x256-v1.png",
             alt: "",
             width: 512,
             height: 256,
@@ -96,7 +96,7 @@ export default [
     {
         name: "AmTrust Financial Services, Inc.",
         image: {
-            src: "about/job-logos/amtrust-logo-416.jpg",
+            src: "about/job-logos/amtrust-logo-416-v1.jpg",
             alt: "",
             width: 416,
             height: 416,
@@ -126,7 +126,7 @@ export default [
     {
         name: "University of Akron, Department of Biology",
         image: {
-            src: "about/education-seals/ua-seal-500.jpg",
+            src: "about/education-seals/ua-seal-500-v1.jpg",
             alt: "",
             width: 500,
             height: 500,
@@ -153,7 +153,7 @@ export default [
     {
         name: "University of Akron, Department of Biology",
         image: {
-            src: "about/education-seals/ua-seal-500.jpg",
+            src: "about/education-seals/ua-seal-500-v1.jpg",
             alt: "",
             width: 500,
             height: 500,
@@ -181,7 +181,7 @@ export default [
     {
         name: "Davey Tree Expert Company",
         image: {
-            src: "about/job-logos/daveyTree-logo-400x200.jpg",
+            src: "about/job-logos/daveyTree-logo-400x200-v1.jpg",
             alt: "",
             width: 400,
             height: 200,
@@ -214,7 +214,7 @@ export default [
     {
         name: "Cuyahoga Falls Parks & Recreation Department",
         image: {
-            src: "about/job-logos/cfParksRec-logo-950x425.png",
+            src: "about/job-logos/cfParksRec-logo-950x425-v1.png",
             alt: "",
             width: 950,
             height: 425,
@@ -240,7 +240,7 @@ export default [
     {
         name: "Insomnia Cookies",
         image: {
-            src: "about/job-logos/insomnia-logo-329.jpg",
+            src: "about/job-logos/insomnia-logo-329-v1.jpg",
             alt: "",
             width: 329,
             height: 329,
@@ -268,7 +268,7 @@ export default [
     {
         name: "Jimmy John's",
         image: {
-            src: "about/job-logos/jimmyJohns-logo-800.png",
+            src: "about/job-logos/jimmyJohns-logo-800-v1.png",
             alt: "",
             width: 800,
             height: 800,
@@ -296,7 +296,7 @@ export default [
     {
         name: "University of Akron, Department of Student Life",
         image: {
-            src: "about/job-logos/uaSource-logo-1200x600.png",
+            src: "about/job-logos/uaSource-logo-1200x600-v1.png",
             alt: "",
             width: 1200,
             height: 600,
@@ -325,7 +325,7 @@ export default [
     {
         name: "Centerville-Washington Township Rec Center",
         image: {
-            src: "about/job-logos/recCenter-logo-387.png",
+            src: "about/job-logos/recCenter-logo-387-v1.png",
             alt: "",
             width: 387,
             height: 387,
@@ -354,7 +354,7 @@ export default [
     {
         name: "Centerville Pizza and BBQ",
         image: {
-            src: "about/job-logos/centervillePizza-logo-480x240.png",
+            src: "about/job-logos/centervillePizza-logo-480x240-v1.png",
             alt: "",
             width: 480,
             height: 240,
@@ -385,7 +385,7 @@ export default [
     {
         name: "Arby's & Lee's Famous Recipe Chicken",
         image: {
-            src: "about/job-logos/arbysLees-logo-600x300.png",
+            src: "about/job-logos/arbysLees-logo-600x300-v1.png",
             alt: "",
             width: 600,
             height: 300,
