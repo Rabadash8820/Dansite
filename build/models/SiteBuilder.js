@@ -24,15 +24,14 @@ export default class SiteBuilder {
 async function renderPageAsync(pageOptions, siteOptions) {
     // Build view model
     const sharedViewModel  = {
-        pageTitle: pageOptions.title,
         navbarLinks: siteOptions.navbarLinks.map(x => ({
             active: (pageOptions.id === x.id),
             label: x.label,
             href: x.href
         })),
-        pageHeading: pageOptions.heading,
+        page: pageOptions,
     }
-    const fullViewModel = Object.assign(await pageOptions.viewModelFactory(), siteOptions, pageOptions, sharedViewModel)
+    const fullViewModel = Object.assign(await pageOptions.viewModelFactory(), siteOptions, sharedViewModel)
 
     // Load all components
     let numErrs = 0;
@@ -75,11 +74,11 @@ async function renderPageAsync(pageOptions, siteOptions) {
     const cleanCssOutput = await _cleanCss
         .minify(css)
         .catch(e => console.error(`Error while minifying CSS for page '${pageOptions.title}': ${e}`))
-    allPartials.pageStyles = cleanCssOutput.styles
+    allPartials.styles = cleanCssOutput.styles
 
     // Create a partial template for the concatenated scripts
     const allScriptPaths = components.flatMap(c => c.scriptPaths)
-    allPartials.pageScripts = (
+    allPartials.scripts = (
         await Promise.all(allScriptPaths.map(p => SiteComponent.readFileAsync(p)))
     ).reduce((previousValue, currentValue) => previousValue + currentValue, "")
 
