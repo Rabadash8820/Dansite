@@ -1,67 +1,63 @@
-<form class="contact-form" novalidate>
+<form id="contact-form" novalidate {{#emailjs}}data-emailjs-user-id="{{userId}}" data-emailjs-service-id="{{serviceId}}" data-emailjs-template-id="{{templateId}}"{{/emailjs}}>
   {{#fields}}
 
     <div class="row">
 
-      <div class="col">
-        <div class="form-group">
-          {{# firstName}}
+      {{# firstName}}
+        <div class="col">
+          <div class="form-group">
             {{> fieldLabel}}
-            <input type="text" class="form-control" id="{{fieldId}}" {{#required}}required{{/required}}>
-            <div class="invalid-feedback">
-              Please provide your first name, so I know what to call you!
-            </div>
-          {{/ firstName}}
+            <input type="text" class="form-control" id="{{fieldId}}" name="{{fieldId}}" {{#required}}required{{/required}}>
+            <div class="invalid-feedback">{{invalidFeedback}}</div>
+          </div>
         </div>
-      </div>
+      {{/ firstName}}
 
-      <div class="col">
-        <div class="form-group">
-          {{# lastName}}
+      {{# lastName}}
+        <div class="col">
+          <div class="form-group">
             {{> fieldLabel}}
-            <input type="text" class="form-control" id="{{fieldId}}" {{#required}}required{{/required}}>
-          {{/ lastName}}
+            <input type="text" class="form-control" id="{{fieldId}}" name="{{fieldId}}" {{#required}}required{{/required}}>
+          </div>
         </div>
+      {{/ lastName}}
+
+    </div>
+
+    {{# email}}
+      <div class="form-group">
+          {{> fieldLabel}}
+          <input type="email" class="form-control" id="{{fieldId}}" name="{{fieldId}}" {{#required}}required{{/required}}>
+          <div class="invalid-feedback">{{invalidFeedback}}</div>
       </div>
+    {{/ email}}
 
-    </div>
-
-    <div class="form-group">
-      {{# email}}
+    {{# referral}}
+      <div class="form-group">
         {{> fieldLabel}}
-        <input type="email" class="form-control" id="{{fieldId}}" {{#required}}required{{/required}}>
-        <div class="invalid-feedback">
-          Please provide a valid email, so I can get back to you
-        </div>
-      {{/ email}}
-    </div>
+        <textarea class="form-control" id="{{fieldId}}" name="{{fieldId}}" rows="3" {{#required}}required{{/required}}></textarea>
+      </div>
+    {{/ referral}}
 
-    <div class="form-group">
-      {{# referral}}
+    {{# message}}
+      <div class="form-group">
         {{> fieldLabel}}
-        <textarea class="form-control" id="{{fieldId}}" rows="3" {{#required}}required{{/required}}></textarea>
-      {{/ referral}}
-    </div>
-
-    <div class="form-group">
-      {{# message}}
-        {{> fieldLabel}}
-        <textarea class="form-control" id="{{fieldId}}" rows="3" {{#required}}required{{/required}}></textarea>
-        <div class="invalid-feedback">
-          Please enter a message, so we have something to talk about!
-        </div>
-      {{/ message}}
-    </div>
+        <textarea class="form-control" id="{{fieldId}}" name="{{fieldId}}" rows="3" {{#required}}required{{/required}}></textarea>
+        <div class="invalid-feedback">{{invalidFeedback}}</div>
+      </div>
+    {{/ message}}
 
   {{/fields}}
 
-  <button type="submit" class="btn btn-primary">Send</button>
-
-  <div class="row">
-    <div class="col">
-      <p class="msg-success" hidden>Success! Thanks for reaching out!</p>
-    </div>
+  <div class="row justify-content-center">
+    <button type="submit" class="btn btn-primary btn-lg">Send!</button>
   </div>
+
 </form>
 
 <br/>
+
+<div class="dan-emailjs-alerts">
+  <div class="alert alert-success dan-msg-success" role="alert">Success! Thanks for reaching out!</div>
+  <div class="alert alert-danger dan-msg-failure" role="alert">Whoa, something went wrong while sending your message. Sorry about that :/ Please try again in a bit.</div>
+</div>

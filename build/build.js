@@ -5,6 +5,7 @@ import { fileURLToPath } from "url"
 import feather from "feather-icons"
 import Mustache from "mustache"
 
+import secrets from "./data/secrets.js"
 import contactInfo from "./data/contactInfo.js"
 import projectGroups from "./data/projects.js"
 import education from "./data/education.js"
@@ -93,6 +94,9 @@ const siteOptions = {
             heading: "Contact",
             viewModelFactory: getContactViewModels,
             bodyPartial: "contact",
+            scriptTags: [
+                { src: "https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js" },
+            ],
             componentDirectories: [
                 path.normalize(SRC_DIR + "contact/"),
                 SHARED_DIR
@@ -197,11 +201,13 @@ async function getProjectsViewModels() {
 }
 async function getContactViewModels() {
     return await Promise.resolve({
+        emailjs: secrets.emailjs,
         fields: {
             firstName: {
                 fieldId: "firstName",
                 label: "First name",
                 required: true,
+                invalidFeedback: "Please provide your first name, so I know what to call you!",
             },
             lastName: {
                 fieldId: "lastName",
@@ -212,6 +218,7 @@ async function getContactViewModels() {
                 fieldId: "email",
                 label: "Email",
                 required: true,
+                invalidFeedback: "Please provide a valid email, so I can get back to you",
             },
             referral: {
                 fieldId: "referral",
@@ -220,8 +227,9 @@ async function getContactViewModels() {
             },
             message: {
                 fieldId: "message",
-                label: "Tell me about your project!",
+                label: "Tell me about your project, or anything really!",
                 required: true,
+                invalidFeedback: "Please enter a message, so we have something to talk about!",
             },
         }
     })
