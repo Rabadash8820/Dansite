@@ -1,0 +1,6 @@
+/* Make Simple Icons brand icons (technically all non-Feather icons) look like the Feather icons */
+.dan-contact-link svg:not(.feather) {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}

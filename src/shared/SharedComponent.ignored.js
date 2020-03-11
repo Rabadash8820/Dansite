@@ -2,6 +2,7 @@ import path from "path"
 import { fileURLToPath } from "url"
 
 import feather from "feather-icons"
+import simpleIcons from "simple-icons"
 
 import englishText from "./i18n/en-US.ignored.js"
 
@@ -47,22 +48,22 @@ export default class SharedComponent extends SiteComponent {
                 {
                     name: "Facebook",
                     href: "https://www.facebook.com/dan.vicarel",
-                    icon: feather.icons.facebook.toSvg()
+                    icon: simpleIcons.get("Facebook").svg
                 },
                 {
                     name: "Twitter",
                     href: "https://twitter.com/Rabadash8820",
-                    icon: feather.icons.twitter.toSvg()
+                    icon: simpleIcons.get("Twitter").svg
                 },
                 {
                     name: "GitHub",
                     href: "https://github.com/Rabadash8820",
-                    icon: feather.icons.github.toSvg()
+                    icon: simpleIcons.get("GitHub").svg
                 },
                 {
                     name: "LinkedIn",
                     href: "https://www.linkedin.com/in/daniel-vicarel/",
-                    icon: feather.icons.linkedin.toSvg()
+                    icon: simpleIcons.get("LinkedIn").svg
                 }
             ],
             currentYear: new Date().getFullYear(),
