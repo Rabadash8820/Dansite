@@ -1,18 +1,12 @@
 import path from "path"
 import { fileURLToPath } from "url"
 
-// Icons
-// Only including the exact ones that we need from Simple Icons, Feather doesn't seem to have this option
-import feather from "feather-icons"
-import facebookIcon from "simple-icons/icons/facebook.js"
-import twitterIcon from "simple-icons/icons/twitter.js"
-import gitHubIcon from "simple-icons/icons/github.js"
-import linkedInIcon from "simple-icons/icons/linkedin.js"
-import stackExchangeIcon from "simple-icons/icons/stackexchange.js"
-
 import englishText from "./i18n/en-US.ignored.js"
 
 import SiteComponent from "../build/SiteComponent.js"
+import FooterContentsComponent from "../footerContents/FooterContentComponent.ignored.js"
+
+import deepmerge from "deepmerge"
 
 export default class SharedComponent extends SiteComponent {
 
@@ -21,13 +15,11 @@ export default class SharedComponent extends SiteComponent {
         super(dir)
 
         this.subComponents.push(new SiteComponent(path.normalize(dir + "../primaryNav/")))
+        this.subComponents.push(new FooterContentsComponent())
     }
 
     async loadAsync(siteOptions) {
         const result = await super.loadAsync(siteOptions)
-
-        result.partialMap.footerText = result.partialMap["footerText.en-US"]
-        delete result.partialMap["footerText.en-US"]
 
         const vm = {
             favicons: {
@@ -45,42 +37,9 @@ export default class SharedComponent extends SiteComponent {
                     }
                 }
             },
-            contactInfo: [
-                {
-                    name: "Email",
-                    href: "mailto:shundra8820@gmail.com",
-                    icon: feather.icons.mail.toSvg()
-                },
-                {
-                    name: "Facebook",
-                    href: "https://www.facebook.com/dan.vicarel",
-                    icon: facebookIcon.svg
-                },
-                {
-                    name: "Twitter",
-                    href: "https://twitter.com/Rabadash8820",
-                    icon: twitterIcon.svg
-                },
-                {
-                    name: "GitHub",
-                    href: "https://github.com/Rabadash8820",
-                    icon: gitHubIcon.svg
-                },
-                {
-                    name: "LinkedIn",
-                    href: "https://www.linkedin.com/in/daniel-vicarel/",
-                    icon: linkedInIcon.svg
-                },
-                {
-                    name: "Stack Exchange",
-                    href: "https://stackexchange.com/users/4914349/rabadash8820",
-                    icon: stackExchangeIcon.svg
-                },
-            ],
-            currentYear: new Date().getFullYear(),
         }
 
-        result.viewModel = Object.assign(result.viewModel, vm, englishText)
+        result.viewModel = deepmerge.all([ result.viewModel, vm, englishText ])
 
         return result
     }
