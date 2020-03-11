@@ -64,7 +64,12 @@ export default class SharedComponent extends SiteComponent {
                     name: "LinkedIn",
                     href: "https://www.linkedin.com/in/daniel-vicarel/",
                     icon: simpleIcons.get("LinkedIn").svg
-                }
+                },
+                {
+                    name: "Stack Exchange",
+                    href: "https://stackexchange.com/users/4914349/rabadash8820",
+                    icon: simpleIcons.get("Stack Exchange").svg
+                },
             ],
             currentYear: new Date().getFullYear(),
         }
