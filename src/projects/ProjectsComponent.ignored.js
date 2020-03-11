@@ -60,8 +60,12 @@ function getTweakedProjectGroups(projectGroups, partialMap){
                 const partial = project.readMore.partial
                 partialMap[partial] = partialMap[partial + "en-US"]
                 delete partialMap[partial + "en-US"]
-                const icon = feather.icons[project.readMore.icon || "chevron-down"].toSvg()
-                project.readMore = Object.assign(project.readMore, { icon: icon }, englishText.readMore)
+
+                const readMoreIcons = {
+                    iconExpand: feather.icons["chevron-down"].toSvg(),
+                    iconCollapse: feather.icons["chevron-up"].toSvg()
+                }
+                project.readMore = Object.assign(project.readMore, readMoreIcons, englishText.readMore)
             }
         })
     })

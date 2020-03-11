@@ -5,6 +5,7 @@ export default {
     heading: "Projects",
     projectGroups: projectGroups,
     readMore: {
-        btnLbl: "Read more"
+        btnExpandLbl: "Read more",
+        btnCollapseLbl: "Read less",
     }
 }

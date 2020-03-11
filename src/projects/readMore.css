@@ -1,0 +1,5 @@
+.dan-btn-readMore .dan-expand { display: none; }
+.dan-btn-readMore .dan-collapse { display: none; }
+
+.dan-btn-readMore[aria-expanded="false"] .dan-expand { display: initial; }
+.dan-btn-readMore[aria-expanded="true"] .dan-collapse { display: initial; }
