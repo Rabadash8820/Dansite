@@ -7,7 +7,7 @@
         <div class="col">
           <div class="form-group">
             {{> fieldLabel}}
-            <input type="text" class="form-control" id="{{fieldId}}" name="{{fieldId}}" {{#required}}required{{/required}}>
+            <input type="text" class="form-control" id="{{identifier}}" name="{{identifier}}" {{#required}}required{{/required}}>
             <div class="invalid-feedback">{{invalidFeedback}}</div>
           </div>
         </div>
@@ -17,7 +17,7 @@
         <div class="col">
           <div class="form-group">
             {{> fieldLabel}}
-            <input type="text" class="form-control" id="{{fieldId}}" name="{{fieldId}}" {{#required}}required{{/required}}>
+            <input type="text" class="form-control" id="{{identifier}}" name="{{identifier}}" {{#required}}required{{/required}}>
           </div>
         </div>
       {{/ lastName}}
@@ -27,7 +27,7 @@
     {{# email}}
       <div class="form-group">
           {{> fieldLabel}}
-          <input type="email" class="form-control" id="{{fieldId}}" name="{{fieldId}}" {{#required}}required{{/required}}>
+          <input type="email" class="form-control" id="{{identifier}}" name="{{identifier}}" {{#required}}required{{/required}}>
           <div class="invalid-feedback">{{invalidFeedback}}</div>
       </div>
     {{/ email}}
@@ -35,14 +35,14 @@
     {{# referral}}
       <div class="form-group">
         {{> fieldLabel}}
-        <textarea class="form-control" id="{{fieldId}}" name="{{fieldId}}" rows="3" {{#required}}required{{/required}}></textarea>
+        <textarea class="form-control" id="{{identifier}}" name="{{identifier}}" rows="3" {{#required}}required{{/required}}></textarea>
       </div>
     {{/ referral}}
 
     {{# message}}
       <div class="form-group">
         {{> fieldLabel}}
-        <textarea class="form-control" id="{{fieldId}}" name="{{fieldId}}" rows="3" {{#required}}required{{/required}}></textarea>
+        <textarea class="form-control" id="{{identifier}}" name="{{identifier}}" rows="3" {{#required}}required{{/required}}></textarea>
         <div class="invalid-feedback">{{invalidFeedback}}</div>
       </div>
     {{/ message}}
@@ -50,7 +50,7 @@
   {{/fields}}
 
   <div class="row justify-content-center">
-    <button type="submit" class="btn btn-primary btn-lg">Send!</button>
+    <button type="submit" class="btn btn-primary btn-lg">{{btnSendLbl}}</button>
   </div>
 
 </form>
@@ -58,6 +58,8 @@
 <br/>
 
 <div class="dan-emailjs-alerts">
-  <div class="alert alert-success dan-msg-success" role="alert">Success! Thanks for reaching out!</div>
-  <div class="alert alert-danger dan-msg-failure" role="alert">Whoa, something went wrong while sending your message. Sorry about that :/ Please try again in a bit.</div>
+  {{#emailjsAlerts}}
+    <div class="alert alert-success dan-msg-success" role="alert">{{success}}</div>
+    <div class="alert alert-danger dan-msg-failure" role="alert">{{failure}}</div>
+  {{/emailjsAlerts}}
 </div>

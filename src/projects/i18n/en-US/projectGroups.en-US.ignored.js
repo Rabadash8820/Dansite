@@ -1,146 +1,98 @@
-const GITHUB_USER_URL = "https://github.com/Rabadash8820/"
-const GITHUB_DERPLOID_URL = "https://github.com/DerploidEntertainment/"
-
-export default [
-    {
+export default {
+    misc: {
         heading: {
-            id: "miscellaneous",
-            heading: "Miscellaneous",
-            level: "2"
+            text: "Miscellaneous",
         },
-        projects: [
-            {
+        projects: {
+            waveAnalysisScripts: {
                 name: "Wave Analysis Scripts",
                 description: "I built these scripts while working as a research assistant at the University of Akron. Check out Dr. Jordan Renna's lab page for description of the work.",
-                image: {
-                    src: "",
-                    alt: "",
-                    width: 200,
-                    height: 200,
+                image: { alt: "" },
+                dates: { start: { descriptor: "Spring" } },
+                links: {
+                    source: { text: "Source code" },
+                    rennaLab: { text: "Renna lab" },
+                    publication: { text: "Publication" },
                 },
-                dates: {
-                    start: { year: 2014, descriptor: "Spring" },
-                    end: { year: 2016, month: 12 },
-                },
-                links: [
-                    {
-                        text: "Source code",
-                        href: GITHUB_USER_URL + "WaveAnalysisScripts",
-                        icon: "github"
-                    },
-                    {
-                        text: "Renna lab",
-                        href: "https://rennalab.uakron.edu",
-                    },
-                    {
-                        text: "Publication",
-                        href: "https://www.ncbi.nlm.nih.gov/pubmed/28617242",
-                        icon: "file-text"
-                    },
-                ],
-                readMore: {
-                    id: "wave-analysis-scripts",
-                    partial: "WaveAnalysisScripts",
-                }
             },
-            {
+            hardyWeinberg: {
                 name: "HardyWeinberg",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "HardyWeinberg",
             },
-            {
+            scammerFlooder: {
                 name: "ScammerFlooder",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "ScammerFlooder"
             },
-            {
+            gravitySimulator: {
                 name: "GravitySimulator",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "GravitySimulator"
             },
-            {
+            nonIntersecting3dGraphs: {
                 name: "NonIntersecting3dGraphs",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "NonIntersecting3dGraphs"
             },
-            {
-                name: "2048",
+            auto2048: {
+                name: "Automated 2048",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "2048"
             },
-            {
+            factorioServer: {
                 name: "FactorioServer",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "FactorioServer"
             },
-            {
+            gitAliases: {
                 name: "GitAliases",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "GitAliases"
             },
-            {
+            vsEditorConfig: {
                 name: "VsEditorConfig",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "VsEditorConfig"
             },
-            {
+            vbaModuleManager: {
                 name: "VbaModuleManager",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "VbaModuleManager"
             },
-        ]
+        }
     },
-    {
+    unityGames: {
         heading: {
-            id: "unity-games",
-            heading: "Unity Games",
-            level: "2"
+            text: "Unity Games",
         },
-        projects: [
-            {
+        projects: {
+            barrelRoll: {
                 name: "BarrelRoll",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: "#",
             },
-            {
+            skelia: {
                 name: "Skelia",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: "#",
             },
-            {
+            highHandHoldem: {
                 name: "HighHandHoldem",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_DERPLOID_URL + "HighHandHoldem"
             },
-            {
+            gravityCopter: {
                 name: "GravityCopter",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: GITHUB_USER_URL + "GravityCopter",
             },
-        ]
+        }
     },
-    {
+    gameJams: {
         heading: {
-            id: "game-jams",
-            heading: "Game Jams",
-            level: "2"
+            text: "Game Jams",
         },
-        projects: [
-            {
+        projects: {
+            bubonic: {
                 name: "DemiSword Bubonic",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: "#",
             },
-            {
+            sendThemHome: {
                 name: "Send Them Home",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: "#",
             },
-            {
+            bm: {
                 name: "Body Maintenance (BM)",
                 description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-                href: "#",
             },
-        ]
+        }
     }
-]
+}

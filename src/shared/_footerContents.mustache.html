@@ -10,18 +10,18 @@
   {{/contactInfo}}
 </ul>
 
-<p class="text-center">Powered by vanilla HTML/CSS/JavaScript ...and maybe some <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://feathericons.com/">Feather</a> icons, <a href="https://mustache.github.io/">Mustache</a> templates, and a <a href="https://github.com/Rabadash8820/Dansite/blob/master/build/build.js">custom NPM build script.</p>
+{{> footerText}}
 
 <ul class="list-inline text-center">
     <li class="list-inline-item">
-      <a href="#">Privacy Policy</a>
+      <a href="#">{{txtPrivacyPolicy}}</a>
     </li>
     <li class="list-inline-item">
-      <a href="#">Terms of Use</a>
+      <a href="#">{{txtTermsOfUse}}</a>
     </li>
     <li class="list-inline-item">
-      <a href="#">Licenses</a>
+      <a href="#">{{txtLicenses}}</a>
     </li>
 </ul>
 
-<p class="text-center">© 2019 - {{currentYear}} Daniel Vicarel</p>
+<p class="text-center">© Daniel Vicarel 2019 - {{currentYear}}</p>

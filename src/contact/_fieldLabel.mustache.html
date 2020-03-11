@@ -1,3 +1,5 @@
-<label for="{{fieldId}}">
-  {{#required}}<span aria-hidden="true" class="text-danger">* </span>{{/required}}{{label}}{{#required}}<span class="sr-only"> (required)</span>{{/required}}
+<label for="{{identifier}}">
+  {{#required}}<span aria-hidden="true" class="text-danger">* </span>{{/required}}
+  {{label}}
+  {{#required}}<span class="sr-only">{{srText}}</span>{{/required}}
 </label>

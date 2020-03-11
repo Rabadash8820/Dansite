@@ -2,11 +2,11 @@
   "name": "dansite",
   "version": "0.1.0",
   "description": "The source of all things Dan!",
-  "main": "index.js",
+  "main": "src/build/build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "build": "node --unhandled-rejections=strict ./build/build.js",
+    "build": "node --unhandled-rejections=strict ./src/build/build.js",
     "rebuild": "npm run clean && npm run build",
     "start": "http-server ./dist --ssl --cert cert.pem --key key.pem -c-1",
     "clean": "rm -rf dist/"
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "clean-css": "^4.2.3",
+    "deepmerge": "^4.2.2",
     "del": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",

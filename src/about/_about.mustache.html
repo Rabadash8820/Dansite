@@ -1,26 +1,30 @@
 {{#aboutSection}}
   <section>
-    {{> sectionHeading}}
+    {{#heading}}
+      {{> sectionHeading}}
+    {{/heading}}
     <div class="row">
+      {{#image}}
+        <div class="col">
+          <img src="{{src}}" class="img-fluid" alt="{{alt}}" width="{{width}}" height="{{height}}">
+        </div>
+      {{/image}}
       <div class="col">
-        <img src="about/gdex-2019-presentation-720x960-v1.jpg" class="img-fluid" alt="Me giving my Designing New Lifeforms presentation at GDEX 2019">
-      </div>
-      <div class="col">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed varius est. Cras est nunc, molestie non finibus vel, lacinia eget enim. Nullam eu ex et ligula aliquam ultrices. Curabitur metus quam, varius eget purus quis, ultricies hendrerit tortor. Nulla vel bibendum mi. Fusce viverra interdum vulputate. Etiam pulvinar ex quis ante molestie, in imperdiet arcu blandit. Nullam semper a enim eget consectetur. Etiam tellus libero, feugiat et varius id, accumsan sit amet velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur vitae egestas metus.</p>
-        <p>Duis iaculis accumsan vestibulum. Nunc sit amet lacus in lectus accumsan fermentum. Integer magna leo, semper nec augue sed, tincidunt sollicitudin sem. Aliquam volutpat purus facilisis nibh sollicitudin, ut semper ante condimentum. Maecenas euismod porttitor elit, quis pretium purus mollis quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis vel massa sed mauris sagittis ultrices in vitae lectus. Nam non semper ante, vitae ullamcorper nunc. Vestibulum vitae congue mauris, ac dictum nulla. Vivamus facilisis faucibus libero, pretium porta odio aliquet non. Aenean congue mi non eros volutpat, sed maximus urna hendrerit.</p>
-        <p>Sed eget faucibus turpis. Maecenas dignissim nisi nec porttitor ultrices. Curabitur bibendum porta quam, et elementum eros imperdiet eu. Ut varius risus quis dui bibendum varius. Pellentesque blandit lobortis odio, sit amet facilisis ex lacinia ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse tempus, nisl at sollicitudin dictum, elit enim lobortis magna, eget tempus diam sem eget ligula. Vestibulum suscipit dui lacus, tincidunt convallis nunc bibendum id. Suspendisse ex ligula, auctor eu posuere quis, pellentesque eu dui. Donec tristique ornare lacus.</p>
+        {{> aboutText}}
       </div>
     </div>
   </section>
 {{/aboutSection}}
 
-<div class="row">
-  <div class="col text-center">
-    <br/>
-    <p>Want to utilize my skills in your next project?</p>
-    <a class="btn btn-primary btn-lg" href="/contact.html" role="button">Let's chat!</a>
+{{#contact}}
+  <div class="row">
+    <div class="col text-center">
+      <br/>
+      <p>{{message}}</p>
+      <a class="btn btn-primary btn-lg" href="/contact.html" role="button">{{btnLbl}}</a>
+    </div>
   </div>
-</div>
+{{/contact}}
 
 <br/>
 <br/>
