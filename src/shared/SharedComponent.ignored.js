@@ -1,8 +1,14 @@
 import path from "path"
 import { fileURLToPath } from "url"
 
+// Icons
+// Only including the exact ones that we need from Simple Icons, Feather doesn't seem to have this option
 import feather from "feather-icons"
-import simpleIcons from "simple-icons"
+import facebookIcon from "simple-icons/icons/facebook.js"
+import twitterIcon from "simple-icons/icons/twitter.js"
+import gitHubIcon from "simple-icons/icons/github.js"
+import linkedInIcon from "simple-icons/icons/linkedin.js"
+import stackExchangeIcon from "simple-icons/icons/stackexchange.js"
 
 import englishText from "./i18n/en-US.ignored.js"
 
@@ -48,27 +54,27 @@ export default class SharedComponent extends SiteComponent {
                 {
                     name: "Facebook",
                     href: "https://www.facebook.com/dan.vicarel",
-                    icon: simpleIcons.get("Facebook").svg
+                    icon: facebookIcon.svg
                 },
                 {
                     name: "Twitter",
                     href: "https://twitter.com/Rabadash8820",
-                    icon: simpleIcons.get("Twitter").svg
+                    icon: twitterIcon.svg
                 },
                 {
                     name: "GitHub",
                     href: "https://github.com/Rabadash8820",
-                    icon: simpleIcons.get("GitHub").svg
+                    icon: gitHubIcon.svg
                 },
                 {
                     name: "LinkedIn",
                     href: "https://www.linkedin.com/in/daniel-vicarel/",
-                    icon: simpleIcons.get("LinkedIn").svg
+                    icon: linkedInIcon.svg
                 },
                 {
                     name: "Stack Exchange",
                     href: "https://stackexchange.com/users/4914349/rabadash8820",
-                    icon: simpleIcons.get("Stack Exchange").svg
+                    icon: stackExchangeIcon.svg
                 },
             ],
             currentYear: new Date().getFullYear(),
