@@ -1,0 +1,3 @@
+.dan-btn-send:not(.dan-sending) .spinner-border { display: none; }
+.dan-btn-send:not(.dan-sending) .dan-sending-lbl { display: none; }
+.dan-btn-send.dan-sending .dan-send-lbl { display: none; }

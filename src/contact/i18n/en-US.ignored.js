@@ -24,6 +24,7 @@ export default {
         },
     },
     btnSendLbl: "Send!",
+    btnSendSendingLbl: "Sending...",
     emailjsAlerts: {
         success: {
             heading: "Sent!",

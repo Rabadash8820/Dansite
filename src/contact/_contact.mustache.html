@@ -45,7 +45,11 @@
   {{#recaptcha}}<div type="submit" class="g-recaptcha" data-theme="dark" data-sitekey="{{siteKey}}">{{btnSendLbl}}></div>{{/recaptcha}}
 
   <div class="row justify-content-center">
-    <button type="submit" class="btn btn-primary btn-lg">{{btnSendLbl}}</button>
+    <button type="submit" class="btn btn-primary btn-lg dan-btn-send">
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span class="dan-sending-lbl">{{btnSendSendingLbl}}</span>
+      <span class="dan-send-lbl">{{btnSendLbl}}</span>
+    </button>
   </div>
 
 </form>
