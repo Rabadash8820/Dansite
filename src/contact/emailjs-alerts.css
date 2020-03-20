@@ -1,5 +1,2 @@
-.dan-emailjs-alerts .alert-success { display: none; }
-.dan-emailjs-alerts .alert-danger { display: none; }
-
-.dan-emailjs-alerts .dan-emailjs-success .alert-success { display: initial; }
-.dan-emailjs-alerts .dan-emailjs-failure .alert-danger { display: initial; }
+.dan-emailjs-alerts:not(.dan-emailjs-succeeded) .alert-success { display: none; }
+.dan-emailjs-alerts:not(.dan-emailjs-failed) .alert-danger { display: none; }

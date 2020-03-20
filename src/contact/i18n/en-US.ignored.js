@@ -28,7 +28,13 @@ export default {
     },
     btnSendLbl: "Send!",
     emailjsAlerts: {
-        success: "Success! Thanks for reaching out!",
-        failure: "Whoa, something went wrong while sending your message. Sorry about that :/ Please try again in a bit.",
+        success: {
+            heading: "Sent!",
+            message: "Thanks for reaching out!",
+        },
+        failure: {
+            heading: "Uh oh!",
+            message: "Something went wrong while sending your message. Sorry about that :/ Please try again in a bit.",
+        },
     }
 }

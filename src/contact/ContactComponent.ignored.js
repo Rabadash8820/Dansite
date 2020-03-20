@@ -23,6 +23,7 @@ export default class ContactComponent extends SiteComponent {
 
         const vm = {
             emailjs: secrets.emailjs,
+            recaptcha: secrets.recaptcha,
             scriptTags: [
                 { src: "https://www.google.com/recaptcha/api.js", async: true, defer: true },
                 { src: "https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js" },

@@ -49,6 +49,8 @@
 
   {{/fields}}
 
+  {{#recaptcha}}<div type="submit" class="g-recaptcha" data-theme="dark" data-sitekey="{{siteKey}}">{{btnSendLbl}}></div>{{/recaptcha}}
+
   <div class="row justify-content-center">
     <button type="submit" class="btn btn-primary btn-lg">{{btnSendLbl}}</button>
   </div>
@@ -58,8 +60,22 @@
 <br/>
 
 <div class="dan-emailjs-alerts">
+  <!-- These alerts are purposefully not dismissable, so that the alert still exsts to show if submission succeeds/fails a second time. -->
+
   {{#emailjsAlerts}}
-    <div class="alert alert-success dan-msg-success" role="alert">{{success}}</div>
-    <div class="alert alert-danger dan-msg-failure" role="alert">{{failure}}</div>
+    {{#success}}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">{{heading}}</h4>
+        <p>{{message}}</p>
+      </div>
+    {{/success}}
+
+    {{#failure}}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">{{heading}}</h4>
+        <p>{{message}}</p>
+        <p class="dan-msg-failure"></p>
+      </div>
+    {{/failure}}
   {{/emailjsAlerts}}
 </div>
