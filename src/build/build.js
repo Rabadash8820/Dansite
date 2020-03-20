@@ -10,6 +10,8 @@ import AboutComponent from "../about/AboutComponent.ignored.js"
 import ProjectsComponent from "../projects/ProjectsComponent.ignored.js"
 import ContactComponent from "../contact/ContactComponent.ignored.js"
 
+import englishText from "../build/i18n/index.en-US.js"
+
 const BUILD_DIR = path.dirname(fileURLToPath(import.meta.url)) + "/"
 const SRC_DIR = path.normalize(BUILD_DIR + "../")
 const OUT_DIR = path.normalize(SRC_DIR + "../dist/")
@@ -29,9 +31,7 @@ const PageSlug = {
         culture: "en-US",
         htmlMinifier: htmlMinifier,
         cleanCss: cleanCss,
-        viewModel: {
-            siteTitle: "The Dansite",
-        },
+        viewModel: Object.assign(englishText, { }),
         pages: [
             {
                 slug: PageSlug.About,
