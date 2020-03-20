@@ -35,6 +35,7 @@ export default class ContactComponent extends SiteComponent {
                 },
                 email: {
                     identifier: "email",
+                    type: "email",
                     required: {},
                 },
                 referral: {

@@ -1,0 +1,9 @@
+<div class="form-group">
+  {{> fieldLabel}}
+  <input id="{{identifier}}" name="{{identifier}}" class="form-control"
+  type="{{type}}{{^type}}text{{/type}}"
+  {{#required}}required{{/required}}
+  />
+  {{#validFeedback}}<div class="valid-feedback">{{message}}</div>{{/validFeedback}}
+  {{#invalidFeedback}}<div class="invalid-feedback">{{message}}</div>{{/invalidFeedback}}
+</div>

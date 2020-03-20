@@ -1,0 +1,9 @@
+<div class="form-group">
+  {{> fieldLabel}}
+  <textarea id="{{identifier}}" name="{{identifier}}" class="form-control"
+    {{#required}}required{{/required}}
+    rows="{{rows}}{{^rows}}3{{/rows}}">
+  </textarea>
+  {{#validFeedback}}<div class="valid-feedback">{{message}}</div>{{/validFeedback}}
+  {{#invalidFeedback}}<div class="invalid-feedback">{{message}}</div>{{/invalidFeedback}}
+</div>

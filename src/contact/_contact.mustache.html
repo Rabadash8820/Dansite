@@ -5,39 +5,24 @@
 
       {{# name}}
         <div class="col">
-          <div class="form-group">
-            {{> fieldLabel}}
-            <input type="text" class="form-control" id="{{identifier}}" name="{{identifier}}" {{#required}}required{{/required}}>
-            <div class="invalid-feedback">{{invalidFeedback}}</div>
-          </div>
+          {{> formInput}}
         </div>
       {{/ name}}
 
       {{# email}}
         <div class="col">
-          <div class="form-group">
-              {{> fieldLabel}}
-              <input type="email" class="form-control" id="{{identifier}}" name="{{identifier}}" {{#required}}required{{/required}}>
-              <div class="invalid-feedback">{{invalidFeedback}}</div>
-          </div>
+          {{> formInput}}
         </div>
       {{/ email}}
 
     </div>
 
     {{# referral}}
-      <div class="form-group">
-        {{> fieldLabel}}
-        <textarea class="form-control" id="{{identifier}}" name="{{identifier}}" rows="3" {{#required}}required{{/required}}></textarea>
-      </div>
+      {{> formTextArea}}
     {{/ referral}}
 
     {{# message}}
-      <div class="form-group">
-        {{> fieldLabel}}
-        <textarea class="form-control" id="{{identifier}}" name="{{identifier}}" rows="3" {{#required}}required{{/required}}></textarea>
-        <div class="invalid-feedback">{{invalidFeedback}}</div>
-      </div>
+      {{> formTextArea}}
     {{/ message}}
 
   {{/fields}}

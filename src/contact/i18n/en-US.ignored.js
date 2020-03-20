@@ -7,12 +7,12 @@ export default {
         name: {
             label: "Name",
             required: { srText: REQUIRED_FIELD_SR },
-            invalidFeedback: "Please provide your name, so I know what to call you!",
+            invalidFeedback: { message: "Please provide your name, so I know what to call you!" },
         },
         email: {
             label: "Email",
             required: { srText: REQUIRED_FIELD_SR },
-            invalidFeedback: "Please provide a valid email, so I can get back to you",
+            invalidFeedback: { message: "Please provide a valid email, so I can get back to you" },
         },
         referral: {
             label: "How did you hear about me?",
@@ -20,7 +20,7 @@ export default {
         message: {
             label: "Tell me about your project, or anything really!",
             required: { srText: REQUIRED_FIELD_SR },
-            invalidFeedback: "Please enter a message, so we have something to talk about!",
+            invalidFeedback: { message: "Please enter a message, so we have something to talk about!" },
         },
     },
     btnSendLbl: "Send!",
