@@ -4,13 +4,10 @@ export default {
     title: "Contact",
     heading: "Contact",
     fields: {
-        firstName: {
-            label: "First name",
+        name: {
+            label: "Name",
             required: { srText: REQUIRED_FIELD_SR },
-            invalidFeedback: "Please provide your first name, so I know what to call you!",
-        },
-        lastName: {
-            label: "Last name",
+            invalidFeedback: "Please provide your name, so I know what to call you!",
         },
         email: {
             label: "Email",

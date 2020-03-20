@@ -29,12 +29,9 @@ export default class ContactComponent extends SiteComponent {
                 { src: "https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js" },
             ],
             fields: {
-                firstName: {
-                    identifier: "firstName",
+                name: {
+                    identifier: "name",
                     required: {},
-                },
-                lastName: {
-                    identifier: "lastName",
                 },
                 email: {
                     identifier: "email",

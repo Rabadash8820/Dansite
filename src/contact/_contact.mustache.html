@@ -3,7 +3,7 @@
 
     <div class="row">
 
-      {{# firstName}}
+      {{# name}}
         <div class="col">
           <div class="form-group">
             {{> fieldLabel}}
@@ -11,26 +11,19 @@
             <div class="invalid-feedback">{{invalidFeedback}}</div>
           </div>
         </div>
-      {{/ firstName}}
+      {{/ name}}
 
-      {{# lastName}}
+      {{# email}}
         <div class="col">
           <div class="form-group">
-            {{> fieldLabel}}
-            <input type="text" class="form-control" id="{{identifier}}" name="{{identifier}}" {{#required}}required{{/required}}>
+              {{> fieldLabel}}
+              <input type="email" class="form-control" id="{{identifier}}" name="{{identifier}}" {{#required}}required{{/required}}>
+              <div class="invalid-feedback">{{invalidFeedback}}</div>
           </div>
         </div>
-      {{/ lastName}}
+      {{/ email}}
 
     </div>
-
-    {{# email}}
-      <div class="form-group">
-          {{> fieldLabel}}
-          <input type="email" class="form-control" id="{{identifier}}" name="{{identifier}}" {{#required}}required{{/required}}>
-          <div class="invalid-feedback">{{invalidFeedback}}</div>
-      </div>
-    {{/ email}}
 
     {{# referral}}
       <div class="form-group">
