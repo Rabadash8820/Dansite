@@ -4,6 +4,8 @@
   "description": "The source of all things Dan!",
   "main": "src/build/build.js",
   "scripts": {
+    "generate-cert": "openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem -subj '/O=Organization'",
+    "prepare": "cp src/build/secrets.template.js src/build/secrets.js && echo \"Don't forget to fill in the 'src/build/secrets.js' file!\" && npm run generate-cert",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "build": "node --unhandled-rejections=strict ./src/build/build.js",
