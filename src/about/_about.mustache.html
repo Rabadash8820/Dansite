@@ -39,9 +39,11 @@
         {{#heading}}
           {{> headingLink}}
         {{/heading}}
-        <ul class="list-group">
+        <ul class="list-inline">
           {{#skills}}
-            <li class="list-group-item">{{skill}}</li>
+            <li class="list-inline-item">
+              <span class="badge badge-pill badge-primary">{{skill}}</span>
+            </li>
           {{/skills}}
         </ul>
       </section>
