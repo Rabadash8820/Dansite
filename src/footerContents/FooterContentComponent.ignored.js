@@ -6,6 +6,7 @@ import { fileURLToPath } from "url"
 import feather from "feather-icons"
 import facebookIcon from "simple-icons/icons/facebook.js"
 import twitterIcon from "simple-icons/icons/twitter.js"
+import discordIcon from "simple-icons/icons/discord.js"
 import gitHubIcon from "simple-icons/icons/github.js"
 import linkedInIcon from "simple-icons/icons/linkedin.js"
 import stackExchangeIcon from "simple-icons/icons/stackexchange.js"
@@ -42,6 +43,11 @@ export default class FooterContentsComponent extends SiteComponent {
                         name: "Twitter",
                         href: "https://twitter.com/Rabadash8820",
                         icon: twitterIcon.svg
+                    },
+                    {
+                        name: "Discord",
+                        href: "https://discordapp.com/users/351928062478385153",
+                        icon: discordIcon.svg
                     },
                     {
                         name: "GitHub",
