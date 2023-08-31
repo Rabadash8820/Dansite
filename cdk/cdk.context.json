@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=271422189028:domainName=danvicarel.com:region=us-east-2": {
+    "Id": "/hostedzone/Z3KYLL8RSTTRWB",
+    "Name": "danvicarel.com."
+  },
+  "hosted-zone:account=271422189028:domainName=danvicarel.com:region=us-east-1": {
+    "Id": "/hostedzone/Z3KYLL8RSTTRWB",
+    "Name": "danvicarel.com."
+  }
+}
