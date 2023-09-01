@@ -1,0 +1,16 @@
+/* Shared */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background-image: linear-gradient(rgb(36, 12, 125), rgb(0, 0, 0));
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #141414;
+    color: white;
+}

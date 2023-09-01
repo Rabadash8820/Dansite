@@ -1,0 +1,25 @@
+<p class="fw-bold">Built with ❤️ by Dan.</p>
+<p>
+    {% if site.contact.twitter %}
+    {% include bootstrap-icons/twitter.svg %}
+    &nbsp;
+    {% endif %}
+
+    {% if site.contact.github %}
+    {% include bootstrap-icons/github.svg %}
+    &nbsp;
+    {% endif %}
+
+    {% if site.contact.email %}
+    {% include bootstrap-icons/envelope-fill.svg %}
+    {% endif %}
+</p>
+
+<p>
+    © {{ site.copyright.startYear }}-{{ site.copyright.endYear }} {{ site.copyright.owner }}.
+    All rights reserved.
+</p>
+
+{% if site.privacyPolicyUri %}
+<p><a href="{{ site.privacyPolicyUri }}">Privacy Policy</a></p>
+{% endif %}
