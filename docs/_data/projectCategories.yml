@@ -1,0 +1,35 @@
+- gameJams:
+  slug: game-jams
+  header: Game Jams
+  projects:
+    - slug: root-canal
+      header: Root Canal
+    - slug: body-maintenance
+      header: Body Maintenance
+    - slug: send-them-home
+      header: Send Them Home
+    - slug: demisword-bubonic
+      header: "Demisword: Bubonic"
+
+- libraries:
+  slug: libraries
+  header: Libraries
+  projects:
+    - slug: unity-assemblies
+      header: UnityAssemblies
+    - slug: unityutil
+      header: UnityUtil
+
+- mobileGames:
+  slug: mobile
+  header: Mobile Games
+  projects:
+    - slug: hhh
+      header: High Hand Hold'em
+
+- pcGames:
+  slug: pc
+  header: PC Games
+  projects:
+    - slug: farmageddon
+      header: "Farmageddon: A Cattle Royale"
