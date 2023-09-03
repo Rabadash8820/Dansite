@@ -3,6 +3,15 @@ html {
     scroll-behavior: smooth;
 }
 
+.dan-hover-shift {
+    top: 0;
+    transition: top ease 0.25s;
+}
+
+.dan-hover-shift:hover {
+    top: -0.5em;
+}
+
 /* Header */
 header {
     background-image: linear-gradient(rgb(36, 12, 125), rgb(0, 0, 0));

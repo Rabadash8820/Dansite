@@ -4,12 +4,41 @@
   projects:
     - slug: root-canal
       header: Root Canal
+      years:
+        start: 2023
+        end: 2023
+      mainImage:
+        src: root-canal.png
+        alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
     - slug: body-maintenance
       header: Body Maintenance
+      years:
+        start: 2020
+        end: 2020
+      mainImage:
+        src: body-maintenance.png
+        alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
     - slug: send-them-home
       header: Send Them Home
+      years:
+        start: 2019
+        end: 2019
+      mainImage:
+        src: send-them-home.jpg
+        alt: >
+          Title screen with white text surrounded by little white monster faces,
+          in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
     - slug: demisword-bubonic
       header: "Demisword: Bubonic"
+      years:
+        start: 2018
+        end: 2018
+      mainImage:
+        src: demisword-bubonic.jpg
+        alt: >
+          Title screen with white text above a dark a mountainous terrain full of black rats with white eyes,
+          and above them are two black human figures with white eyes, one holds a torch and the other holds the titular sword,
+          which has a multicolor handle and a large purple flower-like blade
 
 - libraries:
   slug: libraries
@@ -17,8 +46,14 @@
   projects:
     - slug: unity-assemblies
       header: UnityAssemblies
+      years:
+        start: 2019
+        end: present
     - slug: unityutil
       header: UnityUtil
+      years:
+        start: 2016
+        end: present
 
 - mobileGames:
   slug: mobile
@@ -26,6 +61,12 @@
   projects:
     - slug: hhh
       header: High Hand Hold'em
+      years:
+        start: 2017
+        end: present
+      mainImage:
+        src: hhh.png
+        alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
 
 - pcGames:
   slug: pc
@@ -33,3 +74,17 @@
   projects:
     - slug: farmageddon
       header: "Farmageddon: A Cattle Royale"
+      years:
+        start: 2020
+        end: 2022
+      mainImage:
+        src: farmageddon.jpg
+        alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
+    - slug: gravitycopter
+      header: "GravityCopter"
+      years:
+        start: 2020
+        end: 2022
+      mainImage:
+        src:
+        alt: Gameplay screenshot showing a silly low-resolution helicopter flying between grey columns amid barrel-like pieces of debris
