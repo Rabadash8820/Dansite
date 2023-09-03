@@ -88,3 +88,18 @@
       mainImage:
         src:
         alt: Gameplay screenshot showing a silly low-resolution helicopter flying between grey columns amid barrel-like pieces of debris
+
+- websites:
+  slug: websites
+  header: Websites
+  projects:
+    - slug: derploid-site
+      header: Derploid Website
+      years:
+        start: 2023
+        end: present
+    - slug: dansite
+      header: The Dansite
+      years:
+        start: 2023
+        end: present
