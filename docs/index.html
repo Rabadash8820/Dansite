@@ -79,9 +79,13 @@ title: Home
                                         {% endif %}
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                <a href="projects/{{ project.slug }}" class="text-reset stretched-link"><cite>{{ project.header}}</cite></a>
+                                                <a href="projects/{{ project.slug }}" class="text-reset stretched-link d-inline-block">
+                                                    <cite>{{ project.header}}</cite>
+                                                </a>
                                                 {% if project.years %}
-                                                ({{ project.years.start }}{% if project.years.end != project.years.start %} - {{ project.years.end }}{% endif %})
+                                                <span class="d-inline-block">
+                                                    ({{ project.years.start }}{% if project.years.end != project.years.start %} - {{ project.years.end }}{% endif %})
+                                                </span>
                                                 {% endif %}
                                             </h5>
                                             <p class="card-text">{% include_relative projects/{{ project.slug }}/summary.html %}</p>
