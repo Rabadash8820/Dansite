@@ -1,5 +1,4 @@
-- gameJams:
-  slug: game-jams
+- slug: game-jams
   header: Game Jams
   projects:
     - slug: root-canal
@@ -40,8 +39,7 @@
           and above them are two black human figures with white eyes, one holds a torch and the other holds the titular sword,
           which has a multicolor handle and a large purple flower-like blade
 
-- libraries:
-  slug: libraries
+- slug: libraries
   header: Libraries
   projects:
     - slug: unity-assemblies
@@ -55,8 +53,7 @@
         start: 2016
         end: present
 
-- mobileGames:
-  slug: mobile
+- slug: mobile
   header: Mobile Games
   projects:
     - slug: hhh
@@ -68,8 +65,7 @@
         src: hhh.png
         alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
 
-- pcGames:
-  slug: pc
+- slug: pc
   header: PC Games
   projects:
     - slug: space-game
@@ -97,8 +93,7 @@
         src:
         alt: Gameplay screenshot showing a silly low-resolution helicopter flying between grey columns amid barrel-like pieces of debris
 
-- websites:
-  slug: websites
+- slug: websites
   header: Websites
   projects:
     - slug: derploid-site
