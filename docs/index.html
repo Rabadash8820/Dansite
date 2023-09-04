@@ -74,12 +74,12 @@ title: Home
                                 <div class="col">
                                     <div class="dan-hover-shift card shadow">
                                         {% if project.mainImage %}
-                                        <img src="projects/{{ project.slug }}/{{ project.mainImage.src }}"
+                                        <img src="projects/{{ category.slug }}/{{ project.slug }}/{{ project.mainImage.src }}"
                                             class="card-img-top" alt="{{ project.mainImage.alt }}" />
                                         {% endif %}
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                <a href="projects/{{ project.slug }}" class="text-reset stretched-link d-inline-block">
+                                                <a href="projects/{{ category.slug }}/{{ project.slug }}" class="text-reset stretched-link d-inline-block">
                                                     <cite>{{ project.header}}</cite>
                                                 </a>
                                                 {% if project.years %}
@@ -88,7 +88,7 @@ title: Home
                                                 </span>
                                                 {% endif %}
                                             </h5>
-                                            <p class="card-text">{% include_relative projects/{{ project.slug }}/summary.html %}</p>
+                                            <p class="card-text">{% include_relative projects/{{ category.slug }}/{{ project.slug }}/summary.html %}</p>
                                         </div>
                                     </div>
                                 </div>
