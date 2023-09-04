@@ -9,6 +9,14 @@
       mainImage:
         src: root-canal.png
         alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
+    - slug: space-game
+      header: "\"Space Game\""
+      years:
+        start: 2022
+        end: 2022
+      mainImage:
+        src: space-game.png
+        alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
     - slug: body-maintenance
       header: Body Maintenance
       years:
@@ -68,14 +76,6 @@
 - slug: pc
   header: PC Games
   projects:
-    - slug: space-game
-      header: "\"Space Game\""
-      years:
-        start: 2022
-        end: 2022
-      mainImage:
-        src: space-game.png
-        alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
     - slug: farmageddon
       header: "Farmageddon: A Cattle Royale"
       years:
