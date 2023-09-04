@@ -72,6 +72,14 @@
   slug: pc
   header: PC Games
   projects:
+    - slug: space-game
+      header: "\"Space Game\""
+      years:
+        start: 2022
+        end: 2022
+      mainImage:
+        src: space-game.png
+        alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
     - slug: farmageddon
       header: "Farmageddon: A Cattle Royale"
       years:
