@@ -112,3 +112,37 @@
       mainImage:
         src: dansite.png
         alt: Dansite logo. A cartoony image of Dan's face.
+
+- slug: talks
+  header: Talks
+  projects:
+    - slug: building-interactive-enemy
+      header: "Live Demo: Building an Interactive Enemy"
+      years:
+        start: 2023
+        end: 2023
+    - slug: mobile-ads-less-awful
+      header: Making Mobile Ads Less Awful
+      years:
+        start: 2023
+        end: 2023
+    - slug: singletons-doing-them-wrong
+      header: "Singletons: You're Doing Them Wrong"
+      years:
+        start: 2021
+        end: 2021
+    - slug: advanced-ifs
+      header: "Advanced Gameplay Programming: If Statements"
+      years:
+        start: 2021
+        end: 2021
+    - slug: designing-new-lifeforms
+      header: Designing New Lifeforms
+      years:
+        start: 2019
+        end: 2019
+    - slug: supercharging-unity-workflow
+      header: "Superchargning Your Unity Workflow With Visual Studio and Git"
+      years:
+        start: 2019
+        end: 2019
