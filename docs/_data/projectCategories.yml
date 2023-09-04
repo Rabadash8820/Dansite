@@ -98,8 +98,14 @@
       years:
         start: 2023
         end: present
+      mainImage:
+        src: derploid-site.png
+        alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
     - slug: dansite
       header: The Dansite
       years:
         start: 2023
         end: present
+      mainImage:
+        src: dansite.png
+        alt: Dansite logo. A cartoony image of Dan's face.
