@@ -1,34 +1,11 @@
 <p class="fw-bold">Built with ❤️ by Dan.</p>
 <p>
-    {% if site.contact.twitter %}
-    <a href="https://twitter.com/{{ site.contact.twitter }}" target="_blank" rel="noopener noreferrer"
-        class="text-decoration-none">
-        {% include bootstrap-icons/twitter.svg %}
-    </a>
-    &nbsp;
-    {% endif %}
-
-    {% if site.contact.github %}
-    <a href="https://github.com/{{ site.contact.github }}" target="_blank" rel="noopener noreferrer"
-        class="text-decoration-none">
-        {% include bootstrap-icons/github.svg %}
-    </a>
-    &nbsp;
-    {% endif %}
-
-    {% if site.contact.linkedin %}
-    <a href="https://www.linkedin.com/in/{{ site.contact.linkedin }}" target="_blank" rel="noopener noreferrer"
-        class="text-decoration-none">
-        {% include bootstrap-icons/linkedin.svg %}
-    </a>
-    &nbsp;
-    {% endif %}
-
-    {% if site.contact.email %}
-    <a href="mailto:{{ site.contact.email }}" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-        {% include bootstrap-icons/envelope-fill.svg %}
-    </a>
-    {% endif %}
+    {% for contact in site.data.contact %}
+        <a href="{{ contact.uri }}" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+            {% include bootstrap-icons/{{ contact.icon }}.svg %}
+        </a>
+        {% if forloop.last != true %}&nbsp;{% endif %}
+    {% endfor %}
 </p>
 
 <p>

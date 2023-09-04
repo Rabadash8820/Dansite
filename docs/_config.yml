@@ -21,12 +21,7 @@ copyright:
   owner: Daniel Vicarel
 logo:
   alt: Dansite logo. A cartoony image of Dan's face.
-contact:
-  # twitter:
-  github: Rabadash8820
-  linkedin: daniel-vicarel
-  email: dvic@derploid.com
-  support: https://github.com/Rabadash8820/Dansite/issues/new
+supportUri: https://github.com/Rabadash8820/Dansite/issues/new
 # privacyPolicyUri:
 
 strict_front_matter: true

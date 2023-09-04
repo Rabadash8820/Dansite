@@ -31,11 +31,17 @@ title: Home
                 <br />
                 This site is very much a work in progress, but I needed an interactive space for my portfolio.
                 <br />
-                If you are looking to collaborate, please contact me at
-                <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}.</a>
-                <br />
                 You can find my full credentials on
-                <a href="https://www.linkedin.com/in/{{ site.contact.linkedin }}">LinkedIn</a>.
+                <a href="{{ site.data.contact.linkedin.uri }}">LinkedIn</a>.
+                <br />
+                If you are looking to collaborate, please contact me at:
+                <ul class="text-center list-unstyled">
+                    {% for contact in site.data.contact %}
+                    <li>
+                        <a href="{{ contact.uri }}" class="text-decoration-none">{% include bootstrap-icons/{{ contact.icon }}.svg %} {{ contact.text }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </p>
         </section>
     </div>
