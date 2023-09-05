@@ -22,6 +22,7 @@ copyright:
 logo:
   alt: Dansite logo. A cartoony image of Dan's face.
 supportUri: https://github.com/Rabadash8820/Dansite/issues/new
+externalLinkAttributes: "target=\"_blank\" rel=\"noopener noreferrer\""
 # privacyPolicyUri:
 
 strict_front_matter: true

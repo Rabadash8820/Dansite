@@ -1,7 +1,7 @@
 <p class="fw-bold">Built with ❤️ by Dan.</p>
 <p>
     {% for contact in site.data.contact %}
-        <a href="{{ contact.uri }}" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+        <a href="{{ contact.uri }}" {{ site.externalLinkAttributes }} class="text-decoration-none">
             {% include bootstrap-icons/{{ contact.icon }}.svg %}
         </a>
         {% if forloop.last != true %}&nbsp;{% endif %}
