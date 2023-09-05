@@ -24,8 +24,10 @@ layout: default
         </div>
     </div>
 
-    <div class="row">
-        {% include project-links.html links=project.links %}
+    <div class="row mt-3">
+        <div class="col d-flex justify-content-center">
+            {% include project-links.html links=project.links %}
+        </div>
     </div>
 
     {{ content }}

@@ -3,14 +3,37 @@
   projects:
     - slug: root-canal
       header: Root Canal
+      links:
+      - text: Download
+        title: coming soon
+        icon: download
+        href:
+      - text: Global Game Jam page
+        icon: globe
+        href: https://globalgamejam.org/2023/games/root-canal-5
+      - text: Source
+        icon: github
+        href: https://github.com/JulieHirt/RootCanal
       years:
         start: 2023
         end: 2023
       images:
       - src: root-canal.png
         alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
+      - src: root-canal-2.png
+        alt:
+      - src: root-canal-3.png
+        alt:
     - slug: space-game
       header: "\"Space Game\""
+      links:
+      - text: Download
+        title: coming soon
+        icon: download
+        href:
+      - text: Source
+        icon: github
+        href: https://github.com/Rabadash8820/GDEX2023_BuildingInteractiveEnemy/tree/main/SpaceGame
       years:
         start: 2022
         end: 2022
@@ -19,6 +42,18 @@
         alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
     - slug: body-maintenance
       header: Body Maintenance
+      links:
+      - text: Download
+        title: coming soon
+        icon: download
+        href:
+      - text: Global Game Jam page
+        icon: globe
+        href: https://globalgamejam.org/2020/games/body-movement-bm-9
+      - text: Source
+        title: coming soon
+        icon: github
+        href:
       years:
         start: 2020
         end: 2020
@@ -27,6 +62,18 @@
         alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
     - slug: send-them-home
       header: Send Them Home
+      links:
+      - text: Download
+        title: coming soon
+        icon: download
+        href:
+      - text: Global Game Jam page
+        icon: globe
+        href: https://globalgamejam.org/2019/games/send-them-home
+      - text: Source
+        title: coming soon
+        icon: github
+        href:
       years:
         start: 2019
         end: 2019
@@ -37,6 +84,18 @@
           in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
     - slug: demisword-bubonic
       header: "Demisword: Bubonic"
+      links:
+      - text: Download
+        title: coming soon
+        icon: download
+        href:
+      - text: Global Game Jam page
+        icon: globe
+        href: https://globalgamejam.org/2018/games/demiswordbubonic
+      - text: Source
+        title: coming soon
+        icon: github
+        href:
       years:
         start: 2018
         end: 2018
@@ -52,11 +111,26 @@
   projects:
     - slug: unity-assemblies
       header: UnityAssemblies
+      links:
+      - text: NuGet package
+        icon: box-seam
+        href: https://www.nuget.org/packages/Unity3D
+      - text: Source
+        icon: github
+        href: https://github.com/Rabadash8820/UnityAssemblies
       years:
         start: 2019
         end: present
     - slug: unityutil
       header: UnityUtil
+      links:
+      - text: OpenUPM page
+        title: once published
+        icon: box-seam
+        href:
+      - text: Source
+        icon: github
+        href: https://github.com/DerploidEntertainment/UnityUtil
       years:
         start: 2016
         end: present
@@ -66,6 +140,17 @@
   projects:
     - slug: hhh
       header: High Hand Hold'em
+      links:
+      - text: Promo site
+        icon: globe
+        href: https://www.derploid.com#hhh-ad
+      - text: Support repo
+        icon: github
+        href: https://github.com/DerploidEntertainment/HighHandHoldem-Support
+      - text: Source
+        title: coming soon
+        icon: github
+        href:
       years:
         start: 2017
         end: present
@@ -78,6 +163,14 @@
   projects:
     - slug: farmageddon
       header: "Farmageddon: A Cattle Royale"
+      links:
+      - text: Steam page
+        icon: steam
+        href: https://store.steampowered.com/app/1300330/Farmageddon_A_Cattle_Royale
+      - text: Source
+        title: once published
+        icon: github
+        href:
       years:
         start: 2020
         end: 2022
@@ -86,6 +179,14 @@
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
     - slug: gravitycopter
       header: "GravityCopter"
+      links:
+      - text: Download
+        title: coming soon
+        icon: download
+        href:
+      - text: Source
+        icon: github
+        href: https://github.com/Rabadash8820/GravityCopter
       years:
         start: 2020
         end: 2022
@@ -98,6 +199,13 @@
   projects:
     - slug: derploid-site
       header: Derploid Website
+      links:
+      - text: Website
+        icon: globe
+        href: https://www.derploid.com
+      - text: Source
+        icon: github
+        href: https://github.com/DerploidEntertainment/Website
       years:
         start: 2023
         end: present
@@ -106,6 +214,10 @@
         alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
     - slug: dansite
       header: The Dansite
+      links:
+      - text: Source
+        icon: github
+        href: https://github.com/Rabadash8820/Dansite
       years:
         start: 2023
         end: present
@@ -118,31 +230,79 @@
   projects:
     - slug: building-interactive-enemy
       header: "Live Demo: Building an Interactive Enemy"
+      links:
+      - text: Recording
+        icon: record-circle
+        href: https://1drv.ms/f/s!Apw9vDm6ePFBgd07aJlmpPZFN8Ge3Q?e=46ozNG
+      - text: Slides
+        icon: file-slides
+        href: https://tinyurl.com/enemySlidesGdex23
+      - text: Companion repository
+        icon: github
+        href: https://github.com/Rabadash8820/GDEX2023_BuildingInteractiveEnemy
       years:
         start: 2023
         end: 2023
     - slug: mobile-ads-less-awful
       header: Making Mobile Ads Less Awful
+      links:
+      - text: Recording
+        icon: record-circle
+        href: https://1drv.ms/f/s!Apw9vDm6ePFBgdxSkqiqquzy9vuPdQ?e=wvdf3i
+      - text: Slides
+        icon: file-slides
+        href: https://onedrive.live.com/?id=41F178BA39BC3D9C%2128242&cid=41F178BA39BC3D9C
       years:
         start: 2023
         end: 2023
     - slug: singletons-doing-them-wrong
       header: "Singletons: You're Doing Them Wrong"
+      links:
+      - text: Recording
+        icon: record-circle
+        href: https://1drv.ms/f/s!Apw9vDm6ePFBgbA4h-52ghUUaNx6mw?e=u1ldaE
+      - text: Slides
+        icon: file-slides
+        href: https://1drv.ms/p/s!Apw9vDm6ePFBgdJ2ImHZWF45mAWEOg?e=5YebQ9
+      - text: Companion repository
+        icon: github
+        href: https://github.com/Rabadash8820/GDEX2021_SingletonPattern
       years:
         start: 2021
         end: 2021
     - slug: advanced-ifs
       header: "Advanced Gameplay Programming: If Statements"
+      links:
+      - text: Recording
+        icon: record-circle
+        href: https://1drv.ms/f/s!Apw9vDm6ePFBgc1s39MT9dJ8akKPzw?e=dxW4ty
+      - text: Slides
+        icon: file-slides
+        href: https://1drv.ms/p/s!Apw9vDm6ePFBgdEUzifOwpMiwRq75w?e=RIfF2p
       years:
         start: 2021
         end: 2021
     - slug: designing-new-lifeforms
       header: Designing New Lifeforms
+      links:
+      - text: Recording
+        icon: record-circle
+        href: https://1drv.ms/f/s!Apw9vDm6ePFBgakz-XtqbKPUTg7lOw?e=Vaw1xa
+      - text: Slides
+        icon: file-slides
+        href: https://1drv.ms/p/s!Apw9vDm6ePFBgak1fvFqPOWyVikggQ?e=ASTrij
       years:
         start: 2019
         end: 2019
     - slug: supercharging-unity-workflow
       header: "Superchargning Your Unity Workflow With Visual Studio and Git"
+      links:
+      - text: Slides
+        icon: file-slides
+        href: https://1drv.ms/p/s!Apw9vDm6ePFBgasohoUml3N47t7mig?e=GZXNtV
+      - text: Companion repository
+        icon: github
+        href: https://github.com/Rabadash8820/GDEX2019_UnityWithVsAndGit
       years:
         start: 2019
         end: 2019
