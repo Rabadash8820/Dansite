@@ -27,7 +27,13 @@
 
     <link href="/shared-v1.css" rel="stylesheet">
 
-    <title>{{ site.title }} | {{ page.title }}</title>
+    {% if page.project_slug %}
+        {% assign category = site.data.projectCategories | where: "slug", page.project_category_slug | first %}
+        {% assign project = category.projects | where: "slug", page.project_slug | first %}
+        <title>{{ site.title }} | {{ project.header}}</title>
+    {% else %}
+        <title>{{ site.title }} | {{ page.title }}</title>
+    {% endif %}
 
     <script src="/shared-v1.js"></script>
 </head>

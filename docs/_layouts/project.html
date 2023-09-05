@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="d-flex flex-column">
+
+    <div class="position-fixed ms-3 mt-3" style="width: 64px; height:64px;">
+        <a href="/" title="Home">
+            <img src="/index/hero-logo-v1.png" class="img-fluid" alt="{{ site.logo.alt }}">
+        </a>
+    </div>
+
+</div>
+
+<main class="container">
+
+    {% assign category = site.data.projectCategories | where: "slug", page.project_category_slug | first %}
+    {% assign project = category.projects | where: "slug", page.project_slug | first %}
+
+    <h1 class="display-1 text-center"><cite>{{ project.header }}</cite></h1>
+
+    <div class="row">
+        <div class="col">
+            {% include project-carousel.html images=project.images %}
+        </div>
+    </div>
+
+    <div class="row">
+        {% include project-links.html links=project.links %}
+    </div>
+
+    {{ content }}
+
+</main>
+
+<footer class="py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                {% include footer.html %}
+            </div>
+        </div>
+    </div>
+</footer>
