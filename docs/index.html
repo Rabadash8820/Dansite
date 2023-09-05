@@ -15,7 +15,7 @@ title: Home
 
     <div class="position-absolute bottom-0 start-50 translate-middle-x">
         <a class="display-1 text-reset scroll-indicator" href="#welcome">
-            {% include bootstrap-icons/chevron-compact-down.svg %}
+            {% include bootstrap-icons/chevron-compact-down.svg title="Continue" %}
         </a>
     </div>
 </header>
@@ -39,7 +39,9 @@ title: Home
             <ul class="text-center list-unstyled">
                 {% for contact in site.data.contact %}
                 <li>
-                    <a href="{{ contact.uri }}" class="text-decoration-none">{% include bootstrap-icons/{{ contact.icon }}.svg %} {{ contact.text }}</a>
+                    <a href="{{ contact.uri }}" class="text-decoration-none">
+                        {% include bootstrap-icons/{{ contact.icon }}.svg title=contact.title %} {{ contact.text }}
+                    </a>
                 </li>
                 {% endfor %}
             </ul>

@@ -2,7 +2,7 @@
 <p>
     {% for contact in site.data.contact %}
         <a href="{{ contact.uri }}" {{ site.externalLinkAttributes }} class="text-decoration-none">
-            {% include bootstrap-icons/{{ contact.icon }}.svg %}
+            {% include bootstrap-icons/{{ contact.icon }}.svg title=contact.title %}
         </a>
         {% if forloop.last != true %}&nbsp;{% endif %}
     {% endfor %}
