@@ -6,32 +6,32 @@
       years:
         start: 2023
         end: 2023
-      mainImage:
-        src: root-canal.png
+      images:
+      - src: root-canal.png
         alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
     - slug: space-game
       header: "\"Space Game\""
       years:
         start: 2022
         end: 2022
-      mainImage:
-        src: space-game.png
+      images:
+      - src: space-game.png
         alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
     - slug: body-maintenance
       header: Body Maintenance
       years:
         start: 2020
         end: 2020
-      mainImage:
-        src: body-maintenance.png
+      images:
+      - src: body-maintenance.png
         alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
     - slug: send-them-home
       header: Send Them Home
       years:
         start: 2019
         end: 2019
-      mainImage:
-        src: send-them-home.jpg
+      images:
+      - src: send-them-home.jpg
         alt: >
           Title screen with white text surrounded by little white monster faces,
           in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
@@ -40,8 +40,8 @@
       years:
         start: 2018
         end: 2018
-      mainImage:
-        src: demisword-bubonic.jpg
+      images:
+      - src: demisword-bubonic.jpg
         alt: >
           Title screen with white text above a dark a mountainous terrain full of black rats with white eyes,
           and above them are two black human figures with white eyes, one holds a torch and the other holds the titular sword,
@@ -69,8 +69,8 @@
       years:
         start: 2017
         end: present
-      mainImage:
-        src: hhh.png
+      images:
+      - src: hhh.png
         alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
 
 - slug: pc
@@ -81,16 +81,16 @@
       years:
         start: 2020
         end: 2022
-      mainImage:
-        src: farmageddon.jpg
+      images:
+      - src: farmageddon.jpg
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
     - slug: gravitycopter
       header: "GravityCopter"
       years:
         start: 2020
         end: 2022
-      mainImage:
-        src:
+      images:
+      - src:
         alt: Gameplay screenshot showing a silly low-resolution helicopter flying between grey columns amid barrel-like pieces of debris
 
 - slug: websites
@@ -101,16 +101,16 @@
       years:
         start: 2023
         end: present
-      mainImage:
-        src: derploid-site.png
+      images:
+      - src: derploid-site.png
         alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
     - slug: dansite
       header: The Dansite
       years:
         start: 2023
         end: present
-      mainImage:
-        src: dansite.png
+      images:
+      - src: dansite.png
         alt: Dansite logo. A cartoony image of Dan's face.
 
 - slug: talks

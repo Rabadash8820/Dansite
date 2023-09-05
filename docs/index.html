@@ -72,9 +72,10 @@ title: Home
                         {% for project in category.projects %}
                         <div class="col">
                             <div class="dan-hover-shift card shadow">
-                                {% if project.mainImage %}
-                                <img src="projects/{{ category.slug }}/{{ project.slug }}/{{ project.mainImage.src }}"
-                                    class="card-img-top" alt="{{ project.mainImage.alt }}" />
+                                {% assign mainImg = project.images[0] %}
+                                {% if mainImg %}
+                                <img src="projects/{{ category.slug }}/{{ project.slug }}/{{ mainImg.src }}"
+                                    class="card-img-top" alt="{{ mainImg.alt }}" />
                                 {% endif %}
                                 <div class="card-body">
                                     <h5 class="card-title">
