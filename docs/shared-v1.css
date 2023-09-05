@@ -12,6 +12,18 @@ html {
     top: -0.5em;
 }
 
+.dan-bg-overlay {
+    background-color: rgb(50% 50% 50% / 50%);
+}
+
+.dan-w-10 {
+    width: 10% !important;
+}
+
+.dan-h-10rem {
+    height: 10rem !important;
+}
+
 /* Header */
 header {
     background-image: linear-gradient(rgb(36, 12, 125), rgb(0, 0, 0));
