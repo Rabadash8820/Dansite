@@ -34,15 +34,15 @@ title: Home
                 You can find my full credentials on
                 <a href="{{ site.data.contact.linkedin.uri }}">LinkedIn</a>.
                 <br />
-                If you are looking to collaborate, please contact me at:
-                <ul class="text-center list-unstyled">
-                    {% for contact in site.data.contact %}
-                    <li>
-                        <a href="{{ contact.uri }}" class="text-decoration-none">{% include bootstrap-icons/{{ contact.icon }}.svg %} {{ contact.text }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
             </p>
+            <p class="text-center">If you are looking to collaborate, please contact me at:</p>
+            <ul class="text-center list-unstyled">
+                {% for contact in site.data.contact %}
+                <li>
+                    <a href="{{ contact.uri }}" class="text-decoration-none">{% include bootstrap-icons/{{ contact.icon }}.svg %} {{ contact.text }}</a>
+                </li>
+                {% endfor %}
+            </ul>
         </section>
     </div>
 
