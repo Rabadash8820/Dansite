@@ -1,7 +1,7 @@
 ---
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
 
 <head>
     <!-- Required meta tags -->
@@ -36,9 +36,16 @@
     {% endif %}
 
     <script src="/shared-v1.js"></script>
+    <script src="/color-mode-dropdown-v1.js"></script>
 </head>
 
 <body>
+    <div class="d-flex flex-row-reverse">
+        <div class="position-fixed me-3 mt-3">
+            {% include color-mode-dropdown.html %}
+        </div>
+    </div>
+
     {{ content }}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

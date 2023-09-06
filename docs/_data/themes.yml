@@ -1,0 +1,12 @@
+- slug: light
+  name: Light
+  isPressed: false
+  icon: sun-fill
+- slug: dark
+  name: Dark
+  isPressed: false
+  icon: moon-fill
+- slug: auto
+  name: Auto
+  isPressed: true
+  icon: circle-half

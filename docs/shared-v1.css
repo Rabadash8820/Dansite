@@ -23,6 +23,10 @@ html {
     }
 }
 
+.dropdown-menu .active .dan-theme-check {
+    display: block !important;
+}
+
 .dan-w-10 {
     width: 10% !important;
 }
@@ -33,6 +37,6 @@ html {
 
 /* Header */
 header {
-    background-image: linear-gradient(rgb(36, 12, 125), rgb(0, 0, 0));
-    color: white;
+    background-image: linear-gradient(rgba(var(--bs-primary-rgb)), rgba(var(--bs-body-bg-rgb)));
+    color: rgba(var(--bs-body-color-rgb));
 }
