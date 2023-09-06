@@ -12,8 +12,15 @@ html {
     top: -0.5em;
 }
 
-.dan-bg-overlay {
-    background-color: rgb(50% 50% 50% / 50%);
+.dan-bg-overlay,
+[data-bs-theme="light"] .dan-bg-overlay {
+    background-color: rgb(0% 0% 0% / 50%);
+}
+
+[data-bs-theme="dark"] {
+    .dan-bg-overlay {
+        background-color: rgb(100% 100% 100% / 50%);
+    }
 }
 
 .dan-w-10 {
@@ -27,11 +34,5 @@ html {
 /* Header */
 header {
     background-image: linear-gradient(rgb(36, 12, 125), rgb(0, 0, 0));
-    color: white;
-}
-
-/* Footer */
-footer {
-    background-color: #141414;
     color: white;
 }
