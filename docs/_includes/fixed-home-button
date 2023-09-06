@@ -1,0 +1,6 @@
+<div class="position-fixed ms-3 mt-3" style="width: 64px; height:64px;">
+    <div class="text-center">
+        <img src="/index/hero-logo-v1.png" class="img-fluid" alt="{{ site.logo.alt }}">
+        <a href="/" class="stretched-link">Home</a>
+    </div>
+</div>

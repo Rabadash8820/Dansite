@@ -3,11 +3,7 @@ layout: default-with-footer
 ---
 
 <div class="vh-100 d-flex flex-column">
-    <div class="position-fixed ms-3 mt-3" style="width: 64px; height:64px;">
-        <a href="/" title="Home">
-            <img src="/index/hero-logo-v1.png" class="img-fluid" alt="{{ site.logo.alt }}">
-        </a>
-    </div>
+    {% include fixed-home-button %}
     <main class="flex-grow-1 d-flex flex-column justify-content-center">
         {{content}}
     </main>
