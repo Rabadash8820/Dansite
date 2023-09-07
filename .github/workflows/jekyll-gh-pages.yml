@@ -5,7 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: [main]
-    paths: [docs/*]
+    paths: [web/*]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,12 +36,12 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./docs/
-          destination: ./docs/_site
+          source: ./web/
+          destination: ./web/_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./docs/_site
+          path: ./web/_site
 
   # Deployment job
   deploy:
