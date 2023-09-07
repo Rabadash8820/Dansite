@@ -18,10 +18,13 @@
   }
 
   function setTheme(theme) {
-    const bsTheme = theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches
+    document.documentElement.setAttribute('data-bs-theme', toBootstrapTheme(theme))
+  }
+
+  function toBootstrapTheme(theme) {
+    return theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : theme
-    document.documentElement.setAttribute('data-bs-theme', bsTheme)
   }
 
   setTheme(getPreferredTheme())
@@ -45,6 +48,9 @@
     btnToActivate.setAttribute('aria-pressed', 'true')
     activeThemeIconSvg.replaceWith(btnToActivateSvg.cloneNode(true))
     btnThemeSwitcher.setAttribute('aria-label', `${lblThemeSwitcher.textContent} (${btnToActivate.dataset.bsThemeValue})`)
+    const bsTheme = toBootstrapTheme(theme)
+    btnThemeSwitcher.classList.add(bsTheme === 'dark' ? 'btn-light' : 'btn-dark')
+    btnThemeSwitcher.classList.remove(bsTheme === 'dark' ? 'btn-dark' : 'btn-light')
 
     if (focus)
       btnThemeSwitcher.focus()
