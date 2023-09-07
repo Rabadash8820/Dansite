@@ -5,23 +5,25 @@ html {
 
 .dan-hover-shift {
     top: 0;
-    transition: top ease 0.25s;
+    background-color: rgba(var(--bs-body-bg-rgb));
+    transition: all ease 0.25s;
 }
 
 .dan-hover-shift:hover {
     top: -0.5em;
 }
 
-.dan-bg-overlay,
-[data-bs-theme="light"] .dan-bg-overlay {
-    background-color: rgb(0% 0% 0% / 50%);
+[data-bs-theme="dark"] .dan-hover-shift:hover {
+    filter: brightness(125%);
 }
 
-[data-bs-theme="dark"] {
-    .dan-bg-overlay {
+[data-bs-theme="light"] .dan-bg-overlay {
+    background-color: rgb(0% 0% 0 / 50%);
+}
+
+[data-bs-theme="dark"] .dan-bg-overlay {
         background-color: rgb(100% 100% 100% / 50%);
     }
-}
 
 .dropdown-menu .active .dan-theme-check {
     display: block !important;
