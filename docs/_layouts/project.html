@@ -7,8 +7,9 @@ layout: default-with-footer
 
 <main class="container">
 
-    {% assign category = site.data.projectCategories | where: "slug", page.project_category_slug | first %}
-    {% assign project = category.projects | where: "slug", page.project_slug | first %}
+    {% assign pagePathParts = page.dir | split: '/' %}
+    {% assign category = site.data.projectCategories | where: "slug", pagePathParts[-2] | first %}
+    {% assign project = category.projects | where: "slug", pagePathParts[-1] | first %}
 
     <h1 class="display-1 text-center"><cite>{{ project.header }}</cite></h1>
 

@@ -27,9 +27,10 @@
 
     <link href="/shared-v1.css" rel="stylesheet">
 
-    {% if page.project_slug %}
-        {% assign category = site.data.projectCategories | where: "slug", page.project_category_slug | first %}
-        {% assign project = category.projects | where: "slug", page.project_slug | first %}
+    {% assign pagePathParts = page.dir | split: "/" %}
+    {% if pagePathParts[1] == "projects" %}
+        {% assign category = site.data.projectCategories | where: "slug", pagePathParts[-2] | first %}
+        {% assign project = category.projects | where: "slug", pagePathParts[-1] | first %}
         <title>{{ site.title }} | {{ project.header}}</title>
     {% else %}
         <title>{{ site.title }} | {{ page.title }}</title>
