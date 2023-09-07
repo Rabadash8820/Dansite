@@ -1,0 +1,44 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+    "name": "CDK",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/devcontainers/features/aws-cli:1": {
+            "version": "2.13.15"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "os-provided"
+        }
+    },
+    "onCreateCommand": "cd cdk/ && npm install --global npm@10.0.0 && npm install",
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [
+        9229 // Node.js debugging
+    ],
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {},
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "mikestead.dotenv",
+                "mhutchie.git-graph",
+                "eamodio.gitlens",
+                "ms-azuretools.vscode-docker",
+                "GitHub.vscode-github-actions"
+            ]
+        }
+    },
+    "mounts": [
+        // Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
+        // "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws/,target=/home/node/.aws/,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gnupg/,target=/home/node/.gnupg/,type=bind"
+    ]
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
+}
