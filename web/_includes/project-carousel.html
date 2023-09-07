@@ -1,3 +1,12 @@
+{% if include.images.size == 1 %}
+
+{% assign image = include.images[0] %}
+<div class="d-flex justify-content-center">
+    <img src="{{ image.src }}" class="d-block" alt="{{ image.alt }}">
+</div>
+
+{% else %}
+
 <div id="projectImgCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators dan-bg-overlay">
         {% for image in include.images %}
@@ -23,3 +32,5 @@
         <span class="visually-hidden">Next image</span>
     </button>
 </div>
+
+{% endif %}
