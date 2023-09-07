@@ -1,0 +1,4 @@
+# GitHub Pages' default build actions do not work with LFS pointers, see https://github.com/git-lfs/git-lfs/issues/1342.
+# However, a custom build action allows us to use LFS.
+
+[attr]lfs filter=lfs diff=lfs merge=lfs -text

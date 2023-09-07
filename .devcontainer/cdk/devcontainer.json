@@ -11,6 +11,9 @@
         },
         "ghcr.io/devcontainers/features/git:1": {
             "version": "os-provided"
+        },
+        "ghcr.io/devcontainers/features/git-lfs:1": {
+            "version": "latest"
         }
     },
     "onCreateCommand": "cd cdk/ && npm install --global npm@10.0.0 && npm install",
