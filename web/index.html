@@ -7,7 +7,7 @@ title: Home
             <div class="col text-center">
 
                 <img src="index/hero-logo-v1.png" class="img-fluid" alt="{{ site.logo.alt }}">
-                <h1 class="fw-bold display-1">DAN</h1>
+                <p class="display-1">Hi, I'm Dan!</p>
 
             </div>
         </div>
@@ -24,10 +24,8 @@ title: Home
 
     <div class="row">
         <section id="welcome" class="col">
-            <h2 class="text-center display-2">Welcome!</h2>
-
-            <p class="text-center">
-                My name is Dan Vicarel (he/him), and you've found my little corner of the Internet!
+            <p class="text-center lead">
+                My name is Dan Vicarel, and you've found my little corner of the Internet. Congratulations!
                 <br />
                 This site is very much a work in progress, but I needed an interactive space for my portfolio.
                 <br />
@@ -35,8 +33,8 @@ title: Home
                 <a href="{{ site.data.contact.linkedin.uri }}">LinkedIn</a>.
                 <br />
             </p>
-            <p class="text-center">If you are looking to collaborate, please contact me at:</p>
-            <ul class="text-center list-unstyled">
+            <p class="text-center lead">If you are looking to collaborate, please contact me at:</p>
+            <ul class="text-center lead list-unstyled">
                 {% for contact in site.data.contact %}
                 <li>
                     <a href="{{ contact.uri }}" class="text-decoration-none">
