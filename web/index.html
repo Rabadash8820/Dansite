@@ -22,19 +22,19 @@ title: Home
 
 <main class="container">
 
-    <div class="row">
-        <section id="welcome" class="col pt-5">
-            <p class="text-center lead">
+    <section id="welcome" class="row row-cols-1 row-cols-md-2 pt-5">
+        <div class="col">
+            <img class="w-100" src="index/dan-vicarel-headshot-2023.jpg"
+                alt="Headshot of Dan in a blue collared shirt with a beta fish pattern on it, sitting at a desk with a Macbook, monitor, and blue Xbox One controller on it" />
+        </div>
+        <div id="welcome" class="col">
+            <p class="lead">
                 My name is Dan Vicarel, and you've found my little corner of the Internet!
-                <br />
                 This site is very much a work in progress, but I needed an interactive space for my portfolio.
-                <br />
-                You can find my full credentials on
-                <a href="{{ site.data.contact.linkedin.uri }}">LinkedIn</a>.
-                <br />
+                You can view my full credentials on <a href="{{ site.data.contact.linkedin.uri }}">LinkedIn</a>.
             </p>
-            <p class="text-center lead">If you are looking to collaborate, please contact me at:</p>
-            <ul class="text-center lead list-unstyled">
+            <p class="lead">If you are looking to collaborate, please contact me at:</p>
+            <ul class="lead">
                 {% for contact in site.data.contact %}
                 <li>
                     <a href="{{ contact.uri }}" class="text-decoration-none">
@@ -43,10 +43,10 @@ title: Home
                 </li>
                 {% endfor %}
             </ul>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <div class="row">
+    <div class="row mt-5">
         <section class="col">
             <h2 class="text-center display-2">My Projects</h2>
 
