@@ -1,5 +1,6 @@
 - slug: game-jams
   header: Game Jams
+  icon: controller
   projects:
     - slug: root-canal
       header: Root Canal
@@ -108,6 +109,7 @@
 
 - slug: libraries
   header: Libraries
+  icon: box-seam
   projects:
     - slug: unity-assemblies
       header: UnityAssemblies
@@ -137,6 +139,7 @@
 
 - slug: mobile
   header: Mobile Games
+  icon: phone
   projects:
     - slug: hhh
       header: High Hand Hold'em
@@ -160,6 +163,7 @@
 
 - slug: pc
   header: PC Games
+  icon: pc-display
   projects:
     - slug: farmageddon
       header: "Farmageddon: A Cattle Royale"
@@ -196,6 +200,7 @@
 
 - slug: websites
   header: Websites
+  icon: globe
   projects:
     - slug: derploid-site
       header: Derploid Website
@@ -227,6 +232,7 @@
 
 - slug: talks
   header: Talks
+  icon: mic
   projects:
     - slug: building-interactive-enemy
       header: "Live Demo: Building an Interactive Enemy"
