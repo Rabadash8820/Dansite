@@ -1,15 +1,16 @@
 ---
 layout: default-with-footer
 ---
+
+{% assign pagePathParts = page.dir | split: '/' %}
+{% assign category = site.data.projectCategories | where: "slug", pagePathParts[-2] | first %}
+{% assign project = category.projects | where: "slug", pagePathParts[-1] | first %}
+
 <div class="d-flex flex-column">
-    {% include fixed-home-button %}
+    {% include project-breadcrumbs.html category=category project=project %}
 </div>
 
 <main class="container">
-
-    {% assign pagePathParts = page.dir | split: '/' %}
-    {% assign category = site.data.projectCategories | where: "slug", pagePathParts[-2] | first %}
-    {% assign project = category.projects | where: "slug", pagePathParts[-1] | first %}
 
     <h1 class="display-1 text-center"><cite>{{ project.header }}</cite></h1>
 
