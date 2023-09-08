@@ -231,78 +231,77 @@
     - slug: building-interactive-enemy
       header: "Live Demo: Building an Interactive Enemy"
       links:
-      - text: Recording
-        icon: record-circle
-        href: https://1drv.ms/f/s!Apw9vDm6ePFBgd07aJlmpPZFN8Ge3Q?e=46ozNG
-      - text: Slides
-        icon: file-slides
-        href: https://tinyurl.com/enemySlidesGdex23
       - text: Companion repository
         icon: github
         href: https://github.com/Rabadash8820/GDEX2023_BuildingInteractiveEnemy
       years:
         start: 2023
         end: 2023
+      embeds:
+      - title: Video recording (opens in new tab)
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128554&authkey=!AIzzDE7Yox4vDlo
+        allowfullscreen: true
+      - title: PowerPoint slides
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128348&authkey=!AOp-TA7oX7rm7HY&em=2
     - slug: mobile-ads-less-awful
       header: Making Mobile Ads Less Awful
-      links:
-      - text: Recording
-        icon: record-circle
-        href: https://1drv.ms/f/s!Apw9vDm6ePFBgdxSkqiqquzy9vuPdQ?e=wvdf3i
-      - text: Slides
-        icon: file-slides
-        href: https://onedrive.live.com/?id=41F178BA39BC3D9C%2128242&cid=41F178BA39BC3D9C
       years:
         start: 2023
         end: 2023
+      embeds:
+      - title: Video recording (opens in new tab)
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128555&authkey=!ABnQFyyT9begIcc
+        allowfullscreen: true
+      - title: PowerPoint slides
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128354&authkey=!ACv-UMJf4AvgnIM&em=2
     - slug: singletons-doing-them-wrong
       header: "Singletons: You're Doing Them Wrong"
       links:
       - text: Recording
         icon: record-circle
         href: https://1drv.ms/f/s!Apw9vDm6ePFBgbA4h-52ghUUaNx6mw?e=u1ldaE
-      - text: Slides
-        icon: file-slides
-        href: https://1drv.ms/p/s!Apw9vDm6ePFBgdJ2ImHZWF45mAWEOg?e=5YebQ9
       - text: Companion repository
         icon: github
         href: https://github.com/Rabadash8820/GDEX2021_SingletonPattern
       years:
         start: 2021
         end: 2021
+      embeds:
+      - title: PowerPoint slides
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126998&authkey=!AHX4HJO89gzLt_Y&em=2
     - slug: advanced-ifs
       header: "Advanced Gameplay Programming: If Statements"
       links:
       - text: Recording
         icon: record-circle
         href: https://1drv.ms/f/s!Apw9vDm6ePFBgc1s39MT9dJ8akKPzw?e=dxW4ty
-      - text: Slides
-        icon: file-slides
-        href: https://1drv.ms/p/s!Apw9vDm6ePFBgdEUzifOwpMiwRq75w?e=RIfF2p
       years:
         start: 2021
         end: 2021
+      embeds:
+      - title: PowerPoint slides
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126772&authkey=!AOQjp_1CToFhPnE&em=2
     - slug: designing-new-lifeforms
       header: Designing New Lifeforms
       links:
       - text: Recording
         icon: record-circle
         href: https://1drv.ms/f/s!Apw9vDm6ePFBgakz-XtqbKPUTg7lOw?e=Vaw1xa
-      - text: Slides
-        icon: file-slides
-        href: https://1drv.ms/p/s!Apw9vDm6ePFBgak1fvFqPOWyVikggQ?e=ASTrij
       years:
         start: 2019
         end: 2019
+      embeds:
+      - title: PowerPoint slides
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121685&authkey=!AAG8Gax-vW7LBm4&em=2
     - slug: supercharging-unity-workflow
       header: "Superchargning Your Unity Workflow With Visual Studio and Git"
       links:
-      - text: Slides
-        icon: file-slides
-        href: https://1drv.ms/p/s!Apw9vDm6ePFBgasohoUml3N47t7mig?e=GZXNtV
       - text: Companion repository
         icon: github
         href: https://github.com/Rabadash8820/GDEX2019_UnityWithVsAndGit
       years:
         start: 2019
         end: 2019
+      embeds:
+      - title: PowerPoint slides
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121928&authkey=!AEEvTMgB8xEgphI&em=2
