@@ -15,7 +15,7 @@ layout: default-with-footer
     <h1 class="display-1 text-center"><cite>{{ project.header }}</cite></h1>
 
     {% if project.embeds %}
-    <div class="row row-cols-1 row-cols-lg-2">
+    <div class="row row-cols-1 row-cols-lg-2 justify-content-center">
         {% for embed in project.embeds %}
         <div class="col {% if forloop.first == false %}mt-3 mt-lg-0{% endif %}">
             <div class="ratio ratio-16x9">
