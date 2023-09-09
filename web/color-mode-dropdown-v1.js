@@ -11,23 +11,20 @@
   function setStoredTheme(theme) { localStorage.setItem('theme', theme) }
 
   function getPreferredTheme() {
-    const storedTheme = getStoredTheme()
-    return storedTheme
-      ? storedTheme
-      : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    return getStoredTheme() || 'auto'
   }
 
-  function setTheme(theme) {
-    document.documentElement.setAttribute('data-bs-theme', toBootstrapTheme(theme))
+  function setBootstrapTheme(bootstrapTheme) {
+    document.documentElement.setAttribute('data-bs-theme', bootstrapTheme)
   }
 
   function toBootstrapTheme(theme) {
-    return theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
+    return theme === 'auto'
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
       : theme
   }
 
-  setTheme(getPreferredTheme())
+  setBootstrapTheme(toBootstrapTheme(getPreferredTheme()))
 
   function showActiveTheme(theme, focus = false) {
     const btnThemeSwitcher = document.getElementById('dan-theme')
@@ -57,22 +54,21 @@
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    const storedTheme = getStoredTheme()
-    if (storedTheme !== 'light' && storedTheme !== 'dark')
-      setTheme(getPreferredTheme())
+    const theme = getPreferredTheme()
+    if (theme === 'auto')
+      setBootstrapTheme(toBootstrapTheme(theme))
   })
 
   window.addEventListener('DOMContentLoaded', () => {
     showActiveTheme(getPreferredTheme())
 
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          setStoredTheme(theme)
-          setTheme(theme)
-          showActiveTheme(theme, true)
-        })
+    document.querySelectorAll('[data-bs-theme-value]').forEach(function (toggle) {
+      toggle.addEventListener('click', function () {
+        const theme = toggle.getAttribute('data-bs-theme-value')
+        setStoredTheme(theme)
+        setBootstrapTheme(toBootstrapTheme(theme))
+        showActiveTheme(theme, true)
       })
+    })
   })
 })()
