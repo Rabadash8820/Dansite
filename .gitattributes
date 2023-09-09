@@ -2,3 +2,9 @@
 # However, a custom build action allows us to use LFS.
 
 [attr]lfs filter=lfs diff=lfs merge=lfs -text
+
+*.jpg lfs
+*.jpeg lfs
+*.png lfs
+*.gif lfs
+*.ico lfs
