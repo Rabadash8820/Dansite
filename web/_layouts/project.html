@@ -6,7 +6,7 @@ layout: default-with-footer
 {% assign category = site.data.projectCategories | where: "slug", pagePathParts[-2] | first %}
 {% assign project = category.projects | where: "slug", pagePathParts[-1] | first %}
 
-<div class="d-flex flex-column">
+<div class="d-flex flex-column w-75">
     {% include project-breadcrumbs.html category=category project=project %}
 </div>
 

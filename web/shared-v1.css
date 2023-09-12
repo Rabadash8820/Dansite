@@ -52,6 +52,10 @@ header {
     animation-timing-function: ease;
 }
 
+.dan-project-breadcrumb>li:last-child {
+    max-width: 60%;
+}
+
 /* Inspired by https://css-tricks.com/making-css-animations-feel-natural */
 @keyframes bounce {
     0% {
