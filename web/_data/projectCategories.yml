@@ -300,7 +300,7 @@
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121685&authkey=!AAG8Gax-vW7LBm4&em=2
     - slug: supercharging-unity-workflow
-      header: "Superchargning Your Unity Workflow With Visual Studio and Git"
+      header: "Supercharging Your Unity Workflow With Visual Studio and Git"
       links:
       - text: Companion repository
         icon: github
