@@ -1,4 +1,4 @@
-<div class="btn-group btn-group-lg" role="group" aria-label="Links">
+<div class="btn-group btn-group-lg flex-wrap" role="group" aria-label="Links">
     {% for link in include.links %}
     <a href="{{ link.href }}" {{ site.externalLinkAttributes }}
         class="btn btn-outline-primary icon-link{% unless link.href %} disabled{% endunless %}"
