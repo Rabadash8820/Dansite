@@ -263,9 +263,6 @@
     - slug: singletons-doing-them-wrong
       header: "Singletons: You're Doing Them Wrong"
       links:
-      - text: Recording
-        icon: record-circle
-        href: https://1drv.ms/f/s!Apw9vDm6ePFBgbA4h-52ghUUaNx6mw?e=u1ldaE
       - text: Companion repository
         icon: github
         href: https://github.com/Rabadash8820/GDEX2021_SingletonPattern
@@ -273,14 +270,17 @@
         start: 2021
         end: 2021
       embeds:
+      - title: Video recording (opens in new tab)
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2146407&authkey=!AJ4BY5eQiJoieMo
+        allowfullscreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126998&authkey=!AHX4HJO89gzLt_Y&em=2
     - slug: advanced-ifs
       header: "Advanced Gameplay Programming: If Statements"
       links:
-      - text: Recording
+      - text: Recording (coming soon)
         icon: record-circle
-        href: https://1drv.ms/f/s!Apw9vDm6ePFBgc1s39MT9dJ8akKPzw?e=dxW4ty
+        href:
       years:
         start: 2021
         end: 2021
@@ -289,14 +289,13 @@
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126772&authkey=!AOQjp_1CToFhPnE&em=2
     - slug: designing-new-lifeforms
       header: Designing New Lifeforms
-      links:
-      - text: Recording
-        icon: record-circle
-        href: https://1drv.ms/f/s!Apw9vDm6ePFBgakz-XtqbKPUTg7lOw?e=Vaw1xa
       years:
         start: 2019
         end: 2019
       embeds:
+      - title: Video recording (opens in new tab)
+        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2146408&authkey=!AF8P8KA5XDCnPKY
+        allowfullscreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121685&authkey=!AAG8Gax-vW7LBm4&em=2
     - slug: supercharging-unity-workflow
