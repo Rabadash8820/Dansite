@@ -4,6 +4,7 @@
         class="btn btn-outline-primary icon-link{% unless link.href %} disabled{% endunless %}"
         {% if link.title %}title="{{ link.title }}"{% endif %}
         {% unless link.href %}aria-disabled="true"{% endunless %}
+        {% if link.isDownload %}download{% endif %}
     >
         {% include bootstrap-icons/{{ link.icon }}.svg title=false %} {{ link.text }}
         {% if link.title %}({{ link.title }}){% endif %}

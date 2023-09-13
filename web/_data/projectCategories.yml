@@ -5,10 +5,11 @@
     - slug: root-canal
       header: Root Canal
       links:
-      - text: Download
-        title: coming soon
+      - text: Download (Win64)
+        title:
         icon: download
-        href:
+        href: /projects/game-jams/root-canal/root-canal-win64-v1.zip
+        isDownload: true
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2023/games/root-canal-5
@@ -28,10 +29,11 @@
     - slug: space-game
       header: "\"Space Game\""
       links:
-      - text: Download
-        title: coming soon
+      - text: Download (Win64)
+        title:
         icon: download
-        href:
+        href: https://github.com/Rabadash8820/GDEX2023_BuildingInteractiveEnemy/raw/main/builds/win64.zip
+        isDownload: true
       - text: Source
         icon: github
         href: https://github.com/Rabadash8820/GDEX2023_BuildingInteractiveEnemy/tree/main/SpaceGame
@@ -44,10 +46,11 @@
     - slug: body-maintenance
       header: Body Maintenance
       links:
-      - text: Download
-        title: coming soon
+      - text: Download (Win64)
+        title:
         icon: download
-        href:
+        href: /projects/game-jams/body-maintenance/body-maintenance-win64-v1.zip
+        isDownload: true
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2020/games/body-movement-bm-9
@@ -64,10 +67,11 @@
     - slug: send-them-home
       header: Send Them Home
       links:
-      - text: Download
-        title: coming soon
+      - text: Download (Win64)
+        title:
         icon: download
-        href:
+        href: /projects/game-jams/send-them-home/send-them-home-win64-v1.zip
+        isDownload: true
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2019/games/send-them-home
@@ -86,10 +90,11 @@
     - slug: demisword-bubonic
       header: "Demisword: Bubonic"
       links:
-      - text: Download
-        title: coming soon
+      - text: Download (Win64)
+        title:
         icon: download
-        href:
+        href: /projects/game-jams/demisword-bubonic/demisword-bubonic-win64-v1.zip
+        isDownload: true
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2018/games/demiswordbubonic
