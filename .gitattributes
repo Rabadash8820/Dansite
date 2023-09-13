@@ -3,8 +3,12 @@
 
 [attr]lfs filter=lfs diff=lfs merge=lfs -text
 
+# Images
 *.jpg lfs
 *.jpeg lfs
 *.png lfs
 *.gif lfs
 *.ico lfs
+
+# Downloads
+*.zip lfs
