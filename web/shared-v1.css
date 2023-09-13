@@ -38,7 +38,7 @@ html {
 }
 
 /* Header */
-header {
+#hero {
     background-image: linear-gradient(rgba(var(--bs-primary-rgb)), rgba(var(--bs-body-bg-rgb)));
     color: rgba(var(--bs-body-color-rgb));
 }
