@@ -56,6 +56,10 @@ html {
     max-width: 60%;
 }
 
+.dan-pad-under-header {
+    padding-top: 4rem;
+}
+
 /* Inspired by https://css-tricks.com/making-css-animations-feel-natural */
 @keyframes bounce {
     0% {
