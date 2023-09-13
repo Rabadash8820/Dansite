@@ -1,9 +1,7 @@
-<div class="ms-3 mt-3">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb dan-project-breadcrumb flex-nowrap">
-          <li class="breadcrumb-item text-truncate"><a href="/">Home</a></li>
-          <li class="breadcrumb-item text-truncate"><a href="/#nav-tab-{{ include.category.slug }}">{{ include.category.header }}</a></li>
-          <li class="breadcrumb-item text-truncate active" aria-current="page">{{ include.project.header }}</li>
-        </ol>
-      </nav>
-</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb dan-project-breadcrumb flex-nowrap">
+    <li class="breadcrumb-item text-truncate"><a href="/">Home</a></li>
+    <li class="breadcrumb-item text-truncate"><a href="/#nav-tab-{{ include.category.slug }}">{{ include.category.header }}</a></li>
+    <li class="breadcrumb-item text-truncate active" aria-current="page">{{ include.project.header }}</li>
+  </ol>
+</nav>

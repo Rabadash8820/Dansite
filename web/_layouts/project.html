@@ -7,7 +7,9 @@ layout: default-with-footer
 {% assign project = category.projects | where: "slug", pagePathParts[-1] | first %}
 
 <div class="d-flex flex-column w-75">
-    {% include project-breadcrumbs.html category=category project=project %}
+    <div class="ms-3 mt-3">
+        {% include project-breadcrumbs.html category=category project=project %}
+    </div>
 </div>
 
 <main class="container">
@@ -19,7 +21,7 @@ layout: default-with-footer
         {% for embed in project.embeds %}
         <div class="col {% unless forloop.first %}mt-3 mt-lg-0{% endunless %}">
             <div class="ratio ratio-16x9">
-                <iframe class="z-n1" title="{{ embed.title }}" src="{{ embed.src }}" {% if embed.allowfullscreen %}allowfullscreen{% endif %}></iframe>
+                <iframe title="{{ embed.title }}" src="{{ embed.src }}" {% if embed.allowfullscreen %}allowfullscreen{% endif %}></iframe>
             </div>
         </div>
         {% endfor %}
