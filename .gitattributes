@@ -9,6 +9,7 @@
 *.png lfs
 *.gif lfs
 *.ico lfs
+*.webp lfs
 
 # Downloads
 *.zip lfs
