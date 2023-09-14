@@ -6,7 +6,6 @@
       header: Root Canal
       links:
       - text: Download (Win64)
-        title:
         icon: download
         href: /projects/game-jams/root-canal/root-canal-win64-v1.zip
         isDownload: true
@@ -30,7 +29,6 @@
       header: "\"Space Game\""
       links:
       - text: Download (Win64)
-        title:
         icon: download
         href: https://github.com/Rabadash8820/GDEX2023_BuildingInteractiveEnemy/raw/main/builds/win64.zip
         isDownload: true
@@ -47,7 +45,6 @@
       header: Body Maintenance
       links:
       - text: Download (Win64)
-        title:
         icon: download
         href: /projects/game-jams/body-maintenance/body-maintenance-win64-v1.zip
         isDownload: true
@@ -68,7 +65,6 @@
       header: Send Them Home
       links:
       - text: Download (Win64)
-        title:
         icon: download
         href: /projects/game-jams/send-them-home/send-them-home-win64-v1.zip
         isDownload: true
@@ -91,7 +87,6 @@
       header: "Demisword: Bubonic"
       links:
       - text: Download (Win64)
-        title:
         icon: download
         href: /projects/game-jams/demisword-bubonic/demisword-bubonic-win64-v1.zip
         isDownload: true
@@ -190,9 +185,8 @@
       header: "GravityCopter"
       links:
       - text: Download
-        title: coming soon
         icon: download
-        href:
+        href: https://github.com/Rabadash8820/GravityCopter/raw/master/builds/gravitycopter-win64.zip
       - text: Source
         icon: github
         href: https://github.com/Rabadash8820/GravityCopter
@@ -200,8 +194,18 @@
         start: 2020
         end: 2022
       images:
-      - src:
-        alt: Gameplay screenshot showing a silly low-resolution helicopter flying between grey columns amid barrel-like pieces of debris
+      - src: /projects/pc/gravitycopter/gravitycopter-flying-v1.gif
+        alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background
+      - src: /projects/pc/gravitycopter/gravitycopter-flying-debris-v1.gif
+        alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background amid purple pieces of physics debris
+      - src: /projects/pc/gravitycopter/gravitycopter-accelerate-v1.gif
+        alt: Gameplay GIF of world speed being manually increased at runtime
+      - src: /projects/pc/gravitycopter/gravitycopter-main-menu-v1.webp
+        alt: Gameplay screenshot screenshot of the main menu, just a title, play/quit buttons, and the controls
+      - src: /projects/pc/gravitycopter/gravitycopter-statistics-v1.webp
+        alt: Gameplay screenshot of the togglable stastics overlay, showing world speed, gravity direction and magnitude, etc.
+      - src: /projects/pc/gravitycopter/gravitycopter-gameover-v1.webp
+        alt: Gameplay screenshot screenshot of the gameover menu with Play Again and Main Menu buttons
 
 - slug: websites
   header: Websites
