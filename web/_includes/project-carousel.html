@@ -7,8 +7,8 @@
 
 {% else %}
 
-<div id="projectImgCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators dan-bg-overlay">
+<div id="projectImgCarousel" class="carousel slide mx-auto" style="max-width: 512px;" data-bs-ride="carousel">
+    <div class="carousel-indicators bg-body-tertiary" style="--bs-bg-opacity: .5;">
         {% for image in include.images %}
         <button type="button" data-bs-target="#projectImgCarousel"
             data-bs-slide-to="{{ forloop.index0 }}" aria-label="Image {{ forloop.index }}"
@@ -18,19 +18,11 @@
     </div>
     <div class="carousel-inner">
         {% for image in include.images %}
-        <div class="carousel-item{% if forloop.first %} active{% endif %}">
-            <img src="{{ image.src }}" class="d-block w-100" alt="{{ image.alt }}">
+        <div class="carousel-item ratio ratio-1x1{% if forloop.first %} active{% endif %}">
+            <img src="{{ image.src }}" class="d-block" alt="{{ image.alt }}">
         </div>
         {% endfor %}
     </div>
-    <button class="carousel-control-prev dan-w-10 dan-bg-overlay" type="button" data-bs-target="#projectImgCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon w-100 dan-h-10rem" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous image</span>
-    </button>
-    <button class="carousel-control-next dan-w-10 dan-bg-overlay" type="button" data-bs-target="#projectImgCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon w-100 dan-h-10rem" aria-hidden="true"></span>
-        <span class="visually-hidden">Next image</span>
-    </button>
 </div>
 
 {% endif %}

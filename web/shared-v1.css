@@ -17,24 +17,21 @@ html {
     filter: brightness(125%);
 }
 
-[data-bs-theme="light"] .dan-bg-overlay {
-    background-color: rgb(0% 0% 0 / 50%);
-}
-
-[data-bs-theme="dark"] .dan-bg-overlay {
-    background-color: rgb(100% 100% 100% / 50%);
-}
-
 .dropdown-menu .active .dan-theme-check {
     display: block !important;
 }
 
-.dan-w-10 {
-    width: 10% !important;
+.dan-project-breadcrumb>li:last-child {
+    max-width: 60%;
 }
 
-.dan-h-10rem {
-    height: 10rem !important;
+.dan-pad-under-header {
+    padding-top: 4rem;
+}
+
+/* Override Bootstrap carousel indicator colors (with greater CSS specificiy) */
+[data-bs-theme] .carousel .carousel-indicators [data-bs-target] {
+    background-color: rgba(var(--bs-body-color-rgb));
 }
 
 /* Header */
@@ -50,14 +47,6 @@ html {
     animation-iteration-count: infinite;
     animation-name: bounce;
     animation-timing-function: ease;
-}
-
-.dan-project-breadcrumb>li:last-child {
-    max-width: 60%;
-}
-
-.dan-pad-under-header {
-    padding-top: 4rem;
 }
 
 /* Inspired by https://css-tricks.com/making-css-animations-feel-natural */
