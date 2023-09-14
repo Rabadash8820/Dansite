@@ -1,14 +1,56 @@
 ---
 layout: project
 ---
-<div class="row">
-    <section id="background" class="col">
-        <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+<section id="background" class="row">
+    <class="col">
+        <h2 class="text-center">Background</h2>
+        <p>
+            <cite>GravityCopter</cite> is was one of my simpler, but well-architected hobby games.
+            During a vacation in 2019, my brother-in-law had the idea for a
+            <a href="https://flappybird.io/" {{ site.externalLinkAttributes }}><cite>Flappy Bird</cite></a>-style game where,
+            rather than applying an upward force to stay aloft and avoid obstacles, the player would toggle the direction of gravity.
+            The idea felt like something that I could hack together quickly, both to impress my brother-in-law and to challenge myself.
+            So, in about two nights, I coded all the logic to toggle gravity,
+            put together a basic main menu and game-over menu flow, and created/imported all the artwork and sounds myself
+            (do note that my skills are in code, not art or music!).
+            I also added a bunch of little purple "debris" that are also affected by gravity to add some fun "chaos" to the gravity-switching.
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center">Details</h2>
+        <p>I am proud of several technical details in this game:</p>
+        <ul>
+            <li>
+                The scrolling background recycles "wall" objects from an object pool.
+                The walls move past the player at constant speed to achieve the illusion of constant motion,
+                without increasing the player's x-position indefinitely.
+            </li>
+            <li>
+                Walls heights are randomly staggered each time around, but within configurable limits, so that the player always has enough room to pass between them.
+            </li>
+            <li>
+                Walls also use 9-sliced sprites so that the textures on walls of different heights do not appear awkwardly stretched.
+            </li>
+            <li>
+                The force of gravity is scaled up to 3x for falling bits of debris.
+                This adds more motion to the scene; without the scaling, it just felt like debris was moving up and down in sync to the player.
+            </li>
+            <li>
+                For troubleshooting, I added inputs to toggle a "statistics overlay" that shows current world speed, direction/magnitude of gravity, etc.
+                I also added inputs to increase/decrease the world speed
+            </li>
+            <li>
+                The game code is well-architected, I think, employing the Single Responsibility Principle and event-driven programming.
+            </li>
+            <li>
+                It uses my <a href="../../libraries/unityutil">UnityUtil</a> library for dependency injection and some utility code.
+            </li>
+            <li>
+                The main menu actually has a Quit button: an oft-overlooked feature in tiny games like this!
+            </li>
+        </ul>
+    </div>
+</section>

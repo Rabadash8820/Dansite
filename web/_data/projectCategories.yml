@@ -191,8 +191,8 @@
         icon: github
         href: https://github.com/Rabadash8820/GravityCopter
       years:
-        start: 2020
-        end: 2022
+        start: 2019
+        end: 2019
       images:
       - src: /projects/pc/gravitycopter/gravitycopter-flying-v1.gif
         alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background
