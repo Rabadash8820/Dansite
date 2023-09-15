@@ -202,11 +202,22 @@
         start: 2020
         end: 2022
       cardImage:
-        src: /projects/pc/farmageddon/farmageddon.jpg
+        src: /projects/pc/farmageddon/farmageddon-card-v1.webp
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
       images:
-      - src: /projects/pc/farmageddon/farmageddon.jpg
-        alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
+      - src: /projects/pc/farmageddon/farmageddon-fighting-v1.webp
+        alt: >
+          Gameplay screenshot showing 2D, cartoony cows with name tags "Beeficus" and "Taurean Terror" fighting with rockets amid golden hay,
+          5 keys collected in the top right, health and "milk ammo" stats in the top left, and text above a timer bar along the bottom saying
+          "The Divine Pasture is open! Defeat Beeficus to claim your place in the Golden Herd!"
+      - src: /projects/pc/farmageddon/farmageddon-inventory-v1.webp
+        alt: Gameplay screenshot of the inventory UI, a seven-slot grid currently containing six items, ad the selected one has descriptive text at the bottom
+      - src: /projects/pc/farmageddon/farmageddon-rewind-v1.webp
+        alt: Gameplay screenshot of the "Déjà moo" effect, where a stopwatch with a cow face appears and the whole screen rotates as the match is rewound
+      - src: /projects/pc/farmageddon/farmageddon-autumn-v1.webp
+        alt: Gameplay screenshot of the game's fall skin, with browner grass and leaves
+      - src: /projects/pc/farmageddon/farmageddon-winter-v1.webp
+        alt: Gameplay screenshot of the game's winter skin, with snow covering the grass and presents, trees, and snowmen scattered around
     - slug: gravity-copter
       header: "GravityCopter"
       links:
