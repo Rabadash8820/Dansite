@@ -22,11 +22,11 @@
         src: /projects/game-jams/root-canal/root-canal.png
         alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
       images:
-      - src: root-canal.png
+      - src: /projects/game-jams/root-canal/root-canal.png
         alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
-      - src: root-canal-2.png
+      - src: /projects/game-jams/root-canal/root-canal-2.png
         alt:
-      - src: root-canal-3.png
+      - src: /projects/game-jams/root-canal/root-canal-3.png
         alt:
     - slug: space-game
       header: "\"Space Game\""
@@ -45,7 +45,7 @@
         src: /projects/game-jams/space-game/space-game.png
         alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
       images:
-      - src: space-game.png
+      - src: /projects/game-jams/space-game/space-game.png
         alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
     - slug: body-maintenance
       header: Body Maintenance
@@ -68,7 +68,7 @@
         src: /projects/game-jams/body-maintenance/body-maintenance.png
         alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
       images:
-      - src: body-maintenance.png
+      - src: /projects/game-jams/body-maintenance/body-maintenance.png
         alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
     - slug: send-them-home
       header: Send Them Home
@@ -93,7 +93,7 @@
           Title screen with white text surrounded by little white monster faces,
           in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
       images:
-      - src: send-them-home.jpg
+      - src: /projects/game-jams/send-them-home/send-them-home.jpg
         alt: >
           Title screen with white text surrounded by little white monster faces,
           in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
@@ -121,7 +121,7 @@
           and above them are two black human figures with white eyes, one holds a torch and the other holds the titular sword,
           which has a multicolor handle and a large purple flower-like blade
       images:
-      - src: demisword-bubonic.jpg
+      - src: /projects/game-jams/demisword-bubonic/demisword-bubonic.jpg
         alt: >
           Title screen with white text above a dark a mountainous terrain full of black rats with white eyes,
           and above them are two black human figures with white eyes, one holds a torch and the other holds the titular sword,
@@ -181,7 +181,7 @@
         src: /projects/mobile/hhh/hhh.png
         alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
       images:
-      - src: hhh.png
+      - src: /projects/mobile/hhh/hhh.png
         alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
 
 - slug: pc
@@ -205,7 +205,7 @@
         src: /projects/pc/farmageddon/farmageddon.jpg
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
       images:
-      - src: farmageddon.jpg
+      - src: /projects/pc/farmageddon/farmageddon.jpg
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
     - slug: gravitycopter
       header: "GravityCopter"
@@ -256,7 +256,7 @@
         src: /projects/websites/derploid-site/derploid-site.png
         alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
       images:
-      - src: derploid-site.png
+      - src: /projects/websites/derploid-site/derploid-site.png
         alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
     - slug: dansite
       header: The Dansite
@@ -271,7 +271,7 @@
         src: /projects/websites/dansite/dansite.png
         alt: Dansite logo. A cartoony image of Dan's face.
       images:
-      - src: dansite.png
+      - src: /projects/websites/dansite/dansite.png
         alt: Dansite logo. A cartoony image of Dan's face.
 
 - slug: talks
