@@ -18,6 +18,9 @@
       years:
         start: 2023
         end: 2023
+      cardImage:
+        src: /projects/game-jams/root-canal/root-canal.png
+        alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
       images:
       - src: root-canal.png
         alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
@@ -38,6 +41,9 @@
       years:
         start: 2022
         end: 2022
+      cardImage:
+        src: /projects/game-jams/space-game/space-game.png
+        alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
       images:
       - src: space-game.png
         alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
@@ -58,6 +64,9 @@
       years:
         start: 2020
         end: 2020
+      cardImage:
+        src: /projects/game-jams/body-maintenance/body-maintenance.png
+        alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
       images:
       - src: body-maintenance.png
         alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
@@ -78,6 +87,11 @@
       years:
         start: 2019
         end: 2019
+      cardImage:
+        src: /projects/game-jams/send-them-home/send-them-home.jpg
+        alt: >
+          Title screen with white text surrounded by little white monster faces,
+          in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
       images:
       - src: send-them-home.jpg
         alt: >
@@ -100,6 +114,12 @@
       years:
         start: 2018
         end: 2018
+      cardImage:
+        src: /projects/game-jams/demisword-bubonic/demisword-bubonic.jpg
+        alt: >
+          Title screen with white text above a dark a mountainous terrain full of black rats with white eyes,
+          and above them are two black human figures with white eyes, one holds a torch and the other holds the titular sword,
+          which has a multicolor handle and a large purple flower-like blade
       images:
       - src: demisword-bubonic.jpg
         alt: >
@@ -157,6 +177,9 @@
       years:
         start: 2017
         end: present
+      cardImage:
+        src: /projects/mobile/hhh/hhh.png
+        alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
       images:
       - src: hhh.png
         alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
@@ -178,6 +201,9 @@
       years:
         start: 2020
         end: 2022
+      cardImage:
+        src: /projects/pc/farmageddon/farmageddon.jpg
+        alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
       images:
       - src: farmageddon.jpg
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
@@ -193,6 +219,9 @@
       years:
         start: 2019
         end: 2019
+      cardImage:
+        src: /projects/pc/gravitycopter/gravitycopter-card-v1.webp
+        alt: Gameplay screenshot of a silly low-resolution helicopter flying between grassy columns against a blue background
       images:
       - src: /projects/pc/gravitycopter/gravitycopter-flying-v1.gif
         alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background
@@ -223,6 +252,9 @@
       years:
         start: 2023
         end: present
+      cardImage:
+        src: /projects/websites/derploid-site/derploid-site.png
+        alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
       images:
       - src: derploid-site.png
         alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
@@ -235,6 +267,9 @@
       years:
         start: 2023
         end: present
+      cardImage:
+        src: /projects/websites/dansite/dansite.png
+        alt: Dansite logo. A cartoony image of Dan's face.
       images:
       - src: dansite.png
         alt: Dansite logo. A cartoony image of Dan's face.
