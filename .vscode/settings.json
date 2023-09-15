@@ -15,4 +15,5 @@
         "derpy",
         "toggleable",
     ],
+    "html.format": "preserve-aligned"
 }
