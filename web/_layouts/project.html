@@ -21,7 +21,7 @@ layout: default-with-footer
         {% for embed in project.embeds %}
         <div class="col {% unless forloop.first %}mt-3 mt-lg-0{% endunless %}">
             <div class="ratio ratio-16x9">
-                <iframe title="{{ embed.title }}" src="{{ embed.src }}" {% if embed.allowfullscreen %}allowfullscreen{% endif %}></iframe>
+                <iframe title="{{ embed.title }}" src="{{ embed.src }}" {% if embed.allowFullScreen %}allowfullscreen{% endif %}></iframe>
             </div>
         </div>
         {% endfor %}

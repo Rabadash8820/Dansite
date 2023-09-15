@@ -143,7 +143,7 @@
       years:
         start: 2019
         end: present
-    - slug: unityutil
+    - slug: unity-util
       header: UnityUtil
       links:
       - text: OpenUPM page
@@ -207,12 +207,12 @@
       images:
       - src: /projects/pc/farmageddon/farmageddon.jpg
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
-    - slug: gravitycopter
+    - slug: gravity-copter
       header: "GravityCopter"
       links:
       - text: Download
         icon: download
-        href: https://github.com/Rabadash8820/GravityCopter/raw/master/builds/gravitycopter-win64.zip
+        href: https://github.com/Rabadash8820/GravityCopter/raw/master/builds/gravity-copter-win64.zip
       - text: Source
         icon: github
         href: https://github.com/Rabadash8820/GravityCopter
@@ -220,20 +220,20 @@
         start: 2019
         end: 2019
       cardImage:
-        src: /projects/pc/gravitycopter/gravitycopter-card-v1.webp
+        src: /projects/pc/gravity-copter/gravity-copter-card-v1.webp
         alt: Gameplay screenshot of a silly low-resolution helicopter flying between grassy columns against a blue background
       images:
-      - src: /projects/pc/gravitycopter/gravitycopter-flying-v1.gif
+      - src: /projects/pc/gravity-copter/gravity-copter-flying-v1.gif
         alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background
-      - src: /projects/pc/gravitycopter/gravitycopter-flying-debris-v1.gif
+      - src: /projects/pc/gravity-copter/gravity-copter-flying-debris-v1.gif
         alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background amid purple pieces of physics debris
-      - src: /projects/pc/gravitycopter/gravitycopter-accelerate-v1.gif
+      - src: /projects/pc/gravity-copter/gravity-copter-accelerate-v1.gif
         alt: Gameplay GIF of world speed being manually increased at runtime
-      - src: /projects/pc/gravitycopter/gravitycopter-main-menu-v1.webp
+      - src: /projects/pc/gravity-copter/gravity-copter-main-menu-v1.webp
         alt: Gameplay screenshot screenshot of the main menu, just a title, play/quit buttons, and the controls
-      - src: /projects/pc/gravitycopter/gravitycopter-statistics-v1.webp
-        alt: Gameplay screenshot of the togglable stastics overlay, showing world speed, gravity direction and magnitude, etc.
-      - src: /projects/pc/gravitycopter/gravitycopter-gameover-v1.webp
+      - src: /projects/pc/gravity-copter/gravity-copter-statistics-v1.webp
+        alt: Gameplay screenshot of the toggleable statistics overlay, showing world speed, gravity direction and magnitude, etc.
+      - src: /projects/pc/gravity-copter/gravity-copter-gameover-v1.webp
         alt: Gameplay screenshot screenshot of the gameover menu with Play Again and Main Menu buttons
 
 - slug: websites
@@ -290,7 +290,7 @@
       embeds:
       - title: Video recording (opens in new tab)
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128554&authkey=!AIzzDE7Yox4vDlo
-        allowfullscreen: true
+        allowFullScreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128348&authkey=!AOp-TA7oX7rm7HY&em=2
     - slug: mobile-ads-less-awful
@@ -301,7 +301,7 @@
       embeds:
       - title: Video recording (opens in new tab)
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128555&authkey=!ABnQFyyT9begIcc
-        allowfullscreen: true
+        allowFullScreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128354&authkey=!ACv-UMJf4AvgnIM&em=2
     - slug: singletons-doing-them-wrong
@@ -316,7 +316,7 @@
       embeds:
       - title: Video recording (opens in new tab)
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2146407&authkey=!AJ4BY5eQiJoieMo
-        allowfullscreen: true
+        allowFullScreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126998&authkey=!AHX4HJO89gzLt_Y&em=2
     - slug: advanced-ifs
@@ -339,7 +339,7 @@
       embeds:
       - title: Video recording (opens in new tab)
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2146408&authkey=!AF8P8KA5XDCnPKY
-        allowfullscreen: true
+        allowFullScreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121685&authkey=!AAG8Gax-vW7LBm4&em=2
     - slug: supercharging-unity-workflow
