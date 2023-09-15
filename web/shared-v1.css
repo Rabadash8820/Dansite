@@ -21,20 +21,25 @@ html {
     display: block !important;
 }
 
-.dan-project-breadcrumb>li:last-child {
-    max-width: 60%;
-}
-
-.dan-pad-under-header {
-    padding-top: 4rem;
-}
-
 /* Override Bootstrap carousel indicator colors (with greater CSS specificiy) */
 [data-bs-theme] .carousel .carousel-indicators [data-bs-target] {
     background-color: rgba(var(--bs-body-color-rgb));
 }
 
 /* Header */
+.dan-pad-under-header {
+    padding-top: 4rem;
+}
+
+.dan-navbar-secondary {
+    /* Matches thickness of "top" navbar */
+    top: 59px;
+}
+
+.dan-project-breadcrumb>li:last-child {
+    max-width: 60%;
+}
+
 #hero {
     background-image: linear-gradient(rgba(var(--bs-primary-rgb)), rgba(var(--bs-body-bg-rgb)));
     color: rgba(var(--bs-body-color-rgb));
