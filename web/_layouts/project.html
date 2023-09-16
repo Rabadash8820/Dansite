@@ -29,7 +29,7 @@ layout: default-with-footer
     {% if project.images.size > 0 %}
     <div class="row mt-4">
         <div class="col">
-            {% include project-carousel.html images=project.images %}
+            {% include project-carousel.html project=project %}
         </div>
     </div>
     {% endif %}

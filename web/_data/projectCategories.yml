@@ -204,6 +204,7 @@
       cardImage:
         src: /projects/pc/farmageddon/farmageddon-card-v1.webp
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
+      carouselAspectRatio: 16x9
       images:
       - src: /projects/pc/farmageddon/farmageddon-fighting-v1.webp
         alt: >
@@ -233,6 +234,7 @@
       cardImage:
         src: /projects/pc/gravity-copter/gravity-copter-card-v1.webp
         alt: Gameplay screenshot of a silly low-resolution helicopter flying between grassy columns against a blue background
+      carouselAspectRatio: 1x1
       images:
       - src: /projects/pc/gravity-copter/gravity-copter-flying-v1.gif
         alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background

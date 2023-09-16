@@ -1,6 +1,6 @@
-{% if include.images.size == 1 %}
+{% if include.project.images.size == 1 %}
 
-{% assign image = include.images[0] %}
+{% assign image = include.project.images[0] %}
 <div class="d-flex justify-content-center">
     <img src="{{ image.src }}" class="d-block" alt="{{ image.alt }}">
 </div>
@@ -9,7 +9,7 @@
 
 <div id="projectImgCarousel" class="carousel slide mx-auto" style="max-width: 512px;" data-bs-ride="carousel">
     <div class="carousel-indicators bg-body-tertiary" style="--bs-bg-opacity: .5;">
-        {% for image in include.images %}
+        {% for image in include.project.images %}
         <button type="button" data-bs-target="#projectImgCarousel"
             data-bs-slide-to="{{ forloop.index0 }}" aria-label="Image {{ forloop.index }}"
             {% if forloop.first %}class="active" aria-current="true"{% endif %}>
@@ -17,8 +17,11 @@
         {% endfor %}
     </div>
     <div class="carousel-inner">
-        {% for image in include.images %}
-        <div class="carousel-item ratio ratio-16x9{% if forloop.first %} active{% endif %}">
+        {% for image in include.project.images %}
+        <div class="carousel-item
+            ratio ratio-{% if include.project.carouselAspectRatio %}{{ include.project.carouselAspectRatio }}{% else %}16x9{% endif %}
+            {% if forloop.first %} active{% endif %}
+        ">
             <img src="{{ image.src }}" class="d-block" alt="{{ image.alt }}">
         </div>
         {% endfor %}
