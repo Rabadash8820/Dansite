@@ -30,7 +30,7 @@ defaults:
   - scope: { path: "" }
     values:
       layout: default-with-footer
-  - scope: { path: "projects/" }
+  - scope: { path: "projects/*/*/index.html" }
     values:
       layout: project
 
