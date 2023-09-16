@@ -1,14 +1,106 @@
 ---
 layout: project
 ---
-<div class="row">
-    <section id="background" class="col">
-        <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+<section id="background-involvement" class="row">
+    <div class="col">
+        <h2 class="text-center">How I got involved</h2>
+        <p>
+            <cite>Farmageddon</cite> is a novel roguelike battle royale for PC for which I was the lead backend engineer.
+            I worked as a contractor for the developer, <a href="https://www.solidplasmastudios.com" {{ site.externalLinkAttributes }}>Solidplasma Studios</a>,
+            led by an accomplished Twitch streamer.
+        </p>
+        <p>
+            The inspiration for <cite>Farmageddon</cite> was basically a joke between that streamer and one of the artists: could they design a game around cow puns.
+            From this starting point, they had the idea of a battle royale game, where instead of players fighting each other in realtime
+            (which he knew would be costly to implement), player actions would be recorded and saved in the cloud,
+            then player clients would download those recordings to fight against locally.
+        </p>
+        <p>
+            Another artist on the team was a member of the Cleveland Game Developers (CGD) like me,
+            and posted on the CGD Facebook page in May 2020 that his team was <q>looking for someone who can set up a server to store and distribute json files
+            created by a game client to other game clients via HTTP asynchronously</q>.
+            I expressed my interest, having worked extensively on backend systems by that time at companies like Summit Racing Equipment and OverDrive.
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="background-beta" class="row">
+    <div class="col">
+        <h2 class="text-center">Beta Release</h2>
+        <p>
+            I found Solidplasma's "asynchronous multiplayer" idea pretty brilliant; it could theoretically achieve the same chaos/challenge as a realtime battle royale,
+            without the complex networking, as long as the player recordings still "reacted" to the local player in some way, which was already being working on.
+            So I built a cloud-based system on AWS consisting of the following components:
+        </p>
+        <ul>
+            <li>An API Gateway to which game clients could POST their "runs" and GET a subset of all players' runs back.</li>
+            <li>Lambda Functions to serve these requests, and S3 buckets with lifecycle policies to store/expire the player runs.</li>
+        </ul>
+        <p>
+            We released a free-to-play beta of the game several weeks later.
+            This marked my first ever involvement on a game published to Steam!
+        </p>
+    </div>
+</section>
+<section id="background-launch" class="row">
+    <div class="col">
+        <h2 class="text-center">Official Launch</h2>
+        <p>
+            In December 2020, I spoke again with the head of Solidplasma Studios.
+            He described logic for selecting "bosses" that players would have to fight in the "Divine Pasture".
+            Essentially, if a player managed to hold this area for a certain amount of time, then their run would become the new "boss",
+            and other players would have to fight that cow (with all of its stats, items, etc.) in subsequent runs.
+            I completed the AWS infrastructure for this system in January 2021, leading to the official <cite>Farmageddon</cite> launch on July 24, 2021!
+        </p>
+        <p>
+            In late 2021, I worked on some additional features, including a more complete stats/leaderboard system,
+            tweaks to how players' "cow sprites" were associated with their previous runs, and a full In-App Purchasing system using the Steam WebAPI.
+            My last major contribution during December 2021 was to get the entire backend system running on a single machine so that Solidplasma could demo
+            <cite>Farmageddon</cite> through spotty internet at Super MAGFest 2022.
+            This was the first time I ever got a client/server system to work between two physically connected machines!
+        </p>
+        <p>
+            While there is still occasional bug fixing to do, my involvement in <cite>Farmageddon</cite> mostly ended in late 2022,
+            allowing me to get back to developing my own games (particularly <a href="/projects/mobile/hhh"><cite>High Hand Hold'em</cite></a>).
+        </p>
+    </div>
+</section>
+
+<section id="background" class="row">
+    <div id="details" class="col">
+        <h2 class="text-center">Technical Details</h2>
+        <p>I am proud of several technical details in this game:</p>
+        <ul>
+            <li>
+                The wide array of AWS services that I was able to utilize, including:
+                <ul>
+                    <li>AWS Lambda for custom "playback" validation logic, with SAM for local testing</li>
+                    <li>S3 to store the playback files (we also had designs for a DynamoDB-based system for better consistency, but it was never prioritized)</li>
+                    <li>API Gateway to expose the playbacks to the client GameMaker code over a REST API</li>
+                    <li>CloudWatch for logging/debugging</li>
+                    <li>EventBridge to produce automated events for cleaning up old playbacks and generating new map seeds</li>
+                    <li>CloudFormation to capture all resources in Infrastructure as Code</li>
+                </ul>
+            </li>
+            <li>
+                My thorough specifications of API request/response schemas and backend data flows,
+                to help Solidplasma Studios (and myself) clearly understand the system before we started building, avoiding "cowboy coding"
+            </li>
+            <li>
+                Establishing "demo mode" as a first-party citizen within the codebase to support the Super MAGFest 2022 demo.
+                This included using the file system rather than S3 for storing player runs,
+                and referencing Lambda Functions through local SAM deployments rather than the Lambda service.
+            </li>
+            <li>Learning the Steam WebAPI and building well-tested Lambda Functions for IAP inventory/purchasing</li>
+            <li>
+                The support that I was able to provide for this game during live issues.
+                I became very skilled with CloudWatch Log Insights queries, Metrics, and X-Ray traces to diagnose latency/concurrency issues promptly.
+            </li>
+            <li>
+                Building all of these backend systems on a tight indie budget.
+                I purposely avoided costlier AWS services like RDB and ElastiCache,
+                allowing the game to scale effectively; it cost only a few dollars per month during the early beta phase!
+            </li>
+        </ul>
+    </div>
+</section>

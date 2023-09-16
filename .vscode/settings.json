@@ -10,13 +10,16 @@
         "gameover",
         "Gameplay",
         "Royale",
+        "Solidplasma",
         "Taurean",
         "Vicarel",
         "webp",
     ],
     "cSpell.words": [
         "derpy",
-        "toggleable",
+        "leaderboard",
+        "roguelike",
+        "toggleable"
     ],
     "html.format": "preserve-aligned"
 }
