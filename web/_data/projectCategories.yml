@@ -107,10 +107,6 @@
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2018/games/demiswordbubonic
-      - text: Source
-        title: coming soon
-        icon: github
-        href:
       years:
         start: 2018
         end: 2018
