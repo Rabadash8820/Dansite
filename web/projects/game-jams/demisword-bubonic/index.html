@@ -1,13 +1,54 @@
 ---
 ---
-<div class="row">
-    <section id="background" class="col">
-        <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+<section id="background" class="row">
+    <div class="col">
+        <h2 class="text-center">Background</h2>
+        <p>
+            I built <cite>DemiSword: Bubonic</cite> during Global Game Jam 2018.
+            My first game jam experience the previous summer had not been great, so I almost didn't attend this year.
+            Luckily, though, my business partner and I both decided to get tickets.
+            During the theme presentation, I got to joking around with a guy that I knew from college and two other girls,
+            who would become the other programmer, sound designer, and one of the artists, respectively.
+            By the end of the presentation, we had decided to collaborate, and my business partner joined on as another artist when he found me afterward.
+        </p>
+        <p>
+            The theme was "Transmission", so the other programmer had an idea for a 2-player game where something is being "transmitted" between the players.
+            We decided that the "thing" would be a powerful sword, and the players had to throw it back and forth because it was too powerful
+            for one player to hold forever (i.e., it would slowly drain their health), but it was still their only weapon against waves of enemies.
+            Swords got the group thinking about an old, medieval setting, so the enemies became rats infested with bubonic plague!
+            To make the sword itself seem otherworldly, the artists gave it a vibrant mix of colors and almost floral shape.
+        </p>
+        <p>
+            The game came together very nicely, with awesome backgrounds from my business partner, character sprites from the other artist,
+            excellent music and custom SFX from our sound designer, and tight controls by our other programmer;
+            I built the enemy AI and the tutorial. We thought of several different ideas for the game's name,
+            eventually combining two of them into <cite>DemiSword: Bubonic</cite>, as seen on the game's GGJ page.
+            During the final presentation, I introduced the game, then the other programmer commentated while two volunteers from the audience played,
+            which was very gratifying to watch!
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center">Technical Details</h2>
+        <p>
+            <cite>DemiSword: Bubonic</cite> was my first group game project.
+            My business partner and I had started <a href="/projects/mobile/hhh"><cite>High Hand Hold'em</cite></a> that summer,
+            but we were the only two working on it.
+            So, this game was my first experience with making a design doc, defining/delegating gamedev tasks,
+            and managing code and binary assets in the same version control system (in this case, Unity Collaborate).
+        </p>
+        <p>
+            When building the enemy AI, I was trying to emulate the "walls" of enemies seen in one of my favorite Flash games,
+            <a href="https://www.crazymonkeygames.com/Boxhead-The-Zombie-Wars.html" {{ site.externalLinkAttributes }}><cite>Boxhead: the Zombie Wars</cite></a>,
+            I think I achieved that feel to good effect (see the GIFs above).
+            Thinking back on the code, it was not very efficient (just a bunch of for loops);
+            I would try to parallelize the enemy processing with something like Unity's Job System if were I to do it all again.
+        </p>
+        <p>
+            The inclusion of the tutorial and quit buttons was also pretty slick. Little things like this are often overlooked in game jam games,
+            but they add that extra bit of polish to our presentation, especially with the "opening narration" that I was able to integrate into the tutorial.
+        </p>
+    </div>
+</section>

@@ -98,7 +98,7 @@
           Title screen with white text surrounded by little white monster faces,
           in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
     - slug: demisword-bubonic
-      header: "Demisword: Bubonic"
+      header: "DemiSword: Bubonic"
       links:
       - text: Download (Win64)
         icon: download
@@ -114,18 +114,22 @@
       years:
         start: 2018
         end: 2018
+      carouselAspectRatio: 16x9
       cardImage:
-        src: /projects/game-jams/demisword-bubonic/demisword-bubonic.jpg
+        src: /projects/game-jams/demisword-bubonic/demisword-bubonic-title-v1.webp
         alt: >
           Title screen with white text above a dark a mountainous terrain full of black rats with white eyes,
           and above them are two black human figures with white eyes, one holds a torch and the other holds the titular sword,
           which has a multicolor handle and a large purple flower-like blade
       images:
-      - src: /projects/game-jams/demisword-bubonic/demisword-bubonic.jpg
-        alt: >
-          Title screen with white text above a dark a mountainous terrain full of black rats with white eyes,
-          and above them are two black human figures with white eyes, one holds a torch and the other holds the titular sword,
-          which has a multicolor handle and a large purple flower-like blade
+      - src: /projects/game-jams/demisword-bubonic/demisword-throw-then-slash-v1.gif
+        alt: Gameplay GIF of the peasant-like player character throwing the titular sword through a swarm of rats, then picking it back up to slash them
+      - src: /projects/game-jams/demisword-bubonic/demisword-dodge-throw-v1.gif
+        alt: Gameplay GIF of the peasant-like player character dodge-rolling to grab the titular sword, then throwing it back through a swarm of rats
+      - src: /projects/game-jams/demisword-bubonic/demisword-wave1-v1.gif
+        alt: Gameplay GIF of the peasant-like player character slashing at a wave of rats with the titular sword
+      - src: /projects/game-jams/demisword-bubonic/demisword-sword-spawn-v1.webp
+        alt: Gameplay screenshot of two player characters standing by the titular sword after it spawned on a pedestal
 
 - slug: libraries
   header: Libraries
