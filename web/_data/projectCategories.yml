@@ -88,15 +88,29 @@
         start: 2019
         end: 2019
       cardImage:
-        src: /projects/game-jams/send-them-home/send-them-home.jpg
+        src: /projects/game-jams/send-them-home/send-them-home-title-v1.webp
         alt: >
           Title screen with white text surrounded by little white monster faces,
           in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
       images:
-      - src: /projects/game-jams/send-them-home/send-them-home.jpg
+      - src: /projects/game-jams/send-them-home/send-them-home-bedroom-lightning-v1.gif
+        alt: Gameplay GIF of the witch-like player character standing in a candle-lit bedroom with lighting flashes casting ominous shadows of monsters on the floor
+      - src: /projects/game-jams/send-them-home/send-them-home-demon1-v1.gif
         alt: >
-          Title screen with white text surrounded by little white monster faces,
-          in the background is an intimidating mansion on a distant hill at dusk with mysterious black spirits flying out and into the sky
+          Gameplay GIF of the player defeating the first demon, a dark grinning thing with stick-like fingers and broken horns,
+          in the hallway by drawing a pentagram inside a circle of candles, which sucks the demon into the floor
+      - src: /projects/game-jams/send-them-home/send-them-home-demon2-v1.gif
+        alt: >
+          Gameplay GIF of the player defeating the second demon, a black insectoid thing with one eye and grinning teeth,
+          in the bathroom by placing a crystal in the sink and lighting candles, which sucks the demon into the mirror
+      - src: /projects/game-jams/send-them-home/send-them-home-demon3-v1.gif
+        alt: >
+          Gameplay GIF of the player defending her sister's body in the bedroom by placing salt in the doorway and drawing a pentagram with blood
+          while the third demon, a large humanoid thing with tentacles and eyes in its chest, slowly enters through a portal in the wall
+      - src: /projects/game-jams/send-them-home/send-them-home-gameover-v1.webp
+        alt: >
+          Screenshot of the game over screen after defeating all demons, showing a gravestone that says "END" surrounded by purple and white flowers,
+          with the dark mansion on the hill from the main menu visible in the distance
     - slug: demisword-bubonic
       header: "DemiSword: Bubonic"
       links:
