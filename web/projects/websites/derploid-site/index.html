@@ -1,13 +1,61 @@
 ---
 ---
-<div class="row">
-    <section id="background" class="col">
-        <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+<section id="background" class="row">
+    <div class="col">
+        <h2 class="text-center">Background</h2>
+        <p>
+            This is the basic website that I built for Derploid Entertainment, the company that I started in 2017 with a partner from the Cleveland Game Developers.
+            We made various attempts at creating an online presence for the company, including a Facebook page, Twitter account, and Gmail account,
+            but it always felt weird trying to promote ourselves on social media when we didn't have a finished game released yet.
+            My partner had been building a static website with Bootstrap Studio but it never got very far as he is not a web developer.
+            So, in April 2021, I finally set up a new git repository to build the site with traditional static files.
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center">Technical Details</h2>
+        <p>
+            I initially hosted the Derploid site files (made by my partner in Bootstrap Studio)
+            on <a href="https://aws.amazon.com/s3" {{ site.externalLinkAttributes }}>Amazon S3</a>,
+            using <a href="https://aws.amazon.com/cloudfront" {{ site.externalLinkAttributes }}>AWS CloudFront</a> as a CDN.
+            To this end, I created some YAML CloudFormation templates to encode the necessary AWS resources, like the S3 Bucket and CloudFront Distribution,
+            as well as <a href="https://aws.amazon.com/certificate-manager" {{ site.externalLinkAttributes }}>AWS Certificate Manager</a> certs
+            and <a href="https://aws.amazon.com/route53" {{ site.externalLinkAttributes }}>Route53</a> HostedZones for DNS management and redirects.
+        </p>
+        <p>
+            Later, in May 2022, I started redesigning the site with custom markup
+            and <a href="https://getbootstrap.com" {{ site.externalLinkAttributes }}>Bootstrap</a> components.
+            I knew I wanted to have a proper static site generator at my disposal,
+            so I pivoted from S3/CloudFront to <a href="https://pages.github.com" {{ site.externalLinkAttributes }}>GitHub Pages</a>.
+            This system simplified the hosting (the GitHub repository itself was essentially self-hosting),
+            and allowed me to use the classic static site generator, <a href="https://jekyllrb.com" {{ site.externalLinkAttributes }}>Jekyll</a>.
+            This was my first Jekyll project, and while Ruby may not be my strongest programming language,
+            I still fell in love with Jekyll's simple layout/include systems and the
+            <a href="https://shopify.github.io/liquid" {{ site.externalLinkAttributes }}>Liquid</a> template language.
+        </p>
+        <p>
+            I also pivoted to <a href="https://aws.amazon.com/cdk" {{ site.externalLinkAttributes }}>AWS Cloud Development Kit (CDK)</a> for
+            Infrastructure as Code around this time over CloudFormation, as its TypeScript APIs were much more succinct/powerful than YAML.
+            Finally, I set up a SendinBlue (now <a href="https://www.brevo.com" {{ site.externalLinkAttributes }}>Brevo</a>) account for creating email templates,
+            based on an evaluation of popular email marketing systems in 2022,
+            which we are using for newsletter signup forms for our in-progress mobile game, <a href="/projects/mobile/hhh"><cite>High Hand Hold'em</cite></a>.
+        </p>
+        <p>Some other little engineering details that I'm proud of include:</p>
+        <ul>
+            <li>
+                Creating HTTP redirects to get <code>derploid.com</code>, <code>.net</code>, and <code>.org</code> (with or without <code>www.</code>)
+                all redirecting to the same home page
+            </li>
+            <li>Using appropriate SPF, DKIM, and DMARC records to the site's DNS records to secure our emails and prevent abuse by scammers</li>
+            <li>Adding <code>ads.txt</code> and <code>app-ads.txt</code> files to the site to secure our mobile games' ad monetization</li>
+            <li>
+                Using <a href="https://aws.amazon.com/cloudwatch" {{ site.externalLinkAttributes }}>AWS CloudWatch</a> alarms
+                to monitor the website's DNSSEC and HTTP health
+            </li>
+            <li>Deploying another "environment" of the site on a separate (cheaper) domain with separate Brevo and GitHub Pages setups for testing</li>
+            <li>Defining <a href="https://containers.dev" {{ site.externalLinkAttributes }}>devcontainers</a> for developing the CDK app and Jekyll content</li>
+        </ul>
+    </div>
+</section>
