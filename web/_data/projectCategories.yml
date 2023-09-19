@@ -65,11 +65,39 @@
         start: 2020
         end: 2020
       cardImage:
-        src: /projects/game-jams/body-maintenance/body-maintenance.png
+        src: /projects/game-jams/body-maintenance/body-maintenance-card-v1.webp
         alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
       images:
-      - src: /projects/game-jams/body-maintenance/body-maintenance.png
-        alt: Title screen with white text on a fleshy background with little main character in white uniform with blue hat and a lever nearby
+      - src: /projects/game-jams/body-maintenance/body-maintenance-title-v1.gif
+        alt: >
+          Gameplay GIF of the title screen with white text on a pulsating fleshy background
+          with little main character in white uniform with blue hat and a lever nearby
+      - src: /projects/game-jams/body-maintenance/body-maintenance-minimap-v1.gif
+        alt: >
+          Gameplay GIF of the minimap showing colored dots moving around a black and white body outline as players move,
+          with white text saying "First day of school, 2 years old, toddler", and a circular exclamation mark symbol with yellow timer pointing at the brain
+      - src: /projects/game-jams/body-maintenance/body-maintenance-brain-v1.gif
+        alt: >
+          Gameplay GIF of the brain minigame, where players pull a lever to see a sequence of 4 colored lights on the brain,
+          then jump into colored buttons in the same sequence to clear the mind
+      - src: /projects/game-jams/body-maintenance/body-maintenance-liver-v1.gif
+        alt: >
+          Gameplay GIF of the liver minigame, where greenish "waste" and golden "nutrients" drop down onto two conveyor belts,
+          and players must flip levers to toggle the belts' direction so items fall into the right bucket
+      - src: /projects/game-jams/body-maintenance/body-maintenance-lungs-v1.gif
+        alt: >
+          Gameplay GIF of the lungs/heart minigame, where players must jump back and forth on two pink trampoline-like lungs
+          to charge up a green meter plugged into the heart
+      - src: /projects/game-jams/body-maintenance/body-maintenance-intestines-v1.gif
+        alt: Gameplay GIF of the intestines minigame, where players must empty four tanks of poo by rapidly pushing a plunger in front of each
+      - src: /projects/game-jams/body-maintenance/body-maintenance-groin-v1.gif
+        alt: >
+          Gameplay GIF of the groin minigame, where players must navigate through a maze of disco party lights and smoke to flip some light switches and calm the
+          "party in the pants", but the walls of the maze are only visible within a small circle around the player
+      - src: /projects/game-jams/body-maintenance/body-maintenance-screen-layout-v1.webp
+        alt: >
+          Gameplay screenshot of the overall screen layout, with a black and white body outline in the center column of the screen with cartoonish outlines
+          of each organ system, and a screen centered on each of the four players in each corner
     - slug: send-them-home
       header: Send Them Home
       links:
