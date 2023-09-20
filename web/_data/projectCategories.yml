@@ -28,6 +28,7 @@
         alt:
       - src: /projects/game-jams/root-canal/root-canal-3.png
         alt:
+
     - slug: space-game
       header: "\"Space Game\""
       links:
@@ -47,6 +48,7 @@
       images:
       - src: /projects/game-jams/space-game/space-game.png
         alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
+
     - slug: body-maintenance
       header: Body Maintenance
       links:
@@ -98,6 +100,7 @@
         alt: >
           Gameplay screenshot of the overall screen layout, with a black and white body outline in the center column of the screen with cartoonish outlines
           of each organ system, and a screen centered on each of the four players in each corner
+
     - slug: send-them-home
       header: Send Them Home
       links:
@@ -139,6 +142,7 @@
         alt: >
           Screenshot of the game over screen after defeating all demons, showing a gravestone that says "END" surrounded by purple and white flowers,
           with the dark mansion on the hill from the main menu visible in the distance
+
     - slug: demisword-bubonic
       header: "DemiSword: Bubonic"
       links:
@@ -185,6 +189,7 @@
       years:
         start: 2019
         end: present
+
     - slug: unity-util
       header: UnityUtil
       links:
@@ -261,6 +266,7 @@
         alt: Gameplay screenshot of the game's fall skin, with browner grass and leaves
       - src: /projects/pc/farmageddon/farmageddon-winter-v1.webp
         alt: Gameplay screenshot of the game's winter skin, with snow covering the grass and presents, trees, and snowmen scattered around
+
     - slug: gravity-copter
       header: "GravityCopter"
       links:
@@ -310,6 +316,7 @@
       cardImage:
         src: /projects/websites/derploid-site/derploid-site.png
         alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
+
     - slug: dansite
       header: The Dansite
       links:
@@ -345,6 +352,7 @@
         allowFullScreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128348&authkey=!AOp-TA7oX7rm7HY&em=2
+
     - slug: mobile-ads-less-awful
       header: Making Mobile Ads Less Awful
       years:
@@ -356,6 +364,7 @@
         allowFullScreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128354&authkey=!ACv-UMJf4AvgnIM&em=2
+
     - slug: singletons-doing-them-wrong
       header: "Singletons: You're Doing Them Wrong"
       links:
@@ -371,6 +380,7 @@
         allowFullScreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126998&authkey=!AHX4HJO89gzLt_Y&em=2
+
     - slug: advanced-ifs
       header: "Advanced Gameplay Programming: If Statements"
       links:
@@ -383,6 +393,7 @@
       embeds:
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126772&authkey=!AOQjp_1CToFhPnE&em=2
+
     - slug: designing-new-lifeforms
       header: Designing New Lifeforms
       years:
@@ -394,6 +405,7 @@
         allowFullScreen: true
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121685&authkey=!AAG8Gax-vW7LBm4&em=2
+
     - slug: supercharging-unity-workflow
       header: "Supercharging Your Unity Workflow With Visual Studio and Git"
       links:
