@@ -21,7 +21,7 @@ html {
     display: block !important;
 }
 
-/* Override Bootstrap carousel indicator colors (with greater CSS specificiy) */
+/* Override Bootstrap carousel indicator colors (with greater CSS specificity) */
 [data-bs-theme] .carousel .carousel-indicators [data-bs-target] {
     background-color: rgba(var(--bs-body-color-rgb));
 }
