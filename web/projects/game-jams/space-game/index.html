@@ -1,13 +1,124 @@
 ---
 ---
-<div class="row">
-    <section id="background" class="col">
-        <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+<section id="background" class="row">
+    <div class="col">
+        <h2 class="text-center">Background</h2>
+        <p>
+            I originally built <cite>"Space Game"</cite> with a team during a Prime Gaming hackathon in October 2022.
+            The stated goal of the hackathon was to make software to improve Prime Gaming as a whole,
+            but it sort of turned into a game jam as one of the prompts encouraged making a casual web game similar to
+            <a href="https://www.nytimes.com/games/wordle/index.html" {{ site.externalLinkAttributes }}><cite>Wordle</cite></a>.
+            I of course needed no further excuse to get paid to make a game for a week!
+        </p>
+        <p>
+            After we were randomly sorted into teams,
+            I pitched the idea of a "Game Mode" dropdown on the PG website that could turn the entire website into one of a selection of mini games,
+            similar to the famous <a href="https://www.google.com/doodles?q=interactive" {{ site.externalLinkAttributes }}>interactive Google Doodles</a>
+            or the old <a href="https://homestarrunner.com/viderogames" {{ site.externalLinkAttributes }}>Homestar Runner games menu</a>.
+            As a first mini game option, I pitched a side scroller game where players control a spaceship "hunting for deals" physically floating in space,
+            all while dodging asteroids (which they could push with a sort of "impulse beam") worm-like aliens, and pirates trying to steal the deals.
+        </p>
+        <p>
+            The team agreed to work on this idea, and to use the Unity Engine to make a web game.
+            We went with a classic arcade game, pixelated look, though some of the free images we found were higher-resolution.
+            There were four of us, but all of us were programmers, which posed a unique challenge compared to game jam teams that I had joined before.
+            Moreover, one team member was on-call and not able to devote much attention to the hackathon,
+            while the other two were inexperienced with Unity and gamedev in general.
+            Thus, they mainly found free assets to use for the sprites and sound effects, or <em>made</em> sprites with
+            <a href="https://www.pixilart.com/draw" {{ site.externalLinkAttributes }}>Pixilart</a>,
+            while I did almost all of the gameplay programming and Unity scene setup—a challenge that I relished!
+        </p>
+        <p>
+            I was super pleased with how well the game together by applying best practices like
+            event-driven programming, dependency injection, data-driven design, etc.—particularly
+            the game's floating head enemies, which I put together in the last 24 hours!
+            So, the following summer, I adapted the game for a talk at GDEX 2023:
+            <a href="/projects/talks/building-interactive-enemy">Live Demo: Building an Interactive Enemy</a>.
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center">Technical Details</h2>
+        <p>I am proud of several of my technical/design decisions while building this game:</p>
+        <ul>
+            <li>
+                The nondiegetic UI as a whole is minimal but effective, using as little text as possible:
+                <ul>
+                    <li>The opening "tutorial" UI shows which buttons control which movements with icons only.</li>
+                    <li>The health bar is just a "shield" icon next a green bar that decreases to red when the player is damaged.</li>
+                    <li>
+                        A "counter" in the top left gives the player a sense of progress toward collecting all 4 treasures,
+                        but only appears after the first treasure is collected.
+                    </li>
+                    <li>
+                        A little purple "waypoint" spins around the player like a compass needle, always pointing back at the space station where treasure is collected.
+                    </li>
+                    <li>When a treasure is collected, it floats along behind the player until returned.</li>
+                </ul>
+            </li>
+            <li>
+                Several gameplay systems are satisfactorily <a href="https://www.youtube.com/watch?v=Fy0aCDmgnxg" {{ site.externalLinkAttributes }}>"juicy"</a>:
+                <ul>
+                    <li>When damaged, the spaceship flashes red and the health bar flashes white.</li>
+                    <li>
+                        Sounds are emitted when the spaceship retro rockets are activated,when the ship collides with anything,
+                        when treasure is collected or returned, and when the "monster" roars or shoots its lasers.
+                    </li>
+                    <li>The impulse beam has a little red "laser pointer". When it crosses an asteroid in range, a spinning red reticule appears over the asteroid.</li>
+                    <li>Asteroids collide with other asteroids, and their relative masses make the collisions feel realistic.</li>
+                    <li>"Sparkles" are emitted when the player collects or returns treasure.</li>
+                    <li>The monsters' laser bolts make little explosions when they impact other physical objects.</li>
+                </ul>
+            </li>
+            <li>
+                The level design features several unique "zones" to provide variety and a sense of progression.
+                These zones are connected by "trails" of asteroids so players don't get lost in space (the space station waypoint also helps with this).
+                The entire level is surrounded by a circular "wall" of large asteroids,
+                so neither the player nor asteroids or monster laser bolts can fly off to infinity (or beyond).
+            </li>
+            <li>
+                The asteroid "zones" can be visited in any order, but the "intended" progression, for increasing difficulty, is:
+                <ul>
+                    <li>
+                        The zone closest to the space station, connected by the first trail of asteroids that the player sees so they are drawn to it first.
+                        This zone simply tests players' ability to navigate around asteroids with their ship's unfamiliar controls.
+                    </li>
+                    <li>
+                        Another zone connected to the first by an asteroid trail, encouraging players to continue searching there after returning the first treasure.
+                        This zone requires players to use the impulse beam to push asteroids out of the way of the treasure.
+                    </li>
+                    <li>
+                        A third zone is hidden within a thick wall of large asteroids that the player must navigate around,
+                        pushing many smaller asteroids out of the way as they go.
+                    </li>
+                    <li>
+                        The final zone requires the most precision: pushing a small asteroid into a medium asteroid to unblock an opening between large asteroids.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The player's movements feel unique but grounded in reality, using "retro rockets" on the spaceship
+                (indicated by 4 little particle emitters at the corners) to apply 2D physics forces that move/rotate it.
+                Using physics to move the player also made bumping into asteroids and enemies much easier to set up.
+            </li>
+            <li>The monsters only spawn after two treasures have been collected, so players have time to adjust to the controls before enemies spawn.</li>
+            <li>
+                All significant entities within the game (the player, space stations, treasure, monsters, asteroid zones, etc.) were encapsulated in Unity prefabs.
+                This made viewing diffs in version control easier, reduced the setup to create new "instances" of those entities,
+                lent itself to procedural spawning (for the monsters/lasers), etc.
+            </li>
+            <li>
+                Finally, the game's "monsters" were the most sophisticated NPCs I had yet built, which is ultimately what inspired the aforementioned GDEX talk.
+                Their design came from an emoji in the PG Slack workspace tagged <code>:hyper-bezos:</code>
+                that was basically an image of Jeff Bezos laughing with glowing red eyes. Using it was an inside joke for the hackathon.
+                I animated the image's mouth, got it to shoot lasers out of its eyes on a timer that were always pointed at the player and could collide with asteroids,
+                and gave it AI to chase the player at a distance within a region of the map defined by a 2D <code>MeshCollider</code>,
+                returning to one of several "guard points" in that region when the player exited it to give the impression
+                of the monster "retreating" ominously back into space.
+                I did not have time to implement an object pool for the laser bolts, but that would've been my next optimization.
+            </li>
+        </ul>
+    </div>
+</section>

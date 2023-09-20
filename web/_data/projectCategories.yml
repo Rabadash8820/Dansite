@@ -43,11 +43,27 @@
         start: 2022
         end: 2022
       cardImage:
-        src: /projects/game-jams/space-game/space-game.png
-        alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
+        src: /projects/game-jams/space-game/space-game-card-v1.webp
+        alt: Gameplay screenshot of the player's purple spaceship flying through space, dodging asteroids, and collecting treasure
       images:
-      - src: /projects/game-jams/space-game/space-game.png
-        alt: Gameplay GIF showing player ship flying through space, dodging asteroids, and collecting treasure
+      - src: /projects/game-jams/space-game/space-game-treasure-collect-v1.gif
+        alt: Gameplay GIF of the player's purple spaceship flying through space, dodging asteroids, and collecting purple star-shaped treasures
+      - src: /projects/game-jams/space-game/space-game-impulse-beam-v1.gif
+        alt: Gameplay GIF of the player pushing asteroids out of the way of treasure with a blue "impulse beam"
+      - src: /projects/game-jams/space-game/space-game-monster-crossfire-v1.gif
+        alt: Gameplay GIF of the player dodging large asteroids and red laser bolts from the eyes of two giant floating heads with chomping mouths
+      - src: /projects/game-jams/space-game/space-game-treasure-return-v1.gif
+        alt: >
+          Gameplay GIF of the player returning their purple star-shaped treasure to the central space station,
+          causing a "1 / 4" counter to appear in the top-left corner
+      - src: /projects/game-jams/space-game/space-game-monster-lasers-v1.gif
+        alt: >
+          Gameplay GIF of the player dodging red laser bolts from the eyes of a giant floating head with chomping mouth,
+          as the bolts impact a small asteroid and send it spinning away
+      - src: /projects/game-jams/space-game/space-game-tutorial-v1.webp
+        alt: >
+          Gameplay screenshot of the opening UI for a new game with simple button icons indicating that the W and S buttons move the spaceship forward and back,
+          while the A and D keys rotate the ship counter-clockwise and clockwise.
 
     - slug: body-maintenance
       header: Body Maintenance
