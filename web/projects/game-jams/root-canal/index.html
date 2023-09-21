@@ -1,13 +1,86 @@
 ---
 ---
-<div class="row">
-    <section id="background" class="col">
-        <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+<section id="background" class="row">
+    <div class="col">
+        <h2 class="text-center">Background</h2>
+        <p>
+            I built <cite>Root Canal</cite> with a team during Global Game Jam in January 2023.
+            This was the first GGJ event hosted by the Cleveland Game Developers since the COVID-19 pandemic began,
+            so it was great to see my fellow members again after nearly 3 years.
+            I was sitting with two guys during the announcement of the theme: "Roots".
+            I expected that I might work with them, but while getting food I ended up chatting with some other people about their backgrounds.
+            We were clicking well, but most of them were programmers or inexperienced, so I excused myself to mingle with some others.
+            I eventually saw another group, including one of the programmers that I had spoken with before,
+            that was already discussing game ideas so I asked if I could listen in.
+        </p>
+        <p>
+            The "Roots" theme had made them think of "root canal" as an idea for a game, where the player would control a bunch of bacteria
+            trying to infect a tooth while avoiding dangers like toothbrushes and mouthwash.
+            They drifted from tower defense to RTS, and from infecting multiple teeth to infecting a single tooth with more anatomically correct tissue layers.
+            Another artist and another programmer ended up sitting with them also, so we were all like, "Wanna join?"
+            The final team included myself (a programmer and Unity generalist), another Unity programmer, another general programmer,
+            three artists (one specializing in pixel art), and a musician—the largest game jam team with which I had worked up to that point.
+        </p>
+        <p>
+            The game came together quite well, especially on the last day. I was super impressed by our pixel artist who became very proficient
+            with both Git/GitHub and Unity over the course of the jam. The other Unity programmer was also really cool,
+            and it was pleasant to work with another knowledgeable programmer, though she was still a beginner with Unity.
+            In fact, this was the first year where I spent almost as much time guiding and coaching my fellow developers as on working myself.
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="game-overview" class="row">
+    <div class="col">
+        <h2 class="text-center">Game Overview</h2>
+        <p>
+            In its final form, <cite>Root Canal</cite> was a 2D RTS game for PC.
+            The player starts with 3 adorable bacteria characters with pickaxes (drawn by our talented pixel artist),
+            and can click to move them around a tile-based map and mine through the layers of a tooth:
+            white enamel, yellowish dentin, and red veiny pulp. Within the pulp, at the center of the overall tooth, is the nerve.
+            Once a bacterium reaches the nerve, the player wins!
+        </p>
+        <p>
+            As their bacteria collect "nutrients" from the mined tissues, players can use these nutrients to purchase power-ups from a side menu.
+            The only power-up that we actually implemented was "Cell Divide", which duplicates a random one of the bacteria.
+            Finally, a blue wall of "mouth wash" will cover the entire map on a timer, draining the bacteria's health as it goes;
+            if all bacteria die, the player loses!
+        </p>
+    </div>
+</section>
+
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center">Technical Details</h2>
+        <p>This game represented a couple firsts for me:</p>
+        <ul>
+            <li>
+                It was the first time that I'd worked on a team with (or even witnessed) artists using generative AI.
+                The two artists that I initially sat with during planning had actually brought a computer hosting a Large Language Model to the jam site,
+                and they used it to generate the main menu background, some "opening cinematic" still frames (that unfortunately were never used due to time constraints),
+                and initial mockups for the purchasable items (which our pixel artist then refined).
+            </li>
+            <li>
+                It was also the first time that I used Unity's Tilemap package, and it was quite user-friendly.
+                By the end of the first day, I had already set up an entire tile map in the shape of a tooth with the three tissue layers using
+                placeholder textures that our pixel artist could then replace.
+            </li>
+        </ul>
+        <p>
+            I developed the <code>Health</code> component used both for breaking the tooth tiles and for damaging bacteria from mouthwash,
+            as well as the logic for bacteria movement <em>through</em> the tilemap (without crossing un-mined tiles) as the tilemap is being updated during mining.
+            This logic was pretty basic, only allowing bacteria to move in straight lines until they bumped into an un-mined tile;
+            I would've liked to use a more sophisticated pathfinding algorithm <em>around</em> the tiles like
+            <a href="https://en.wikipedia.org/wiki/Pathfinding#Dijkstra's_algorithm" {{ site.externalLinkAttributes }}>Dijkstra's</a>
+            or <a href="https://en.wikipedia.org/wiki/Pathfinding#A*_algorithm" {{ site.externalLinkAttributes }}>A*</a>.
+        </p>
+        <p>
+            Finally, I set up the purchasing side menu UI and associated logic.
+            The interface is a bit clunky; players must select an item with one click and then click the "Buy" button with another,
+            all while the screen is scrolling in the background.
+            A better UX would've been either 1-click purchases, or clicking the <em>item</em> a second time to purchase.
+            And, obviously, we should've prevented the background from scrolling while the cursor is over the menu UI.
+            These are just tweaks that we never had time to implement.
+        </p>
+    </div>
+</section>

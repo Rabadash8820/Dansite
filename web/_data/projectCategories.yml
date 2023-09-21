@@ -19,15 +19,23 @@
         start: 2023
         end: 2023
       cardImage:
-        src: /projects/game-jams/root-canal/root-canal.png
+        src: /projects/game-jams/root-canal/root-canal-card-v1.webp
         alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
       images:
-      - src: /projects/game-jams/root-canal/root-canal.png
-        alt: Title screen with large white text on a black background with little green bacteria people and purple debris on a white surface
-      - src: /projects/game-jams/root-canal/root-canal-2.png
-        alt:
-      - src: /projects/game-jams/root-canal/root-canal-3.png
-        alt:
+      - src: /projects/game-jams/root-canal/root-canal-moving-mining-v1.gif
+        alt: >
+          Gameplay GIF of 3 little green bacteria characters with pickaxes being moved around a red background, following green lines as they go,
+          and starting to "mine" a white enamel surface
+      - src: /projects/game-jams/root-canal/root-canal-mouthwash-v1.gif
+        alt: Gameplay GIF of the little green bacteria mining as a blue wall of mouthwash descends from above and a yellowish dentin layer is visible below the enamel
+      - src: /projects/game-jams/root-canal/root-canal-tooth-layers-v1.gif
+        alt: Gameplay GIF of the little green bacteria mining with the white enamel, yellowish dentin, and red veiny pulp layers of the tooth all visible
+      - src: /projects/game-jams/root-canal/root-canal-nerve-v1.gif
+        alt: Gameplay GIF of the little green bacteria mining through the red veiny pulp toward a yellow nerve surrounded by red and blue capillaries pumping blood
+      - src: /projects/game-jams/root-canal/root-canal-credits-v1.gif
+        alt: >
+          GIF of the credits screen with black text on a light green background and lots of the little green bacteria jiggling around the side,
+          holding pickaxes and wearing party hats
 
     - slug: space-game
       header: "\"Space Game\""

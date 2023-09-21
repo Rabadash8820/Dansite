@@ -38,12 +38,14 @@
         "minigame",
         "minigames",
         "nondiegetic",
+        "pathfinding",
         "platformer",
         "Platformers",
         "playtesting",
         "Rigidbody",
         "roguelike",
         "Scriptable",
+        "tilemap",
         "toggleable"
     ],
     "html.format": "preserve-aligned"
