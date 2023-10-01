@@ -22,19 +22,20 @@ title: Home
 
 <main class="container">
 
-    <section id="welcome" class="row row-cols-1 row-cols-md-2 dan-pad-under-header">
+    <section id="welcome" class="row row-cols-1 row-cols-lg-2 dan-pad-under-header">
         <div class="col">
             <img class="w-100" src="index/dan-vicarel-headshot-2023.webp"
                 alt="Head shot of Dan in a blue collared shirt with a beta fish pattern on it, sitting at a desk with a MacBook, monitor, and blue Xbox One controller on it" />
         </div>
-        <div id="welcome" class="col">
-            <p class="lead">
+        <div class="col">
+            <p class="lead pt-2 pt-lg-0">
                 My name is Dan Vicarel, and you've found my little corner of the Internet!
-                This site is very much a work in progress, but I needed an interactive space for my portfolio.
-                You can view my full credentials on <a href="{{ site.data.contact.linkedin.uri }}">LinkedIn</a>.
+                I am a full-stack software engineer and game developer from Ohio.
+                For my full credentials, check out my <a href="{{ site.data.contact.linkedin.uri }}">LinkedIn</a> profile;
+                this site is more of an interactive portfolio.
             </p>
             <p class="lead">If you are looking to collaborate, please contact me at:</p>
-            <ul class="lead">
+            <ul class="lead list-unstyled">
                 {% for contact in site.data.contact %}
                 <li>
                     <a href="{{ contact.uri }}" class="text-decoration-none">
@@ -51,12 +52,12 @@ title: Home
             <h2 class="text-center display-2">My Projects</h2>
 
             <nav class="mt-4">
-                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                <div class="nav nav-pills flex-column flex-sm-row" id="nav-tab" role="tablist">
                     {% for category in site.data.projectCategories %}
-                    <button class="nav-link {% if forloop.first %}active{% endif %}"
+                    <button class="flex-sm-fill text-sm-center nav-link {% if forloop.first %}active{% endif %}"
                         id="nav-tab-{{ category.slug }}" data-bs-toggle="tab"
                         data-bs-target="#nav-{{ category.slug }}" type="button" role="tab"
-                        aria-controls="nav-{{ category.slug }}" aria-selected="true"
+                        aria-controls="nav-{{ category.slug }}"
                     >
                         <span class="h4 d-flex align-items-center">
                             {% include bootstrap-icons/{{ category.icon }}.svg class="me-2" title=false %} {{ category.header }}
