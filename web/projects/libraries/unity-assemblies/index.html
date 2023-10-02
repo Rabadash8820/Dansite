@@ -1,13 +1,68 @@
 ---
 ---
-<div class="row">
-    <section id="background" class="col">
-        <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+<section id="background" class="row">
+    <div class="col">
+        <h2 class="text-center">Background</h2>
+        <p>
+            <cite>Unity3D</cite> (or <cite>UnityAssemblies</cite>) is an open-source NuGet package that I started in 2019.
+            Oh, and <em>Unity® and the Unity logo are trademarks of Unity Technologies.</em>
+        </p>
+        <p>
+            Having worked with the .NET stack since ~2014, I was always frustrated when Unity's builtin Mono compiler
+            didn't allow me to use the latest .NET Standard APIs or C# language features,
+            especially after C# 6.0 dropped with great features like <code>nameof</code> and null-conditional operators.
+            To get around these limitations, I started writing my C# scripts in Visual Studio instead, then exporting the compiled DLLs
+            to my Unity projects with an MSBuild post-build event
+            (this was actually the subject of my <a href="/projects/talks/supercharging-unity-workflow">GDEX 2019 talk</a>.)
+        </p>
+        <p>I came to realize that this setup actually had a number of benefits:</p>
+        <ul>
+            <li>The aforementioned access to the latest C# language features (at least those that didn't also require the CoreCLR)</li>
+            <li>
+                A useful separation between programming "sources" and "assets".
+                That is, .cs source files could be stored in one folder of a repository outside the Unity project
+                while the compiled DLLs <em>were</em> stored in the Unity project.
+                This is similar to the separation for other assets (e.g., between PhotoShop .psd files and final images, or .blend files and final 3D meshes).
+            </li>
+            <li>Storing source files outside the Unity project also avoids "double compilation" of library code by both Visual Studio and Unity (Mono).</li>
+            <li>
+                Improved reusability: shared code (like my <a href="/projects/libraries/unity-util">UnityUtil</a> library) can be moved to an entirely separate repository
+                and imported as a .unitypackage or via a package manager like NuGet or UPM.
+            </li>
+        </ul>
+        <p>
+            The last benefit is what led me to create the Unity3D NuGet package.
+            Unity programmers like me could create Visual Studio solutions for their scripts, add this package,
+            and then they would have access to all of Unity's assemblies via MSBuild targets/properties.
+            The <a href="https://github.com/Rabadash8820/UnityAssemblies#why-another-nuget-package-for-unity">Why Another NuGet Package for Unity?</a>
+            section of the project's README expands on other packages that I considered and why I found them insufficient.
+            And I think others agreed!
+            As of this writing in 2023, my package has ~100 stars on GitHub and is easily my best-managed open source project,
+            while those other packages are no longer maintained.
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center">Technical Details</h2>
+        <p>I am proud of several technical details in this library:</p>
+        <ul>
+            <li>The thorough documentation in the README, complete with code samples and clear formatting.</li>
+            <li>The inclusion of typical open-source "Community Standards", including a <code>README.md</code>, Code of conduct, <code>CONTRIBUTING.md</code>, and <code>LICENSE.md</code>.</li>
+            <li>
+                Adherence to the <a href="https://keepachangelog.com/en/1.0.0/" {{ site.externalLinkAttributes }}>Keep a Changelog</a> and
+                <a href="https://semver.org/spec/v2.0.0.html" {{ site.externalLinkAttributes }}>Semantic Versioning</a> standards.
+            </li>
+            <li>
+                The use of test Visual Studio solutions and Unity projects to verify that
+                everything builds correctly before publishing new versions (documented in the
+                <a href="https://github.com/Rabadash8820/UnityAssemblies/blob/main/CONTRIBUTING.md" {{ site.externalLinkAttributes}}>CONTRIBUTING.md</a> file).
+            </li>
+            <li>
+                The complexity of MSBuild property functions used in the main
+                <a href="https://github.com/Rabadash8820/UnityAssemblies/blob/main/nupkg/build/Unity3D.props" {{ site.externalLinkAttributes }}>.props file</a>.
+            </li>
+        </ul>
+    </div>
+</section>
