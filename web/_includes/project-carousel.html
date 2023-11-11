@@ -7,7 +7,7 @@
 
 {% else %}
 
-<div id="projectImgCarousel" class="carousel slide mx-auto" style="max-width: 512px;" data-bs-ride="carousel">
+<div id="projectImgCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators bg-body-tertiary" style="--bs-bg-opacity: .5;">
         {% for image in include.project.images %}
         <button type="button" data-bs-target="#projectImgCarousel"
@@ -19,10 +19,9 @@
     <div class="carousel-inner">
         {% for image in include.project.images %}
         <div class="carousel-item
-            ratio ratio-{% if include.project.carouselAspectRatio %}{{ include.project.carouselAspectRatio }}{% else %}16x9{% endif %}
             {% if forloop.first %} active{% endif %}
         ">
-            <img src="{{ image.src }}" class="d-block" alt="{{ image.alt }}">
+            <img src="{{ image.src }}" class="d-block mx-auto mw-100" alt="{{ image.alt }}">
         </div>
         {% endfor %}
     </div>

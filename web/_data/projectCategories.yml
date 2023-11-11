@@ -180,7 +180,6 @@
       years:
         start: 2018
         end: 2018
-      carouselAspectRatio: 16x9
       cardImage:
         src: /projects/game-jams/demisword-bubonic/demisword-bubonic-title-v1.webp
         alt: >
@@ -233,7 +232,7 @@
   icon: phone
   projects:
     - slug: hhh
-      header: High Hand Hold'em
+      header: High Hand Hold'em™
       links:
       - text: Promo site
         icon: globe
@@ -275,7 +274,6 @@
       cardImage:
         src: /projects/pc/farmageddon/farmageddon-card-v1.webp
         alt: Title screen with white text on a red barn covered in fire and broken eggs with humanoid cows running toward it
-      carouselAspectRatio: 16x9
       images:
       - src: /projects/pc/farmageddon/farmageddon-fighting-v1.webp
         alt: >
@@ -306,7 +304,6 @@
       cardImage:
         src: /projects/pc/gravity-copter/gravity-copter-card-v1.webp
         alt: Gameplay screenshot of a silly low-resolution helicopter flying between grassy columns against a blue background
-      carouselAspectRatio: 1x1
       images:
       - src: /projects/pc/gravity-copter/gravity-copter-flying-v1.gif
         alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background
