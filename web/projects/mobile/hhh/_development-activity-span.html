@@ -1,0 +1,34 @@
+{% if include.level > 0 %}
+    {% assign levelClass = "success" %}
+{% elsif include.level < 0 %}
+    {% assign levelClass = "danger" %}
+{% else %}
+    {% assign levelClass = "warning" %}
+{% endif %}
+
+{% if include.level == 0 %}
+    {% assign levelLbl = "Somewhat active development" %}
+{% elsif include.level == 1 %}
+    {% assign levelLbl = "Active development" %}
+{% elsif include.level == -1 %}
+    {% assign levelLbl = "Inactive development" %}
+{% elsif include.level == 2 %}
+    {% assign levelLbl = "Very active development" %}
+{% else %}
+    {% assign levelLbl = "" %}
+{% endif %}
+
+{% assign absLevel = include.level | abs %}
+{% if absLevel >= 2 %}
+    {% assign levelIcon = "⬤⬤" %}
+{% else %}
+    {% assign levelIcon = "⬤" %}
+{% endif %}
+
+<hgroup>
+    <h3>
+        <span class="text-{{levelClass}}" title="{{levelLbl}}" aria-label="{{levelLbl}}">{{levelIcon}}</span>
+        {{include.heading}}
+    </h3>
+    <p><strong>{{include.subheading}}</strong></p>
+</hgroup>

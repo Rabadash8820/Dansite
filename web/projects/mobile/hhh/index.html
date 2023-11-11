@@ -1,13 +1,319 @@
 ---
 ---
-<div class="row">
-    <section id="background" class="col">
-        <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+<section id="overview" class="row">
+    <div class="col">
+        <h2 class="text-center">Overview</h2>
+        <p>
+            <cite>High Hand Hold'em</cite> is a 2D Poker-style card game for iOS/Android.
+            I was the lead engineering on this game, implementing all logic for procedural deal generation, scorekeeping, and statistics,
+            all UI layouts and state machines, all integration with backend frameworks for configuration, logging, ad mediation, and auth,
+            and the associated CI/CD Pipeline,
+            <a href="https://github.com/DerploidEntertainment/HighHandHoldem-Support" {{ site.externalLinkAttributes }}>support repo</a>,
+            and promotional site/newsletter (see the <a href="/projects/websites/derploid-site">Derploid site</a>).
+            I also contributed heavily to the game's overall design, evaluated alternative technologies for key functionality, and led multiple playtesting campaigns.
+        </p>
+        <p>
+            While the game has been a passion project for my business partner and I for several years,
+            we do mean to publicly release it in Q2 2024 as the first game of our new studio: Derploid Entertainment.
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="development" class="row">
+    <div class="col">
+        <h2 class="text-center">Development</h2>
+        <p>
+            Development of <cite>High Hand Hold'em</cite> began in June 2017, after I attended my first social with
+            the <a href="https://www.facebook.com/groups/clevelandgamedevs/" {{ site.externalLinkAttributes }}>Cleveland Game Developers (CGD)</a> meetup group
+            and met my future business partner, Matt Samardge.
+            Matt and I hit things off at that first meetup, and he suggested that we collaborate on a game.
+            We agreed to start small, and opted for a mobile game to reach the widest market.
+            I had always wanted to make a fully formed playing card game (after trying to make Euchre on my TI-84 calculator back in high school!)
+            and Matt already had designs for a Poker-style card game called <cite>High Hand Hold'em</cite> on his phone.
+            We agreed to build this game with Matt doing all of the visual/sound design, and me doing all of the technical engine and programming work.
+        </p>
+        <p>
+            From that point on, development of <cite>HHH</cite> essentially proceeded in chunks:
+            for a few months, Matt and I would both be focused and knock out lots of bugs and feature work,
+            then a few months would pass where neither of us did much of anything because we were distracted with other projects or life.
+            While I was often embarrassed that development of such a simple game was taking so long,
+            such is the nature of part time, independent game development with a team of only two!
+        </p>
+        <p>The periods of (in)activity were essentially as follows...</p>
+
+        <section id="development-july2017-june2018">
+            {% include_relative _development-activity-span.html level=1 heading="Initial Development" subheading="July 2017 - June 2018" %}
+            <ul>
+                <li>
+                    Much of those initial weeks was spent setting up our new "business".
+                    We registered our company, Derploid Entertainment, LLC, with the state of Ohio,
+                    set up accounts with Google, AWS, Apple, etc., and started fleshing out our designs and making initial project files.
+                </li>
+                <li>
+                    By late September 2017, we already had a functional prototype of the game.
+                    I had ~2 years of experience with the Unity Engine when we started, so we opted to use that engine for this game.
+                </li>
+                <li>
+                    The prototype was ready just in time to exhibit at the 2017 Game Developer Expo (GDEX) in Columbus.
+                    Neither Matt nor I had ever been to GDEX, but we wanted to make a strong first impression by showing off our game,
+                    so we exhibited <cite>High Hand Hold'em</cite> at the CGD booth.
+                    This was a minimum viable product in the truest sense, but the game already featured the core mechanic of tapping the better Poker Hand
+                    to earn points before a timer runs out.
+                    Our game certainly paled in comparison to some of the other games from CGD and throughout GDEX, but we got a lot of positive, constructive feedback
+                    from people who saw the potential of a straightforward, casual game to teach the basics of Poker or hone one's ability to recognize the hands.
+                </li>
+                <li>After a short break after GDEX 2017 in October, I got back to work in November, cleaning up my code and overall architecture.</li>
+                <li>
+                    I added some over-engineered logic to control the various "light shows" happening around the screen to give it that Vegas casino feel
+                    (most of this logic was later replaced with Unity Mecanim animations).
+                </li>
+                <li>I added a SQLite data layer to persist game state between sessions (later replaced with simple JSON files).</li>
+                <li>
+                    We got some help with the initial UI layout (<cite>HHH</cite> is built almost completely with Unity UI)
+                    from the lead designer/engineer of the console party game,
+                    <a href="https://www.playbombfest.com/" {{ site.externalLinkAttributes }}><cite>BOMBFEST</cite></a>.
+                </li>
+                <li>We also prepared a showing for the CGD "Playtest Night" on June 29, 2018.</li>
+            </ul>
+        </section>
+
+        <section id="development-june2018-dec2018">
+            {% include_relative _development-activity-span.html level=-1 heading="Questioning and Apathy" subheading="June 2018 - December 2018" %}
+            <ul>
+                <li>This was the period where I most strongly considered stopping work on <cite>HHH</cite> due to feelings of apathy.</li>
+                <li>
+                    I had split a lot of logic in <cite>HHH</cite> between C# code and "visual scripts" so they would be more approachable for Matt,
+                    but this just made everything confusing, inconsistent, and not very "fun" to work on. Matt was feeling this way as well.
+                </li>
+                <li>
+                    I had put together a test level for another passion game project of mine (codename <cite>Skelia</cite>) for the playtest night and
+                    really wanted to continue building that game, not <cite>HHH</cite>.
+                </li>
+                <li>I also started work at Rakuten OverDrive in late October 2018, which changed my schedule a bit, and my wife had a miscarriage in November.</li>
+                <li>
+                    All of these factors made me consider quitting <cite>HHH</cite> to work on other projects,
+                    but Matt and I ultimately both concluded that it was better to continue until we had something officially published;
+                    this mindset has stuck with us for years since!
+                </li>
+            </ul>
+        </section>
+
+        <section id="development-dec2018-aug2019">
+            {% include_relative _development-activity-span.html level=1 heading="Refreshed Improvements" subheading="December 2018 - August 2019" %}
+            <ul>
+                <li>
+                    Began using Unity Cloud Build (now Unity Build Automation) to generate automated builds with each code push,
+                    greatly improving our ability to playtest on physical devices.
+                </li>
+                <li>
+                    Combined project files from several different repositories into a combined private GitHub repo,
+                    and started using GitHub Issues to track bugs and feature ideas.
+                </li>
+                <li>
+                    Overhauled the Poker dealing logic multiple times to improve performance and generate more of the possible deals,
+                    while keeping keeping certain settings (like max value or suit) adjustable from the Unity Inspector for Matt,
+                    since he would be deciding the "difficulty progression of deals". Writing and unit testing this code was always tedious.
+                </li>
+                <li>
+                    Matt and I also went through multiple iterations on the "game flow", tweaking the positioning of hands
+                    and how cards were accentuated once chosen.
+                </li>
+            </ul>
+        </section>
+
+        <section id="development-aug2019-nov2019">
+            {% include_relative _development-activity-span.html level=-1 heading="Layoff and GDEX 2019" subheading="August 2019 - November 2019" %}
+            <ul>
+                <li>
+                    I took a break from <cite>HHH</cite> to prepare for my first GDEX talks in October 2019:
+                    <a href="/projects/talks/designing-new-lifeforms"><cite>Designing New Lifeforms</cite></a> and
+                    <a href="/projects/talks/supercharging-unity-workflow"><cite>Supercharging Your Unity Workflow With Visual Studio and Git</cite></a>.
+                </li>
+                <li>I was also laid off from OverDrive in November 2019, only two weeks before my first son, Jack, was born.</li>
+            </ul>
+        </section>
+
+        <section id="development-nov2019-may2020">
+            {% include_relative _development-activity-span.html level=2 heading="Pushing to Versioned Releases" subheading="November 2019 - May 2020" %}
+            <ul>
+                <li>
+                    This was my most active period of <cite>HHH</cite> development to date.
+                    Being without a job for two months certainly gave me more time for gamedev (I finally started at Summit Racing Equipment in late January 2020),
+                    as did the world shutting down due to the COVID-19 pandemic.
+                </li>
+                <li>
+                    I created our first "versioned" build of the game
+                    (<a href="https://github.com/DerploidEntertainment/HighHandHoldem-Support/blob/main/CHANGELOG.md#010---2019-12-22"></a>v0.1.0) in December 2019
+                    and tested uploading it to the Google Play Console and App Store Connect.
+                </li>
+                <li>
+                    <a href="https://github.com/DerploidEntertainment/HighHandHoldem-Support/blob/main/CHANGELOG.md#020---2020-01-15" {{ site.externalLinkAttributes }}>v0.2.0</a>
+                    followed shortly thereafter in January 2020, which added an initial app icon, Options menu,
+                    and interstitial ads (powered by Unity Ads) after every 3rd game over.
+                </li>
+                <li>
+                    Starting in April 2020, I was very diligent about updating the Derploid Twitter account
+                    (<a href="https://twitter.com/DerploidCo" {{ site.externalLinkAttributes }}>@DerploidCo</a>),
+                    tweeting gameplay GIFs/screenshots every week or two.
+                </li>
+            </ul>
+        </section>
+
+        <section id="development-may2020-mar2021">
+            {% include_relative _development-activity-span.html level=0 heading="Farmageddon, Booper, and GDEX 2021" subheading="May 2020 - November 2021" %}
+            <ul>
+                <li>
+                    During this time, I became heavily involved with Solidplasma Studio's game,
+                    <a href="/projects/pc/farmageddon"><cite>Farmageddon: A Cattle Royale</cite></a>.
+                </li>
+                <li>
+                    As lead backend developer on <cite>Farmageddon</cite>, the game regularly took my attention away from <cite>HHH</cite>.
+                    I was completely distracted by it until its beta release in mid 2020.
+                </li>
+                <li>
+                    During a subsequent lull in July 2020, Matt and I launched
+                    <a href="https://github.com/DerploidEntertainment/HighHandHoldem-Support/blob/main/CHANGELOG.md#030---2020-07-23" {{ site.externalLinkAttributes }}>v0.3.0</a>,
+                    of <cite>HHH</cite>, which included many additions since 0.2.0, including the
+                    <a href="https://github.com/DerploidEntertainment/HighHandHoldem-Support" {{ site.externalLinkAttributes }}>support repo</a>
+                    for release notes and player feedback, vibrations, additional animations and "juiciness" in the game flow,
+                    rewarded ads for continuing after a wrong choice, a placeholder Privacy Policy and Terms of Use with mechanism for communicating updates,
+                    additional statistics besides high score, and much more.
+                </li>
+                <li>
+                    After an all-online GDEX in October 2020, Matt and I also started working with the founder of
+                    <a href="https://www.loadinglaw.com/" {{ site.externalLinkAttributes }}>Loading Law</a>
+                    on trademarking "Derploid Entertainment" and "High Hand Hold'em".
+                    The former would eventually be registered in October 2022 while the latter was found to be too "descriptive" to trademark.
+                </li>
+                <li>
+                    Late 2020 was more productive for <cite>HHH</cite> as <cite>Farmageddon</cite> work slowed. Matt and I launched
+                    <a href="https://github.com/DerploidEntertainment/HighHandHoldem-Support/blob/main/CHANGELOG.md#040---2021-02-18" {{ site.externalLinkAttributes }}>v0.4.0</a>
+                    of <cite>HHH</cite> in February 2021, which saw the addition of a placeholder tutorial,
+                    migration from Unity Ads to Appodeal for ad mediation, additional "announcer callout" audio, and more.
+                </li>
+                <li>
+                    Starting in March, <cite>Farmageddon</cite> again took up most of my free time.
+                    I migrated my hard-coded Lambda Functions from the previous summer to an actual repository
+                    with AWS SAM for testing locally and CloudFormation templates for Infrastructure as Code.
+                    I also implemented the backend for several key gameplay features, including bosses, in-app purchasing,
+                    player stats/leaderboards, and client versioning.
+                </li>
+                <li>
+                    <cite>Farmageddon</cite>'s public Steam release was July 24, 2021, but I was doing additional feature work and bug fixes all the way to November.
+                </li>
+                <li>
+                    Throughout early 2021, Matt and I did put together a "paper test" for a new <cite>HHH</cite> tutorial.
+                    I conducted this test with several family members, which taught us a lot (both about the tutorial and about paper testing!).
+                </li>
+                <li>
+                    I did some brief optimization and scripting work in early 2021 on
+                    <a href="https://store.steampowered.com/app/631670/Booper_Get_Home/" {{ site.externalLinkAttributes }}><cite>Booper Get Home</cite></a>,
+                    a VR game built by a friend in the Cleveland Game Developers.
+                </li>
+                <li>In August 2021, I started a new job working remotely for Behavioral Health Link, a health care company based out of Atlanta, GA.</li>
+                <li>
+                    I prepared two more talks for GDEX in October 2021:
+                    <a href="/projects/talks/singletons-doing-them-wrong">Singletons: You're Doing Them Wrong</a> and
+                    <a href="/projects/talks/advanced-ifs">Advanced Gameplay Programming: If Statements</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="development-nov2021-july2022">
+            {% include_relative _development-activity-span.html level=1 heading="Procedural Dealing Overhaul" subheading="November 2021 - July 2022" %}
+            <ul>
+                <li><cite>HHH</cite> work picked up a little over the winter, mostly updating dependencies after the long hiatus.</li>
+                <li>
+                    In December 2021, I briefly implemented the ability to run the entire <cite>Farmageddon</cite> backend locally
+                    so that the game could be shown off at Super MAGFest 2022 without internet access.
+                </li>
+                <li>
+                    In February 2022, I started a new backend developer role on the Prime Gaming team at Amazon.
+                    Their core hours were Pacific Time, which created a pretty large change in my schedule.
+                </li>
+                <li>
+                    For most of this period, I made another massive overhaul to <cite>HHH</cite>'s procedural dealing system.
+                    Designing, implementing, unit testing, and "fuzz" testing this logic was quite laborious.
+                    After this update, the system only needed to know how many board cards and hand cards to deal;
+                    it would guarantee a random Poker deal of random rank each time.
+                    This was probably the most important feature we ever implemented: guaranteeing that players would regularly see the rare
+                    Poker ranks like Full House and Straight Flush, without Matt or I having to hard-code specific instances of these ranks.
+                </li>
+                <li>
+                    I added logic to perform the relatively slow deals on a background thread a couple rounds "in advance" to keep things snappy,
+                    and made the dealing logic less "truly" random so that, e.g., the player wouldn't see 10 flushes in a row.
+                </li>
+                <li>
+                    From May-July, I was mostly working on building a
+                    <a href="/projects/websites/derploid-site">promotional website</a> for the game.
+                    This became a fully fledged static website built with Jekyll and Bootstrap CSS and hosted on GitHub Pages,
+                    with newsletter forms built through Sendinblue (now Brevo), and
+                    key infrastructure like AWS CloudWatch alarms and DNS records defined in a CDK app.
+                </li>
+            </ul>
+        </section>
+
+        <section id="development-july2022-jan2023">
+            {% include_relative _development-activity-span.html level=-1 heading="Farmageddon and Riff Raff" subheading="July 2022 - January 2023" %}
+            <ul>
+                <li>
+                    During this period, I was once again pulled into <cite>Farmageddon</cite> work. There were some concerns around scaling the game,
+                    so I designed and began implementing a migration from our previous Amazon S3 storage system to DynamoDB.
+                </li>
+                <li>In October 2022, my family moved to a new home. I also got deeply involved in a week-long Prime Gaming hackathon.</li>
+                <li>
+                    I also worked with a small team created by the founder of Solidplasma Studios (with whom I was working on <cite>Farmageddon</cite>).
+                    He had an idea for a competitive rhythm game called <cite>Riff Raff</cite> and I initially joined as an engineer,
+                    setting up the Unity project and creating some of the initial input and musical key change logic.
+                    However, when it became clear that I would be the <em>lead</em> engineer working without pay, I respectfully declined further involvement.
+                    <cite>Riff Raff</cite> did use some shared code from <cite>HHH</cite> though, which gave me a chance to improve it.
+                </li>
+            </ul>
+        </section>
+
+        <section id="development-jan2023-may2023">
+            {% include_relative _development-activity-span.html level=2 heading="Free From Other Projects" subheading="January 2023 - May 2023" %}
+            <ul>
+                <li>
+                    In late 2022, I had more time for <cite>HHH</cite> work as the <cite>Farmageddon</cite> storage migration project stalled.
+                    It was clearly becoming more effort than it was worth, given the game's low player count.
+                </li>
+                <li>
+                    Matt and I released
+                    <a href="https://github.com/DerploidEntertainment/HighHandHoldem-Support/blob/main/CHANGELOG.md#050---2023-02-13" {{ site.externalLinkAttributes }}>v0.5.0</a>
+                    of <cite>HHH</cite> in February 2023, nearly two years since 0.4!
+                    This release brought a lot of updates though, including my overhauled procedural dealing logic, "accuracy" statistics,
+                    ability to reset statistics, data consent opt-out, and much more.
+                </li>
+                <li>
+                    In March, I respectfully left both the <cite>Farmageddon</cite> and <cite>Riff Raff</cite> projects,
+                    citing my desire to focus back on <cite>High Hand Hold'em</cite>.
+                </li>
+            </ul>
+        </section>
+
+        <section id="development-may2023-nov2023">
+            {% include_relative _development-activity-span.html level=0 heading="GDEX 2023 and Job Hunting" subheading="May 2023 - November 2023" %}
+            <ul>
+                <li>
+                    From May to June 2023, I was mostly preparing my two talks for GDEX 2023:
+                    <a href="/projects/talks/building-interactive-enemy/">Live Demo: Building an Interactive Enemy</a> and
+                    <a href="/projects/talks/mobile-ads-less-awful/">Making Mobile Ads Less Awful</a>.
+                    For the former, I had to build an entire 2D side-scrolling space shooter with Unity!
+                </li>
+                <li>
+                    After GDEX 2023, I did some brief feature/bug work, but was forced to shift priorities in late August as Amazon announced
+                    a company-wide "Return to Office" policy, with strong indications that virtual employees like myself would soon be included.
+                    I took the news as an opportunity to build this <a href="/projects/websites/dansite">portfolio website</a> (something I had long wanted to do).
+                    This took most of September, with follow-up work throughout late 2023.
+                </li>
+                <li>
+                    I also started actively job hunting in early September due to the uncertainty over Amazon's RTO policy.
+                    As of this writing in November, I have had a couple promising leads, but no offers yet,
+                    so <cite>HHH</cite> will probably stay on the back burner until I do.
+                </li>
+            </ul>
+        </section>
+
+    </div>
+</section>
