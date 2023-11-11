@@ -248,11 +248,26 @@
         start: 2017
         end: present
       cardImage:
-        src: /projects/mobile/hhh/hhh.png
+        src: /projects/mobile/hhh/hhh-card-v1.webp
         alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
       images:
-      - src: /projects/mobile/hhh/hhh.png
-        alt: Gameplay screenshot showing the game's casino-like flashy lights and seven cards from which the player would choose the best hand
+      - src: /projects/mobile/hhh/hhh-main-menu-v1.gif
+        alt: Gameplay GIF of the main menu with rotating Poker chip buttons for Play, Stats, Hand Ranks, Options, and About
+      - src: /projects/mobile/hhh/hhh-match-starting-v1.gif
+        alt: >
+          Gameplay GIF showing a 3-second countdown as a timer bar fills up,
+          three flipped cards slide in from the top, and two pairs of cards slide in from either side.
+          After the countdown, the cards flip over to reveal themselves and start the timer.
+      - src: /projects/mobile/hhh/hhh-correct-choice-v1.gif
+        alt: Gameplay GIF of player selecting the correct hand (Full House) and earning 30 points before another board card slides in to make things harder.
+      - src: /projects/mobile/hhh/hhh-max-cards-v1.gif
+        alt: Gameplay GIF of player selecting the correct hand (Straight Flush) at max difficulty (4 hands and 5 board cards)
+      - src: /projects/mobile/hhh/hhh-timeout-v1.gif
+        alt: Gameplay GIF of the little alarm clock animation after the timer runs out.
+      - src: /projects/mobile/hhh/hhh-stats-v1.gif
+        alt: >
+          Gameplay GIF of scrolling the Stats screen, revealing many statistics like number of games played, average round seconds broken down by number of hands,
+          and correct choice percent broken down by winning rank.
 
 - slug: pc
   header: PC Games
