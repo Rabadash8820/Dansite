@@ -24,6 +24,7 @@
         "vscode": {
             // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
+                "mikestead.dotenv",
                 "mhutchie.git-graph",
                 "eamodio.gitlens",
                 "ms-azuretools.vscode-docker",
