@@ -382,6 +382,9 @@
       years:
         start: 2023
         end: 2023
+      cardImage:
+        src: /projects/talks/building-interactive-enemy/building-interactive-enemy-card-v1.webp
+        alt: Screenshot of the 2D space shooter game that I built for this talk, with an interactive enemy that looks like Jeff Bezos' head
       embeds:
       - title: Video recording (opens in new tab)
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128554&authkey=!AIzzDE7Yox4vDlo
@@ -394,6 +397,9 @@
       years:
         start: 2023
         end: 2023
+      cardImage:
+        src: /projects/talks/mobile-ads-less-awful/mobile-ads-less-awful-card-v1.webp
+        alt: Diagram from the talk, showing how apps connect to SSPs, to ad exchanges, to DSPs, to advertisers
       embeds:
       - title: Video recording (opens in new tab)
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128555&authkey=!ABnQFyyT9begIcc
@@ -410,6 +416,9 @@
       years:
         start: 2021
         end: 2021
+      cardImage:
+        src: /projects/talks/singletons-doing-them-wrong/singletons-doing-them-wrong-card-v1.webp
+        alt: UML diagram of a class following the static singleton pattern, one of the (anti)patterns discussed in this talk
       embeds:
       - title: Video recording (opens in new tab)
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2146407&authkey=!AJ4BY5eQiJoieMo
@@ -426,6 +435,9 @@
       years:
         start: 2021
         end: 2021
+      cardImage:
+        src: /projects/talks/advanced-ifs/advanced-ifs-card-v1.webp
+        alt: Image of deeply nested "hadouken indentation", one of the signs of poor conditional logic discussed in this talk
       embeds:
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126772&authkey=!AOQjp_1CToFhPnE&em=2
@@ -435,6 +447,9 @@
       years:
         start: 2019
         end: 2019
+      cardImage:
+        src: /projects/talks/designing-new-lifeforms/designing-new-lifeforms-card-v1.webp
+        alt: Image of an original creature design from this talk, showing a kangaroo-like animal with wheel-like bones growing out of its shoulders
       embeds:
       - title: Video recording (opens in new tab)
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2146408&authkey=!AF8P8KA5XDCnPKY
@@ -451,6 +466,9 @@
       years:
         start: 2019
         end: 2019
+      cardImage:
+        src: /projects/talks/supercharging-unity-workflow/supercharging-unity-workflow-card-v1.webp
+        alt: Image of the Unity, Visual Studio, and Git logos connected by lines with a red heart in the middle
       embeds:
       - title: PowerPoint slides
         src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121928&authkey=!AEEvTMgB8xEgphI&em=2
