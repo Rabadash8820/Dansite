@@ -1,5 +1,7 @@
 ---
 ---
+{% assign julieContact = site.data.contacts.julieHirt %}
+
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center">Background</h2>
@@ -10,29 +12,30 @@
             I was sitting with two guys during the announcement of the theme: "Roots".
             I expected that I might work with them, but while getting food I ended up chatting with some other people about their backgrounds.
             We were clicking well, but most of them were programmers or inexperienced, so I excused myself to mingle with some others.
-            I eventually saw another group, including one of the programmers that I had spoken with before,
-            that was already discussing game ideas so I asked if I could listen in.
+            I eventually saw another group that was already discussing game ideas, including one of the programmers that I had spoken with before
+            ({% include contact-link.html contact="julieHirt" %}) and asked if I could listen in.
         </p>
         <p>
-            The "Roots" theme had made them think of "root canal" as an idea for a game, where the player would control a bunch of bacteria
+            The "Roots" theme had made this team think of "root canal" as an idea for a game, where the player would control a bunch of bacteria
             trying to infect a tooth while avoiding dangers like toothbrushes and mouthwash.
-            They drifted from tower defense to RTS, and from infecting multiple teeth to infecting a single tooth with more anatomically correct tissue layers.
-            Another artist and another programmer ended up sitting with them also, so we were all like, "Wanna join?"
-            The final team included myself (a programmer and Unity generalist), another Unity programmer, another general programmer,
+            Together, we drifted from tower defense to RTS, and from infecting multiple teeth to infecting a single tooth with more anatomically correct tissue layers.
+            Another artist and another programmer ended up sitting near us, so we invited them to join us too.
+            The final team included myself (a programmer and Unity generalist), {{ julieContact.name.first }} as another Unity programmer, another general programmer,
             three artists (one specializing in pixel art), and a musician—the largest game jam team with which I had worked up to that point.
         </p>
         <p>
             The game came together quite well, especially on the last day. I was super impressed by our pixel artist who became very proficient
-            with both Git/GitHub and Unity over the course of the jam. The other Unity programmer was also really cool,
+            with both Git/GitHub and Unity over the course of the jam.
+            {{ julieContact.name.first }} was also really cool,
             and it was pleasant to work with another knowledgeable programmer, though she was still a beginner with Unity.
-            In fact, this was the first year where I spent almost as much time guiding and coaching my fellow developers as on working myself.
+            In fact, this was the first year where I spent almost as much time guiding and coaching my fellow developers as on completing my own tasks!
         </p>
     </div>
 </section>
 
 <section id="game-overview" class="row">
     <div class="col">
-        <h2 class="text-center">Game Overview</h2>
+        <h2 class="text-center">Game Concept</h2>
         <p>
             In its final form, <cite>Root Canal</cite> was a 2D RTS game for PC.
             The player starts with 3 adorable bacteria characters with pickaxes (drawn by our talented pixel artist),
@@ -41,10 +44,10 @@
             Once a bacterium reaches the nerve, the player wins!
         </p>
         <p>
-            As their bacteria collect "nutrients" from the mined tissues, players can use these nutrients to purchase power-ups from a side menu.
+            As bacteria collect "nutrients" from the mined tissues, players can use these nutrients to purchase power-ups from a side menu.
             The only power-up that we actually implemented was "Cell Divide", which duplicates a random one of the bacteria.
-            Finally, a blue wall of "mouth wash" will cover the entire map on a timer, draining the bacteria's health as it goes;
-            if all bacteria die, the player loses!
+            Finally, a blue wall of "mouth wash" will cover the entire map on a timer, draining the bacteria's health as it goes.
+            If all bacteria die, the player loses!
         </p>
     </div>
 </section>
@@ -61,8 +64,9 @@
                 and initial mockups for the purchasable items (which our pixel artist then refined).
             </li>
             <li>
-                It was also the first time that I used Unity's Tilemap package, and it was quite user-friendly.
-                By the end of the first day, I had already set up an entire tile map in the shape of a tooth with the three tissue layers using
+                It was also the first time that I used Unity's
+                <a href="https://docs.unity3d.com/Packages/com.unity.2d.tilemap@1.0/manual/index.html" {{ site.externalLinkAttributes }}>Tilemap</a> package,
+                which was quite user-friendly. By the end of the first day, I had already set up an entire tile map in the shape of a tooth with the three tissue layers using
                 placeholder textures that our pixel artist could then replace.
             </li>
         </ul>

@@ -66,3 +66,16 @@ chrisParkinson:
     text: christopher-parkinson
     uri: https://www.linkedin.com/in/christopher-parkinson/
     icon: linkedin
+julieHirt:
+  name:
+    first: Julie
+    last: Hirt
+  links:
+  - slug: linkedin
+    text: julie-hirt
+    uri: https://www.linkedin.com/in/julie-hirt
+    icon: linkedin
+  - slug: itch-io
+    text: juliehirt
+    uri: https://juliehirt.itch.io
+    icon: itch-io
