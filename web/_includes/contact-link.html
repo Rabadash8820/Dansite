@@ -1,0 +1,4 @@
+{% assign contact = site.data.contacts[include.contact] %}
+{% assign mainLink = contact.links[0] %}
+{% if mainLink %}<a href="{{ mainLink.uri }}" {{ site.externalLinkAttributes }}>{% endif %}
+{{ contact.name.first }} {{ contact.name.last }}{% if mainLink %}</a>{% endif %}

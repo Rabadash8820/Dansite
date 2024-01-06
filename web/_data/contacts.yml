@@ -24,3 +24,27 @@ danVicarel:
     text: Rabadash8820
     uri: https://twitter.com/Rabadash8820
     icon: twitter-x
+mattSamardge:
+  name:
+    first: Matt
+    last: Samardge
+  links: []
+zacPierce:
+  name:
+    first: Zac
+    last: Pierce
+  links:
+  - slug: website
+    text: "ZacFierce: The Ginger Indie"
+    uri: https://www.zacfierce.com/
+    icon: globe
+    title: Personal website
+bexMoss:
+  name:
+    first: Rebekah
+    last: Moss
+  links:
+  - slug: facebook
+    text: Bekah Moss
+    uri: https://www.facebook.com/profile.php?id=100072623508178
+    icon: facebook
