@@ -1,0 +1,26 @@
+danVicarel:
+  name:
+    first: Dan
+    last: Vicarel
+  links:
+  - slug: email
+    text: dan.vicarel@gmail.com
+    uri: mailto:dan.vicarel@gmail.com
+    icon: envelope-fill
+    title: Email
+  - slug: linkedin
+    text: daniel-vicarel
+    uri: https://www.linkedin.com/in/daniel-vicarel
+    icon: linkedin
+  - slug: discord
+    text: rabadash8820
+    uri: https://discordapp.com/users/rabadash8820
+    icon: discord
+  - slug: discord
+    text: Rabadash8820
+    uri: https://github.com/Rabadash8820
+    icon: github
+  - slug: twitter
+    text: Rabadash8820
+    uri: https://twitter.com/Rabadash8820
+    icon: twitter

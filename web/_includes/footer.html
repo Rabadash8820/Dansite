@@ -1,8 +1,10 @@
-<p class="fw-bold">Built with ❤️ by Dan.</p>
+{% assign mainContact = site.data.contacts.danVicarel %}
+
+<p class="fw-bold">Built with ❤️ by me, {{ mainContact.name.first }} {{ mainContact.name.last }}!</p>
 <p>
-    {% for contact in site.data.contact %}
-        <a href="{{ contact.uri }}" {{ site.externalLinkAttributes }} class="text-decoration-none">
-            {% include bootstrap-icons/{{ contact.icon }}.svg title=contact.title %}
+    {% for contactLink in mainContact.links %}
+        <a href="{{ contactLink.uri }}" {{ site.externalLinkAttributes }} aria-label="{{ contactLink.title }}" class="text-decoration-none">
+            {% include bootstrap-icons/{{ contactLink.icon }}.svg title=contactLink.title %}
         </a>
         {% if forloop.last != true %}&nbsp;{% endif %}
     {% endfor %}

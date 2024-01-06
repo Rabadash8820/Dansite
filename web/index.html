@@ -20,6 +20,8 @@ title: Home
     </div>
 </section>
 
+{% assign mainContact = site.data.contacts.danVicarel %}
+
 <main class="container">
 
     <section id="welcome" class="row row-cols-1 row-cols-lg-2 dan-pad-under-header">
@@ -29,17 +31,18 @@ title: Home
         </div>
         <div class="col">
             <p class="lead pt-2 pt-lg-0">
-                My name is Dan Vicarel, and you've found my little corner of the Internet!
+                {% assign linkedinLink = mainContact.links | where: 'slug', 'linkedin' | first %}
+                My name is {{ mainContact.name.first }} {{ mainContact.name.last }}, and you've found my little corner of the Internet!
                 I am a full-stack software engineer and game developer from Ohio.
-                For my full credentials, check out my <a href="{{ site.data.contact.linkedin.uri }}">LinkedIn</a> profile;
+                For my full credentials, check out my <a href="{{ linkedinLink.uri }}">LinkedIn</a> profile;
                 this site is more of an interactive portfolio.
             </p>
             <p class="lead">If you are looking to collaborate, please contact me at:</p>
             <ul class="lead list-unstyled">
-                {% for contact in site.data.contact %}
+                {% for contactLink in mainContact.links %}
                 <li>
-                    <a href="{{ contact.uri }}" class="text-decoration-none">
-                        {% include bootstrap-icons/{{ contact.icon }}.svg title=contact.title %} {{ contact.text }}
+                    <a href="{{ contactLink.uri }}" class="icon-link" aria-label="{{ contactLink.title }}">
+                        {% include bootstrap-icons/{{ contactLink.icon }}.svg title=contactLink.title %} {{ contactLink.text }}
                     </a>
                 </li>
                 {% endfor %}
