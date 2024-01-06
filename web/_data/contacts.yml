@@ -57,3 +57,12 @@ kateTriantafelow:
     text: KT Design & Illustration, LLC
     uri: https://www.ktdesign.llc/
     icon: globe
+chrisParkinson:
+  name:
+    first: Chris
+    last: Parkinson
+  links:
+  - slug: linkedin
+    text: christopher-parkinson
+    uri: https://www.linkedin.com/in/christopher-parkinson/
+    icon: linkedin

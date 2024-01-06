@@ -1,25 +1,29 @@
 ---
 ---
+{% assign chrisContact = site.data.contacts.chrisParkinson %}
+
 <section id="background-team" class="row">
     <div class="col">
         <h2 class="text-center">Team Formation</h2>
         <p>
             I built <cite>Body Maintenance</cite> with a team during Global Game Jam in January 2020.
             I had been discussing an opportunity around this time at <a href="https://www.lamoverse.com" {{ site.externalLinkAttributes }}>LAMO, LLC</a>,
-            with a developer who suggested doing a game jam as a sort of "working interview".
+            with one of their engineers, {% include contact-link.html contact="chrisParkinson" %} who suggested doing a game jam as a sort of "working interview".
             This sounded like a lot of fun to me, and a great chance to show off my skills.
-            I had considered asking him to join whichever group I worked with at GGJ in Cleveland but assumed that it would be awkward timing as LAMO (the game) was being re-released, and he probably wouldn't enjoy being the odd man out working remotely.
-            But then, that developer asked <em>me</em> to join <em>his</em> GGJ group in Columbus,
+            I had considered asking {{ chrisContact.name.first }} to join a GGJ group remotely with me in Cleveland,
+            but assumed that it would be awkward timing as <cite>LAMO</cite> (the game) was being re-released
+            and he probably wouldn't enjoy being the odd man out working remotely.
+            But then, he asked <em>me</em> to join <em>his</em> GGJ group in Columbus,
             since he was already planning to work with his brother (an artist) and another programmer.
-            I was of course interested, and they allowed my brother to join also as a musician, as I wanted to get him involved in the jam that year as well.
+            I was of course interested. They allowed my brother to join also as a musician, as I had encouraged him to jam with me that year as well.
         </p>
         <p>
             My brother and I worked from the Cleveland location on Friday and Saturday,
             to see what some of my other Cleveland Game Developer friends were building and to let my brother meet them.
             Then, he and I drove down to Columbus on Sunday to meet the rest of the team in person
-            at the COGG (Central Ohio Gamedev Group) location and join them in presenting.
+            at the COGG (Central Ohio Gamedev Group) location and present with them.
             While I didn't end up working for the LAMO team (they basically ran out of funding during the COVID-19 pandemic),
-            this was another immensely rewarding game jam experience. Visiting COGG, CGD's "sister organization", was cool,
+            this was another immensely rewarding game jam experience. Visiting COGG (CGD's "sister organization") was cool,
             and this was by far the most mechanically complex game jam game that I had built up to that point.
         </p>
     </div>
@@ -27,37 +31,37 @@
 
 <section id="background-game" class="row">
     <div class="col">
-        <h2 class="text-center">Game Overview</h2>
+        <h2 class="text-center">Game Concept</h2>
         <p>
-            The GGJ 2020 theme was "Repair", so my LAMO contact and his brother had the idea of making a game about repairing the body.
+            The GGJ 2020 theme was "Repair", so {{ chrisContact.name.first }} and his brother had the idea of making a game about repairing a human body.
             Each organ system would be a little platformer mini game, making it easy for us to work in parallel and add more organs as time allowed.
             The brothers were also very experienced with the popular
             <a href="https://assetstore.unity.com/packages/templates/systems/corgi-engine-2d-2-5d-platformer-26617" {{ site.externalLinkAttributes }}>Corgi Engine</a>
             asset for building 2D Platformers in Unity, so a lot of the input/movement systems would already be done for us.
         </p>
         <p>
-            The final game (<cite>Body Maintenance (BM)</cite>, a super creative title),
+            The final game, <cite>Body Maintenance (BM)</cite>,
             featured local multiplayer with 4-player split-screen, and a central mini map that showed each player's location in the body.
             A "life manager" system would trigger events with descriptions like "first day of school" or "senior prom", creating alerts in relevant organs.
         </p>
         <p>We built five organ mini games:</p>
         <ol>
             <li>
-                <strong>Brain</strong>: where players flip a lever to activate a sequence of colored lights on the brain.
-                They would then repeat that sequence by pressing colored buttons to "clear the mind".
+                <strong>Brain</strong>: players flip a lever to activate a sequence of colored lights on the brain.
+                They then repeat that sequence by pressing colored buttons to "clear the mind".
             </li>
             <li>
-                <strong>Heart</strong>: where players jump back and forth on trampoline-like "lungs" to charge up the heart.
+                <strong>Heart</strong>: players jump back and forth on trampoline-like "lungs" to charge up the heart.
             </li>
             <li>
-                <strong>Liver</strong>: where players must filter the bloodstream by toggling the direction of two "conveyor belts"
+                <strong>Liver</strong>: players filter the bloodstream by toggling the direction of two "conveyor belts"
                 to steer waste and nutrients into the appropriate buckets.
             </li>
             <li>
-                <strong>Intestines</strong>: where players must empty four tanks of poo by rapidly pressing a plunger in front of each.
+                <strong>Intestines</strong>: players empty four "tanks of poo" by rapidly pressing a plunger in front of each.
             </li>
             <li>
-                <strong>Groin</strong>: where players must calm the "party in the pants"! I.e., players must navigate a maze through a disco-like area
+                <strong>Groin</strong>: players must calm the "party in the pants"! That is, players must navigate a maze through a disco-like area
                 of smoke and lights to flip some light switches, but the maze walls are only visible within a small circle around a player.
                 Somehow this is what we came up with to keep the reproductive system family-friendly...
             </li>
@@ -71,10 +75,10 @@
         <p>
             I wrote the logic for the liver and groin systems, the overall life manager, and the dynamic music system.
             My brother wrote 28 tracks of music in total for the main menu, game over screen and organ systems.
-            My LAMO contact's brother did all the artwork, which had a fantastic cartoony look with lots of detail.
+            {{ chrisContact.name.first }}'s brother did all the artwork, which had a fantastic cartoony look with lots of detail.
             The other programmer wrote the logic for the brain, intestines, and heart organs, and set up the "life events" using my life manager system.
-            Finally, my LAMO contact put together the whole map, setting up the split-screen, minimap, and player controllers.
-            His two sons also helped with playtesting!
+            Finally, {{ chrisContact.name.first }} put together the overall map, setting up the split-screen, minimap, and player controllers.
+            His two sons also did some playtesting during the final hours!
         </p>
         <p>
             The Corgi Engine asset did prove to be immensely helpful, providing 2D platformer inputs and mechanics, ladders, multiple controllers, etc. out of the box.
@@ -87,25 +91,25 @@
             The manager component itself then accepted an ordered list of "life stages",
             each encapsulating an age in years, a short description (e.g., "Toddler"), and a set of life events that could be randomly chosen.
             The manager listened for organ "completion" events to know when to advance life stages,
-            and activated the appropriate organ minigames, adjusted UI text, etc. for each stage.
-            With this system in place, the other programmer was able to set up all of the game's life stages/events
-            from the Unity Inspector without writing any additional code.
+            and activated the appropriate organ minigames, adjusting UI and other effects for each stage.
+            With this system in place, the other programmer was able to rapidly iterate on the game's life stages/events
+            from the Unity Inspector without waiting for any additional code compilation time.
         </p>
         <p>
             The liver minigame allowed me to use one of my favorite Unity features: 2D Physics.
-            Essentially, each waste/nutrient item (variants of a shared prefab) had a <code>Rigidbody2D</code> component so they would obey physics.
+            Essentially, each waste/nutrient item (variants of a shared prefab) had a <code>Rigidbody2D</code> component so it would obey physics.
             A singleton script listened for events from trigger <code>Collider2D</code>s above each conveyor belt
             to know when an item had landed on it and begin applying forces.
             The script also listened for events from toggling the belt levers to adjust the force direction of the associated belts.
         </p>
         <p>
-            Finally, the groin minigame allowed me to use some level design skills for a change.
+            Finally, the groin minigame allowed me to flex some level design skills.
             I found some free smoke images with transparency and added a couple to the scene with different scales/colors,
             then animated their rotation at different speeds/directions to achieve the smoky dance party atmosphere.
             The little spotlights were just cropped from a single image of a circular gradient
             and I animated their rotations together to look like they were moving in sync to music.
             The walls of the maze were just a bunch of rectangle sprites,
-            but I set them up to only be visible within a circular "mask" sprite centered on each player, and same for the light switches.
+            but I set up them and the light switches to only be visible within a circular "mask" centered on each player.
         </p>
     </div>
 </section>
