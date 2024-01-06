@@ -48,3 +48,12 @@ bexMoss:
     text: Bekah Moss
     uri: https://www.facebook.com/profile.php?id=100072623508178
     icon: facebook
+kateTriantafelow:
+  name:
+    first: Kate
+    last: Triantafelow
+  links:
+  - slug: website
+    text: KT Design & Illustration, LLC
+    uri: https://www.ktdesign.llc/
+    icon: globe

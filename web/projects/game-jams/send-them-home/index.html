@@ -1,31 +1,37 @@
 ---
 ---
+{% assign mattContact = site.data.contacts.mattSamardge %}
+{% assign zacContact = site.data.contacts.zacPierce %}
+{% assign kateContact = site.data.contacts.kateTriantafelow %}
+
 <section id="background-team" class="row">
     <div class="col">
         <h2 class="text-center">Team Formation</h2>
         <p>
             I built <cite>Send Them Home</cite> with a team during Global Game Jam in January 2019.
-            After the amazing experience building <a href="/projects/game-jams/demisword-bubonic"><cite>DemiSword: Bubonic</cite></a>,
-            I was obviously interested in working with that team again, but I also wanted to branch out and meet new people
-            My business partner couldn't attend, and the other programmer from that team was busy with preparations for his own game's release.
-            One of the artists attended though, and she and I bumped into each other in the food line, but didn't immediately commit to collaborating.
+            After the amazing experience building <a href="/projects/game-jams/demisword-bubonic"><cite>DemiSword: Bubonic</cite></a> the previous year,
+            I was obviously interested in working with that team again, but I also wanted to branch out and meet new people.
+            My business partner, {% include contact-link.html contact="mattSamardge" %}, couldn't attend,
+            and the other programmer from that team, {% include contact-link.html contact="zacPierce" %},
+            was busy with preparations for the release of his own game: <a href="https://www.playbombfest.com" {{ site.externalLinkAttributes }}>BOMBFEST</a>.
+            The other 2D artist attended though; she and I bumped into each other in the food line, but didn't immediately commit to collaborating.
         </p>
         <p>
             After the announcement of the theme, "What does home mean to you?", I was eating with some Cleveland Game Developers members.
             Some already planned to work together, and I discussed possibly hopping in on their team.
             Then, when I went back for seconds, the artist from <cite>DemiSword</cite> ran up and excitedly asked, "Do you want to work on a horror game?".
-            I said, "Uh, sure", and began brainstorming with her and another guy with whom she had already agreed to work.
-            As we were chatting, another lady came up and asked if she could join our group.
+            I said, "Uh, sure", and began brainstorming with her and another programmer with whom she had already agreed to work.
+            As we were chatting, another artist, {% include contact-link.html contact="kateTriantafelow" %}, came up and asked if she could join our group.
             Quite satisfied with our organic group formation, we all went upstairs to brainstorm, skipping the other game pitches.
         </p>
         <p>
-            While building the game over the weekend, I was very impressed by the artist who did all of the environment/item/UI artwork.
-            She was churning out art assets almost faster than I could import/position them,
-            even her roughest drafts were gorgeous, and she was clearly a PhotoShop expert.
+            While building the game over the weekend, I was very impressed by {{ kateContact.name.first }}'s environment/item/UI artwork.
+            She was churning out art assets almost faster than I could import/position them in the Unity editor,
+            even her roughest drafts looked incredible, and she was clearly a PhotoShop expert.
             I was also impressed by her project management, like setting up a game doc and an asset list before settling down to draw,
-            and coordinating with the other artist and color pallettes and stylistic choices.
-            She was perhaps the most professional artist whom I had worked with up to that point.
-            We collaborated again in October of that year, when she drew up some creature designs for my talk:
+            and coordinating with the other artist on color pallettes and stylistic choices.
+            She was perhaps the most professional artist with whom I had worked up to that point.
+            We collaborated again in October of that year, when she drew up some creature designs for my GDEX talk:
             <a href="/projects/talks/designing-new-lifeforms"><cite>Designing New Lifeforms</cite></a>.
         </p>
     </div>
@@ -36,8 +42,10 @@
         <h2 class="text-center">Game Concept</h2>
         <p>
             Our initial idea was to explore anxiety, and how "home" can be a negative place for people who feel alone but are afraid to go outside.
-            That morphed into thinking about "scary" things like ghosts and Frankenstein's monster, and we considered making a multi-tasking, time-management game
-            like <cite>Sally's Spa</cite> where the player would run a hotel for recently deceased ghosts and make purgatory more "homely" for them by matching characters up with their desired rooms.
+            That morphed into thinking about "scary" things like ghosts and Frankenstein's monster.
+            We considered making a multi-tasking, time-management game
+            like <a href="https://www.bigfishgames.com/us/en/games/5369/sallys-spa/" {{ site.externalLinkAttributes }}><cite>Sally's Spa</cite></a>
+            where the player would run a hotel for recently deceased ghosts and make purgatory more "homely" for them by matching characters up with their desired rooms.
             While thinking about the characters, we thought it would be cool if all the ghosts were deceased members of the player's family,
             and the player had to help them "finish their business", which made me think that the setting could actually be an old family vacation home
             where the player had gone to reflect/mourn, not expecting to meet their family's ghosts.
@@ -45,9 +53,9 @@
             to create portals that would suck various demons back into the underworld before they could possess the body of her dead sister!
         </p>
         <p>
-            Ultimately, our presentation wasn't great, as all groups were limited to just three minutes and had to rush through their games;
-            plus, the final demon's animation didn't play so the game ends kind of abruptly.
-            Still, this was another excellent game jam experience.
+            Ultimately, our presentation was a bit anti-climactic, as all groups were limited to just three minutes and had to rush through their games;
+            plus, the final demon's animation didn't play so the game just ended abruptly.
+            Still, I considered this another excellent game jam experience.
         </p>
     </div>
 </section>
@@ -57,8 +65,8 @@
         <h2 class="text-center">Technical Details</h2>
         <p>Our team consisted of two programmers (myself and another guy), and two artists:</p>
         <ul>
-            <li>One artist did the animations for the player character and first two demons.</li>
-            <li>The other artist created all of the 2D environments, collectible items, main menu and gameover screens, and animations for the third demon.</li>
+            <li>{{ kateContact.name.first }} {{ kateContact.name.last }} created sprites for all of the 2D environments, collectible items, main menu and gameover screens, and animations for the third demon.</li>
+            <li>The other artist did the animations for the player character and first two demons.</li>
             <li>
                 The other programmer did most of the gameplay programming, including player movement, "puzzle site" mechanics", and the "demon timer",
                 and also wrote a quick multi-tracked score for the game on the last day!
@@ -69,15 +77,15 @@
             </li>
         </ul>
         <p>
-            <cite>Send Them Home</cite> was the most I had worked with Unity's Mecanim animation system up to that point.
+            <cite>Send Them Home</cite> was the most that I had worked with Unity's Mecanim animation system up to that point.
             The game was meant to be very atmospheric and unsettling, and I think that my work on the animations, combined with the artists'
             amazing character/environment work, really pulled this off. For example, notice the following when playing the game:
         </p>
         <ul>
             <li>The subtle candle flickering and lightning-like flashes of light that I added by animating the opacity of the artists' images</li>
             <li>
-                The way that lighting or collecting candles adds or removes glowing highlights in the environment, respectively,
-                which I achieved by toggling sprites with those highlights on/off...a very cheap/effective way to achieve dynamic lighting in 2D.
+                The way that lighting or collecting candles adds or removes glowing highlights in the environment,
+                which I achieved by toggling sprites with those highlights on/off—a very cheap/effective way to realize dynamic lighting in 2D.
             </li>
             <li>
                 The dynamic effects when "vanquishing" demons.
