@@ -352,6 +352,9 @@
       cardImage:
         src: /projects/websites/derploid-site/derploid-site.png
         alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
+      images:
+      - src: /projects/websites/derploid-site/derploid-site.png
+        alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
 
     - slug: dansite
       header: The Dansite
