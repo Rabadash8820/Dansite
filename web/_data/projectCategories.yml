@@ -356,6 +356,9 @@
     - slug: dansite
       header: The Dansite
       links:
+      - text: Website
+        icon: globe
+        href: https://www.danvicarel.com
       - text: Source
         icon: github
         href: https://github.com/Rabadash8820/Dansite

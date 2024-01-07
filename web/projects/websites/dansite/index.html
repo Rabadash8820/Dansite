@@ -1,13 +1,67 @@
 ---
 ---
-<div class="row">
-    <section id="background" class="col">
+<section id="background" class="row">
+    <div class="col">
         <h2 class="text-center display-2">Background</h2>
-    </section>
-</div>
+        <p>
+            I started building this website (the one you are currently reading!) in late August 2023,
+            after realizing that I really needed some kind of digital portfolio for my gamedev and software projects.
+            At that time, I was working at Amazon on the Prime Gaming Fulfillment team.
+            Amazon had announced a "return to office" policy back in February, and in the summer, it was announced
+            that this policy would also affect virtual employees like myself.
+            My options were to relocate to Seattle, transfer to another Amazon role close by, or resign.
+            I took the internal transfer option, but could sense a change in the winds coming,
+            so I started applying to other companies, and began this portfolio site to make myself more attractive to gamedev studios.
+            This was a good call, as my role was later eliminated in November 2023 during a round of layoffs across Prime Gaming.
+        </p>
+    </div>
+</section>
 
-<div class="row">
-    <section id="details" class="col">
-        <h2 class="text-center display-2">Details</h2>
-    </section>
-</div>
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center display-2">Technical Details</h2>
+        <p>
+            The initial codebase for the "Dansite" was copied from the <a href="/projects/websites/derploid-site">Derploid® Entertainment site</a>
+            that I built in 2022. This included:
+            <ul>
+                <li>Infrastructure as Code using <a href="https://aws.amazon.com/cdk" {{ site.externalLinkAttributes }}>AWS Cloud Development Kit (CDK)</a> for all backend resources</li>
+                <li>TLS certs through <a href="https://aws.amazon.com/certificate-manager" {{ site.externalLinkAttributes }}>AWS Certificate Manager</a></li>
+                <li><a href="https://aws.amazon.com/route53" {{ site.externalLinkAttributes }}>Route53</a> HostedZones for DNS management and redirects</li>
+                <li>The <a href="https://jekyllrb.com" {{ site.externalLinkAttributes }}>Jekyll</a> static site generator for web content</li>
+                <li><a href="https://getbootstrap.com" {{ site.externalLinkAttributes }}>Bootstrap</a> for web components and CSS utility classes</li>
+                <li><a href="https://pages.github.com" {{ site.externalLinkAttributes }}>GitHub Pages</a> for hosting</li>
+            </ul>
+        </p>
+        <p>
+            This setup has worked very well, but Jekyll is unfortunately a pretty out-dated tool
+            <a href="https://www.theregister.com/2021/09/14/future_of_jekyll_project_engine/" {{ site.externalLinkAttributes }}>without a clear future</a>.
+            As of this writing in January 2024, I am strongly considering shifting to <a href="https://nextjs.org/" {{ site.externalLinkAttributes }}>Next.js</a>,
+            a static site generator that is very actively maintained and would give me more practice with <a href="https://react.dev/" {{ site.externalLinkAttributes }}>React</a>.
+        </p>
+        <p>Some other little engineering details that I'm proud of include:</p>
+        <ul>
+            <li>
+                Inclusion of embedded slides and recordings for most of my <a href="/#nav-tab-talks">talks</a>.
+                This content is hosted for free on OneDrive, and adds more interactivity/professionalism to those project pages.
+            </li>
+            <li>
+                The talk recordings also forced me to learn a lot more about video editing and transcoding
+                to make sure they were correctly formatted for the web.
+            </li>
+            <li>
+                The little "Dan cartoon" avatar that I use all over this site was created by my good friend and Derploid® business partner,
+                {% include contact-link.html contact="mattSamardge" %}.
+            </li>
+            <li>
+                Creating HTTP redirects to get <code>danvicarel.com</code>, <code>.net</code>, and <code>.org</code> (with or without <code>www.</code>)
+                all redirecting to the same home page
+            </li>
+            <li>Using appropriate SPF, DKIM, and DMARC records to the site's DNS records to prevent abuse by scammers</li>
+            <li>
+                Using <a href="https://aws.amazon.com/cloudwatch" {{ site.externalLinkAttributes }}>AWS CloudWatch</a> alarms
+                to monitor the website's DNSSEC and HTTP health
+            </li>
+            <li>Defining <a href="https://containers.dev" {{ site.externalLinkAttributes }}>devcontainers</a> for developing the CDK app and Jekyll content</li>
+        </ul>
+    </div>
+</section>
