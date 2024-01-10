@@ -16,7 +16,7 @@
             "version": "latest"
         }
     },
-    "onCreateCommand": "cd cdk/ && npm install --global npm@10.0.0 && npm install",
+    "onCreateCommand": "cd cdk/ && npm install --global npm@10.2.5 && npm install",
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [
         9229 // Node.js debugging
