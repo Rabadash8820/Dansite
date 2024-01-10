@@ -6,18 +6,10 @@ This folder contains the CDK source code for the AWS resources for Dan's website
 
 ### Setup
 
-This folder makes use of VS Code devcontainers. To work with the CDK project in this folder:
-
-1. [Install Docker](https://docs.docker.com/get-docker/) and make sure it's running.
-2. Install VS Code along with the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension, if you haven't already.
-3. Open this folder in VS Code. It will automatically prompt you to re-open the folder in a devcontainer.
-
 The devcontainer mounts the `~/.aws` folder from your host, allowing your devcontainer to reuse the AWS profiles that you've already defined on your host machine.
 Make sure a `dansite` profile is defined on your host machine (`aws configure --profile dansite`).
 This is the profile under which CDK will execute all AWS operations, so it must have permissions to create/update/delete the necessary resources.
 You can configure the profile on your host or in your devcontainer, the same files will be stored in the same place on your hard drive either way.
-
-Next, follow the instructions in [.devcontainer/secret.template.env](.devcontainer/secret.template.env) to define secret values for the CDK app.
 
 At this point, you can run [CDK Toolkit commands](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-ref) as usual.
 We've also defined a couple [helpful npm scripts](#useful-commands).
