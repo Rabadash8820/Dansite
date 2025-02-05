@@ -9,6 +9,9 @@
         icon: download
         href: /projects/game-jams/root-canal/root-canal-win64-v1.zip
         isDownload: true
+      - text: Play Online
+        icon: itch-io
+        href: https://juliehirt.itch.io/root-canal
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2023/games/root-canal-5
