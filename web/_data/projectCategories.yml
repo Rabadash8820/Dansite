@@ -2,6 +2,40 @@
   header: Game Jams
   icon: controller
   projects:
+    - slug: stink-bubble
+      header: Stink Bubble
+      links:
+      - text: Download (Win64)
+        icon: download
+        href: /projects/game-jams/stink-bubble/stink-bubble-win64-v1.zip
+        isDownload: true
+      - text: Play Online
+        icon: itch-io
+        href: https://gamedirection.itch.io/stink-bubble
+      - text: Global Game Jam page
+        icon: globe
+        href: https://globalgamejam.org/games/2025/stink-bubble-7
+      - text: Source
+        icon: github
+        href: https://github.com/Rabadash8820/GGJ2025
+      years:
+        start: 2025
+        end: 2025
+      cardImage:
+        src: /projects/game-jams/stink-bubble/stink-bubble-card-v1.webp
+        alt: >
+          Title screen with green title text on top of an interior room with wood floors and a window,
+          with buttons below inside of white bubbles.
+      images:
+      - src: /projects/game-jams/stink-bubble/stink-bubble-flying-v1.gif
+        alt: Gameplay GIF of the player's green stink bug character flying around a room trailing green particles of stink, with 3D people moving around the room and bubbles drifting through the air
+      - src: /projects/game-jams/stink-bubble/stink-bubble-collect-v1.gif
+        alt: Gameplay GIF of the player's green stink bug character hovering down to collect a bubble, encasing itself and its green stink particles inside
+      - src: /projects/game-jams/stink-bubble/stink-bubble-fans-v1.gif
+        alt: Gameplay GIF of the player's green stink bug character flying around inside a bubble, being physically pushed around by a spinning ceiling fan
+      - src: /projects/game-jams/stink-bubble/stink-bubble-person-hit-v1.gif
+        alt: Gameplay GIF of the player's green stink bug character flying inside a bubble, then colliding with a 3D person's head inside the room, causing them to disappear and the player's score to increase
+
     - slug: root-canal
       header: Root Canal
       links:
