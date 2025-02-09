@@ -38,5 +38,5 @@ so that your host, WSL, and devcontainers are all sharing the same keys
 
 VS Code also automatically copies your host's `~/.gitconfig` file, though your dotfile repo setup may have overridden this.
 
-Once the container loads, follow the instructions in [.devcontainer/secret.template.env](.devcontainer/secret.template.env)
+Once the container loads, follow the instructions in [.devcontainer/secret.template.env](.devcontainer/secret.template.env) (if present)
 to define any secret values that the container expects.

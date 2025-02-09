@@ -1,0 +1,93 @@
+---
+---
+{% assign alexContact = site.data.contacts.alexSierputowski %}
+{% assign mattContact = site.data.contacts.mattSamardge %}
+
+<section id="background" class="row">
+    <div class="col">
+        <h2 class="text-center">Background</h2>
+        <p>
+            I built <cite>Stink Bubble</cite> with a team during Global Game Jam in January 2025.
+            I hadn't participated in GGJ 2024 for family reasons, so it was great to see my fellow Cleveland Game Developers again.
+            I entered the venue right as they were announcing the year's theme: "Bubble", an uncharacteristically specific theme;
+            usually GGJ themes were more abstract concepts open to interpretation, like "Transmission" or "Home"!
+        </p>
+        <p>
+            As usual, I found myself chatting with some other participants about their ideas.
+            One group said that they had some fun ideas but the scope would be limited by whether or not they could get a programmer.
+            Their 3D modeler, {% include contact-link.html contact="alexSierputowski" %},
+            was a guy whose work had impressed me at previous CGD events, and I soon learned that he had experience at Riot and Capcom.
+            I always like to work with devs that have knowledge/experience beyond mine, and I was excited by the opportunity to make a 3D game, so I agreed to join!
+        </p>
+        <p>
+            The final team included myself (a programmer and Unity generalist),
+            {{ alexContact.name.first }} (3D modeling/texturing and level design),
+            {% include contact-link.html contact="keyonCohen" %} (another general programmer with whom I had worked at GGJ 2023),
+            {% include contact-link.html contact="malikAkbar" %} (a 2D artist), a music/sound designer,
+            and my business partner {% include contact-link.html contact="mattSamardge" %} (a 2D artist, 
+            with whom I hadn't actually worked on <a href="/projects/mobile/hhh">High Hand Hold'em</a> in nearly a year!).
+            The game came together quite well, with {{ alexContact.name.first }} cranking out 3D models and textures at an incredible rate.
+            We didn't have time to include any of the UI art that {{ mattContact.name.first }} had drawn though, unfortunately.
+        </p>
+    </div>
+</section>
+
+<section id="game-overview" class="row">
+    <div class="col">
+        <h2 class="text-center">Game Concept</h2>
+        <p>
+            The team had waffled back and forth on various game concepts during the first night of the jam,
+            including an endless runner or multiplayer brawler.
+            We kept imagining a birthday party setting, where one might find a lot of bubbles, with an animal trapped inside a bubble.
+            We originally considered a kitten, but my very literal self suggested that it be something small like an insect–
+            specifically, a stink bug, as my family always had a bunch of those in our house during the summer.
+            That led to: a stink bug trapped in a bubble during a party, taking out its frustration by growing the bubble
+            to make big stink bomb and gross out all the party guests.
+        </p>
+        <p>
+            In its final form, <cite>Stink Bubble</cite> is a 3D, 3rd-person arcade game for PC and web.
+            The player flies around collecting bubbles to grow <em>their</em> bubble,
+            then runs into people's faces to pop the bubble and release their stink.
+            The player's bubble is constantly shrinking, and they get more points for having a larger bubble when they hit a person,
+            so the goal is to get the highest score possible.
+        </p>
+        <p>
+            The player control scheme is interesting:
+            they can only move within three "planes" in the room parallel to the ground, or hover up/down between those planes.
+            Our original idea was that the room is so large compared to the stink bug that each plane would feel far apart and unique,
+            with different obstacles and collectibles, and high depth of field to focus on the current plane.
+            All we really had time for was ceiling fans that push the player/bubbles in the top plane,
+            furniture in the bottom plane, and humans that can only be "hit" in the middle plane.
+        </p>
+    </div>
+</section>
+
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center">Technical Details</h2>
+        <p>This was the first 3D game that I had made for a game jam (other than a very basic one that I tried to make by myself at a jam back in 2017).</p>
+        <p>
+            I programmed all of the physics-based movement, random physics-based motion of the bubbles and people, 
+            the physics of the ceiling fans pushing bubbles and the player away,
+            and the logic for keeping score and managing match state.
+            I also implemented two particle systems for the player's "stink particles" (or "farticles" as we called them!):
+            one with particles trailing behind the player in world space, 
+            and one with the particles constrained to a small sphere around the player in local space.
+            Toggling between these particle systems gave the impression of actually "trapping" the player's stink inside a bubble,
+            or releasing it when the bubble pops!
+        </p>
+        <p>
+            This was the first time that I used Unity's UI Toolkit for a game jam (though I had used it briefly on a hobby project in early 2024).
+            The UI was all very basic, but I <em>was</em> making use of custom USS classes by the end of the jam to give buttons a unique font and background image.
+            This game also represented my most extensive use of Unity's InputSystem package to date,
+            using the recommended callback-based Input Action workflow with
+            <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.13/manual/ActionAssets.html#type-safe-c-api-generation" {{ site.externalLinkAttributes }}>type-safe C# API generation</a>.
+        </p>
+        <p>
+            This was also the first Global Game Jam where I was able to include my full <a href="/projects/libraries/unity-util">UnityUtil</a> library in the project,
+            now that it is encapsulated in UPM packages easily consumable via a Git URL.
+            UnityUtil allowed me to handle Unity's update loop more efficiently (important for all the moving bubbles/people),
+            and manage IoC dependencies across scenes.
+        </p>
+    </div>
+</section>

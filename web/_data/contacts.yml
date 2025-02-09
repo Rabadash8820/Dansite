@@ -16,7 +16,7 @@ danVicarel:
     text: rabadash8820
     uri: https://discordapp.com/users/rabadash8820
     icon: discord
-  - slug: discord
+  - slug: github
     text: Rabadash8820
     uri: https://github.com/Rabadash8820
     icon: github
@@ -79,3 +79,30 @@ julieHirt:
     text: juliehirt
     uri: https://juliehirt.itch.io
     icon: itch-io
+alexSierputowski:
+  name:
+    first: Alex
+    last: Sierputowski
+  links:
+  - slug: Website
+    text: GameDirection.net
+    uri: https://gamedirection.net
+    icon: globe
+keyonCohen:
+  name:
+    first: Keyon
+    last: Cohen
+  links:
+  - slug: holyninja16
+    text: holyninja16
+    uri: https://discordapp.com/users/holyninja16
+    icon: discord
+malikAkbar:
+  name:
+    first: Malik
+    last: Akbar
+  links:
+  - slug: serialninja
+    text: serialninja
+    uri: https://discordapp.com/users/serialninja
+    icon: discord
