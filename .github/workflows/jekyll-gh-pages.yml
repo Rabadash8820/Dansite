@@ -39,7 +39,7 @@ jobs:
           source: ./web/
           destination: ./web/_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ./web/_site
 
