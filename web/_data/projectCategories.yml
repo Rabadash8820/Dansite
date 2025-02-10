@@ -41,7 +41,7 @@
       links:
       - text: Download (Win64)
         icon: download
-        href: /projects/game-jams/root-canal/root-canal-win64-v1.zip
+        href: https://github.com/JulieHirt/RootCanal/raw/refs/heads/main/builds/root-canal-win64.zip
         isDownload: true
       - text: Play Online
         icon: itch-io
