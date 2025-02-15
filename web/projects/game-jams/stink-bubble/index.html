@@ -24,7 +24,7 @@
             {{ alexContact.name.first }} (3D modeling/texturing and level design),
             {% include contact-link.html contact="keyonCohen" %} (another general programmer with whom I had worked at GGJ 2023),
             {% include contact-link.html contact="malikAkbar" %} (a 2D artist), a music/sound designer,
-            and my business partner {% include contact-link.html contact="mattSamardge" %} (a 2D artist, 
+            and my business partner {% include contact-link.html contact="mattSamardge" %} (a 2D artist,
             with whom I hadn't actually worked on <a href="/projects/mobile/hhh">High Hand Hold'em</a> in nearly a year!).
             The game came together quite well, with {{ alexContact.name.first }} cranking out 3D models and textures at an incredible rate.
             We didn't have time to include any of the UI art that {{ mattContact.name.first }} had drawn though, unfortunately.
@@ -67,11 +67,11 @@
         <h2 class="text-center">Technical Details</h2>
         <p>This was the first 3D game that I had made for a game jam (other than a very basic one that I tried to make by myself at a jam back in 2017).</p>
         <p>
-            I programmed all of the physics-based movement, random physics-based motion of the bubbles and people, 
+            I programmed all of the physics-based movement, random physics-based motion of the bubbles and people,
             the physics of the ceiling fans pushing bubbles and the player away,
             and the logic for keeping score and managing match state.
             I also implemented two particle systems for the player's "stink particles" (or "farticles" as we called them!):
-            one with particles trailing behind the player in world space, 
+            one with particles trailing behind the player in world space,
             and one with the particles constrained to a small sphere around the player in local space.
             Toggling between these particle systems gave the impression of actually "trapping" the player's stink inside a bubble,
             or releasing it when the bubble pops!
