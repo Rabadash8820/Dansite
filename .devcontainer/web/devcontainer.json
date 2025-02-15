@@ -18,7 +18,7 @@
         4000 // Jekyll server
     ],
     // Uncomment the next line to run commands after the container is created.
-    "onCreateCommand": "cd web/ && bundle install",
+    "onCreateCommand": "bash .devcontainer/on-create.sh && cd web/ && bundle install",
     // Configure tool-specific properties.
     "customizations": {
         "vscode": {
