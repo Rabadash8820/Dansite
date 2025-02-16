@@ -1,6 +1,10 @@
 {% assign mainContact = site.data.contacts.danVicarel %}
 
-<p class="fw-bold">Built with ❤️ by me, {{ mainContact.name.first }} {{ mainContact.name.last }}!</p>
+<p>Built/hosted with <a href="https://pages.github.com/" {{ site.externalLinkAttributes }}>GitHub Pages</a>,
+    <a href="https://jekyllrb.com/" {{ site.externalLinkAttributes }}>Jekyll</a>,
+    <a href="https://getbootstrap.com/" {{ site.externalLinkAttributes }}>Bootstrap</a>,
+    and <a href="https://aws.amazon.com/" {{ site.externalLinkAttributes }}>Amazon Web Services</a>.
+</p>
 <p>
     {% for contactLink in mainContact.links %}
         <a href="{{ contactLink.uri }}" {{ site.externalLinkAttributes }} aria-label="{{ contactLink.title }}" class="text-decoration-none">
