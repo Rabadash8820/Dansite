@@ -53,9 +53,9 @@ title: Home
                 <div class="nav nav-pills flex-column flex-sm-row" id="nav-tab" role="tablist">
                     {% for category in site.data.projectCategories %}
                     <button class="flex-sm-fill text-sm-center nav-link {% if forloop.first %}active{% endif %}"
-                        id="nav-tab-{{ category.slug }}" data-bs-toggle="tab"
-                        data-bs-target="#nav-{{ category.slug }}" type="button" role="tab"
-                        aria-controls="nav-{{ category.slug }}"
+                        id="{{ category.slug }}" data-bs-toggle="tab"
+                        data-bs-target="#nav-tab-{{ category.slug }}" type="button" role="tab"
+                        aria-controls="nav-tab-{{ category.slug }}"
                     >
                         <span class="h4 d-flex align-items-center">
                             {% include bootstrap-icons/{{ category.icon }}.svg class="me-2" title=false %} {{ category.header }}
@@ -68,7 +68,7 @@ title: Home
             <div class="tab-content" id="nav-tabContent">
                 {% for category in site.data.projectCategories %}
                 <div class="tab-pane fade {% if forloop.first %}show active{% endif %}"
-                    id="nav-{{ category.slug }}" role="tabpanel" aria-labelledby="nav-tab-{{ category.slug }}">
+                    id="nav-tab-{{ category.slug }}" role="tabpanel" aria-labelledby="{{ category.slug }}">
                     <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-4">
 
                         {% for project in category.projects %}
