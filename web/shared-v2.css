@@ -31,11 +31,6 @@ html {
     padding-top: 4rem;
 }
 
-.dan-navbar-secondary {
-    /* Matches thickness of "top" navbar */
-    top: 59px;
-}
-
 .dan-project-breadcrumb>li:last-child {
     max-width: 60%;
 }
