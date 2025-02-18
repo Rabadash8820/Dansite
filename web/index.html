@@ -1,28 +1,23 @@
 ---
 title: Home
 ---
-<section id="hero" class="min-vh-100 py-5 d-flex align-items-center">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
+<section id="hero" class="min-vh-100 py-5 d-flex flex-column">
+    <div class="flex-grow-1 text-center">
 
-                <img src="index/hero-logo-v1.png" class="img-fluid" alt="{{ site.logo.alt }}">
-                <p class="display-1">Hi, I'm Dan!</p>
+        <img src="index/hero-logo-v1.png" class="img-fluid" alt="{{ site.logo.alt }}">
+        <p class="display-1">Hi, I'm Dan!</p>
 
-            </div>
-        </div>
     </div>
 
-    <div class="position-absolute bottom-0 start-50 translate-middle-x d-flex">
-        <a class="display-1 text-reset dan-scroll-indicator" href="#welcome" tabindex="-1">
+    <a class="d-flex justify-content-center text-reset" href="#welcome" tabindex="-1">
+        <span class="display-1 text-center dan-scroll-indicator">
             {% include bootstrap-icons/chevron-compact-down.svg title="Continue" %}
-        </a>
-    </div>
+        </span>
+    </a>
 </section>
 
-{% assign mainContact = site.data.contacts.danVicarel %}
-
 <main class="container">
+    {% assign mainContact = site.data.contacts.danVicarel %}
 
     <section id="welcome" class="row row-cols-1 row-cols-lg-2 dan-pad-under-header">
         <div class="col">
