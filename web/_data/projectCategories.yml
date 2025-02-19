@@ -171,10 +171,6 @@
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2019/games/send-them-home
-      - text: Source
-        title: coming soon
-        icon: github
-        href:
       years:
         start: 2019
         end: 2019
