@@ -1,5 +1,8 @@
 ---
 ---
+{% assign category = site.data.projectCategories | where: "slug", "websites" | first %}
+{% assign project = category.projects | where: "slug", "derploid-site" | first %}
+
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center">Background</h2>

@@ -3,12 +3,14 @@
 {% assign mattContact = site.data.contacts.mattSamardge %}
 {% assign zacContact = site.data.contacts.zacPierce %}
 {% assign kateContact = site.data.contacts.kateTriantafelow %}
+{% assign category = site.data.projectCategories | where: "slug", "game-jams" | first %}
+{% assign project = category.projects | where: "slug", "send-them-home" | first %}
 
 <section id="background-team" class="row">
     <div class="col">
         <h2 class="text-center">Team Formation</h2>
         <p>
-            I built <cite>Send Them Home</cite> with a team during Global Game Jam in January 2019.
+            I built <cite>{{ project.header }}</cite> with a team during Global Game Jam in January 2019.
             After the amazing experience building <a href="/projects/game-jams/demisword-bubonic"><cite>DemiSword: Bubonic</cite></a> the previous year,
             I was obviously interested in working with that team again, but I also wanted to branch out and meet new people.
             My business partner, {% include contact-link.html contact="mattSamardge" %}, couldn't attend,
@@ -77,7 +79,7 @@
             </li>
         </ul>
         <p>
-            <cite>Send Them Home</cite> was the most that I had worked with Unity's Mecanim animation system up to that point.
+            <cite>{{ project.header }}</cite> was the most that I had worked with Unity's Mecanim animation system up to that point.
             The game was meant to be very atmospheric and unsettling, and I think that my work on the animations, combined with the artists'
             amazing character/environment work, really pulled this off. For example, notice the following when playing the game:
         </p>

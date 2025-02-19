@@ -1,5 +1,8 @@
 ---
 ---
+{% assign category = site.data.projectCategories | where: "slug", "websites" | first %}
+{% assign project = category.projects | where: "slug", "dansite" | first %}
+
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center display-2">Background</h2>

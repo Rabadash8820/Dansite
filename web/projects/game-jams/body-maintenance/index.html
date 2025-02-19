@@ -1,12 +1,14 @@
 ---
 ---
 {% assign chrisContact = site.data.contacts.chrisParkinson %}
+{% assign category = site.data.projectCategories | where: "slug", "game-jams" | first %}
+{% assign project = category.projects | where: "slug", "body-maintenance" | first %}
 
 <section id="background-team" class="row">
     <div class="col">
         <h2 class="text-center">Team Formation</h2>
         <p>
-            I built <cite>Body Maintenance</cite> with a team during Global Game Jam in January 2020.
+            I built <cite>{{ project.header }}</cite> with a team during Global Game Jam in January 2020.
             I had been discussing an opportunity around this time at <a href="https://www.lamoverse.com" {{ site.externalLinkAttributes }}>LAMO, LLC</a>,
             with one of their engineers, {% include contact-link.html contact="chrisParkinson" %} who suggested doing a game jam as a sort of "working interview".
             This sounded like a lot of fun to me, and a great chance to show off my skills.
@@ -40,7 +42,7 @@
             asset for building 2D Platformers in Unity, so a lot of the input/movement systems would already be done for us.
         </p>
         <p>
-            The final game, <cite>Body Maintenance (BM)</cite>,
+            The final game, <cite>{{ project.header }}</cite>,
             featured local multiplayer with 4-player split-screen, and a central mini map that showed each player's location in the body.
             A "life manager" system would trigger events with descriptions like "first day of school" or "senior prom", creating alerts in relevant organs.
         </p>
@@ -82,7 +84,7 @@
         </p>
         <p>
             The Corgi Engine asset did prove to be immensely helpful, providing 2D platformer inputs and mechanics, ladders, multiple controllers, etc. out of the box.
-            This allowed our team to focus on the custom logic specific to <cite>Body Maintenance</cite>.
+            This allowed our team to focus on the custom logic specific to <cite>{{ project.header }}</cite>.
         </p>
         <p>
             My implementation of the "life manager" made good use of data driven design.

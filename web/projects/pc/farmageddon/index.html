@@ -1,15 +1,21 @@
 ---
 ---
+{% assign category = site.data.projectCategories | where: "slug", "pc" | first %}
+{% assign project = category.projects | where: "slug", "farmageddon" | first %}
+
+{% assign mobileCategory = site.data.projectCategories | where: "slug", "mobile" | first %}
+{% assign hhhProject = mobileCategory.projects | where: "slug", "hhh" | first %}
+
 <section id="background-involvement" class="row">
     <div class="col">
         <h2 class="text-center">How I got involved</h2>
         <p>
-            <cite>Farmageddon</cite> is a novel roguelike battle royale for PC for which I was the lead backend engineer.
+            <cite>{{ project.header }}</cite> is a novel roguelike battle royale for PC for which I was the lead backend engineer.
             I worked as a contractor for the developer, <a href="https://www.solidplasmastudios.com" {{ site.externalLinkAttributes }}>Solidplasma Studios</a>,
             led by an accomplished Twitch streamer.
         </p>
         <p>
-            The inspiration for <cite>Farmageddon</cite> was basically a joke between that streamer and one of the artists: could they design a game around cow puns.
+            The inspiration for <cite>{{ project.header }}</cite> was basically a joke between that streamer and one of the artists: could they design a game around cow puns.
             From this starting point, they had the idea of a battle royale game, where instead of players fighting each other in realtime
             (which he knew would be costly to implement), player actions would be recorded and saved in the cloud,
             then player clients would download those recordings to fight against locally.
@@ -49,18 +55,18 @@
             He described logic for selecting "bosses" that players would have to fight in the "Divine Pasture".
             Essentially, if a player managed to hold this area for a certain amount of time, then their run would become the new "boss",
             and other players would have to fight that cow (with all of its stats, items, etc.) in subsequent runs.
-            I completed the AWS infrastructure for this system in January 2021, leading to the official <cite>Farmageddon</cite> launch on July 24, 2021!
+            I completed the AWS infrastructure for this system in January 2021, leading to the official <cite>{{ project.header }}</cite> launch on July 24, 2021!
         </p>
         <p>
             In late 2021, I worked on some additional features, including a more complete stats/leaderboard system,
             tweaks to how players' "cow sprites" were associated with their previous runs, and a full In-App Purchasing system using the Steam WebAPI.
             My last major contribution during December 2021 was to get the entire backend system running on a single machine so that Solidplasma could demo
-            <cite>Farmageddon</cite> through spotty internet at Super MAGFest 2022.
+            <cite>{{ project.header }}</cite> through spotty internet at Super MAGFest 2022.
             This was the first time I ever got a client/server system to work between two physically connected machines!
         </p>
         <p>
-            While there is still occasional bug fixing to do, my involvement in <cite>Farmageddon</cite> mostly ended in late 2022,
-            allowing me to get back to developing my own games (particularly <a href="/projects/mobile/hhh"><cite>High Hand Hold'em™</cite></a>).
+            While there is still occasional bug fixing to do, my involvement in <cite>{{ project.header }}</cite> mostly ended in late 2022,
+            allowing me to get back to developing my own games (particularly <a href="/projects/mobile/hhh"><cite>{{ hhhProject.header }}</cite></a>).
         </p>
     </div>
 </section>

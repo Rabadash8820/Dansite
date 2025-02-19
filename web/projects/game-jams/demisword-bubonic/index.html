@@ -3,12 +3,14 @@
 {% assign mattContact = site.data.contacts.mattSamardge %}
 {% assign zacContact = site.data.contacts.zacPierce %}
 {% assign bexContact = site.data.contacts.bexMoss %}
+{% assign category = site.data.projectCategories | where: "slug", "game-jams" | first %}
+{% assign project = category.projects | where: "slug", "demisword-bubonic" | first %}
 
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center">Background</h2>
         <p>
-            I built <cite>DemiSword: Bubonic</cite> with a team during Global Game Jam in January 2018.
+            I built <cite>{{ project.header }}</cite> with a team during Global Game Jam in January 2018.
             My first game jam experience the previous summer had not been great, so I almost didn't attend this year.
             Luckily though, my business partner, {% include contact-link.html contact="mattSamardge" %},
             and I both decided to get tickets. During the theme presentation, I got to joking around with
@@ -28,7 +30,7 @@
             The game came together very nicely, with awesome backgrounds from {{ mattContact.name.first }}, character sprites from the other artist,
             excellent music and custom SFX from {{ bexContact.name.first }}, and tight input controls by {{ zacContact.name.first }};
             I built the enemy AI and the tutorial. We thought of several different ideas for the game's name,
-            eventually combining two of them into <cite>DemiSword: Bubonic</cite>, as seen on the game's GGJ page.
+            eventually combining two of them into <cite>{{ project.header }}</cite>, as seen on the game's GGJ page.
             During the final presentation, I introduced the game, then {{ zacContact.name.first }} commentated while two volunteers from the audience played,
             which was very gratifying to watch!
         </p>
@@ -39,7 +41,7 @@
     <div class="col">
         <h2 class="text-center">Technical Details</h2>
         <p>
-            <cite>DemiSword: Bubonic</cite> was my first group game project.
+            <cite>{{ project.header }}</cite> was my first group game project.
             {{ mattContact.name.first }} and I had started <a href="/projects/mobile/hhh"><cite>High Hand Hold'em™</cite></a> that summer,
             but we were the only two working on it.
             So, this game was my first experience with making a design doc, defining/delegating gamedev tasks,

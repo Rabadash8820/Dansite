@@ -2,12 +2,14 @@
 ---
 {% assign alexContact = site.data.contacts.alexSierputowski %}
 {% assign mattContact = site.data.contacts.mattSamardge %}
+{% assign category = site.data.projectCategories | where: "slug", "game-jams" | first %}
+{% assign project = category.projects | where: "slug", "stink-bubble" | first %}
 
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center">Background</h2>
         <p>
-            I built <cite>Stink Bubble</cite> with a team during Global Game Jam in January 2025.
+            I built <cite>{{ project.header }}</cite> with a team during Global Game Jam in January 2025.
             I hadn't participated in GGJ 2024 for family reasons, so it was great to see my fellow Cleveland Game Developers again.
             I entered the venue right as they were announcing the year's theme: "Bubble", an uncharacteristically specific theme;
             usually GGJ themes were more abstract concepts open to interpretation, like "Transmission" or "Home"!
@@ -45,7 +47,7 @@
             to make big stink bomb and gross out all the party guests.
         </p>
         <p>
-            In its final form, <cite>Stink Bubble</cite> is a 3D, 3rd-person arcade game for PC and web.
+            In its final form, <cite>{{ project.header }}</cite> is a 3D, 3rd-person arcade game for PC and web.
             The player flies around collecting bubbles to grow <em>their</em> bubble,
             then runs into people's faces to pop the bubble and release their stink.
             The player's bubble is constantly shrinking, and they get more points for having a larger bubble when they hit a person,

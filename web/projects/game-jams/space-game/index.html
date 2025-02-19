@@ -1,10 +1,13 @@
 ---
 ---
+{% assign category = site.data.projectCategories | where: "slug", "game-jams" | first %}
+{% assign project = category.projects | where: "slug", "space-game" | first %}
+
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center">Background</h2>
         <p>
-            I originally built <cite>"Space Game"</cite> with a team during a Prime Gaming hackathon in October 2022.
+            I originally built <cite>{{ project.header }}</cite> with a team during a Prime Gaming hackathon in October 2022.
             The stated goal of the hackathon was to make software to improve Prime Gaming as a whole,
             but it sort of turned into a game jam as one of the prompts encouraged making a casual web game similar to
             <a href="https://www.nytimes.com/games/wordle/index.html" {{ site.externalLinkAttributes }}><cite>Wordle</cite></a>.

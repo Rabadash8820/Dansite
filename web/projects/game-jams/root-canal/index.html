@@ -1,12 +1,14 @@
 ---
 ---
 {% assign julieContact = site.data.contacts.julieHirt %}
+{% assign category = site.data.projectCategories | where: "slug", "game-jams" | first %}
+{% assign project = category.projects | where: "slug", "root-canal" | first %}
 
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center">Background</h2>
         <p>
-            I built <cite>Root Canal</cite> with a team during Global Game Jam in January 2023.
+            I built <cite>{{ project.header }}</cite> with a team during Global Game Jam in January 2023.
             This was the first GGJ event hosted by the Cleveland Game Developers since the COVID-19 pandemic began,
             so it was great to see my fellow members again after nearly 3 years.
             I was sitting with two guys during the announcement of the theme: "Roots".
@@ -38,7 +40,7 @@
     <div class="col">
         <h2 class="text-center">Game Concept</h2>
         <p>
-            In its final form, <cite>Root Canal</cite> was a 2D RTS game for PC.
+            In its final form, <cite>{{ project.header }}</cite> was a 2D RTS game for PC.
             The player starts with 3 adorable bacteria characters with pickaxes (drawn by our talented pixel artist),
             and can click to move them around a tile-based map and mine through the layers of a tooth:
             white enamel, yellowish dentin, and red veiny pulp. Within the pulp, at the center of the overall tooth, is the nerve.

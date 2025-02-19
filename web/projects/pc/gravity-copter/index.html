@@ -1,10 +1,13 @@
 ---
 ---
+{% assign category = site.data.projectCategories | where: "slug", "pc" | first %}
+{% assign project = category.projects | where: "slug", "gravity-copter" | first %}
+
 <section id="background" class="row">
     <class="col">
         <h2 class="text-center">Background</h2>
         <p>
-            <cite>GravityCopter</cite> is was one of my simpler, but well-architected hobby games.
+            <cite>{{ project.header }}</cite> was one of my simpler, but well-architected hobby games.
             During a vacation in 2019, my brother-in-law had the idea for a
             <a href="https://flappybird.io/" {{ site.externalLinkAttributes }}><cite>Flappy Bird</cite></a>-style game where,
             rather than applying an upward force to stay aloft and avoid obstacles, the player would toggle the direction of gravity.

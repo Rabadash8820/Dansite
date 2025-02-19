@@ -1,5 +1,11 @@
 ---
 ---
+{% assign category = site.data.projectCategories | where: "slug", "libraries" | first %}
+{% assign project = category.projects | where: "slug", "unity-util" | first %}
+
+{% assign mobileCategory = site.data.projectCategories | where: "slug", "mobile" | first %}
+{% assign hhhProject = mobileCategory.projects | where: "slug", "hhh" | first %}
+
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center">Background</h2>
@@ -7,17 +13,17 @@
             This library is essentially a collection of utility classes and components that I've been building since I first adopted Unity in 2016.
             Back then, I was working on a first-person shooter, so I wrote several components related to inventory, ammo/health, projectile spawning, etc.
             As I started adding more general, utility components (for logging, dependency injection, PRNG, file I/O, etc.) and working on games in other genres
-            (particularly the mobile game, <a href="/projects/mobile/hhh"><cite>High Hand Hold'em™</cite></a>)
+            (particularly the mobile game, <a href="/projects/mobile/hhh"><cite>{{ hhhProject.header }}</cite></a>)
             I decided that these components should be moved to a separate, open-source repository for reuse between projects.
         </p>
         <p>
             The name of this library has gone through several iterations.
             First, it was "Danware.Unity", named for the short-lived company, Danware Creations, LLC, that I founded before
             my partner and I founded <a href="https://www.derploid.com" {{ site.externalLinkAttributes }}>Derploid Entertainment, LLC</a>.
-            In January 2018, I renamed this library to the organization-agnostic "UnityUtil", but the namespaces were all still under <code>UnityEngine.*</code>,
+            In January 2018, I renamed this library to the organization-agnostic "{{ project.header }}", but the namespaces were all still under <code>UnityEngine.*</code>,
             which I thought would be simpler for consumers of the library.
             Finally, in May 2022, I decided that this was actually more <em>confusing</em>
-            (it might not be clear why an API is unavailable if UnityUtil hasn't been referenced)
+            (it might not be clear why an API is unavailable if <code>UnityUtil</code> hasn't been referenced)
             and eventually renamed all namespaces to <code>UnityUtil.*</code>.
         </p>
         <p>
@@ -26,9 +32,13 @@
             I created a UPM manifest for the package and made plans to distribute the library that way.
         </p>
         <p>
-            As of this writing in January 2024, the library is still a bit of a "monolith", with all of the logic described above contained in a single assembly (DLL).
-            Once my partner and I publish <cite>High Hand Hold'em™</cite> (meaning UnityUtil has been used in an actual published game),
-            then I will break up the library's <code>UnityUtil.*</code> namespaces into separate packages and release 1.0 versions of them to OpenUPM.
+            In April 2024, while setting up {{ project.header }} for use in another game project (a prospective video game adaptation of the board game, <cite>boop!</cite>),
+            I finally decided to break up the library from its "monolithic" state into separate modules for physics, UI, triggers, etc.
+            Each of these modules can now be imported as UPM packages from their git URLs.
+        </p>
+        <p>
+            Once my partner and I publish <cite>{{ hhhProject.header }}</cite> (meaning {{ project.header }} has been used in an actual published game),
+            then I plan to release 1.0 versions of them to OpenUPM.
         </p>
     </div>
 </section>

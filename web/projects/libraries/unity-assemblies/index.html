@@ -1,10 +1,13 @@
 ---
 ---
+{% assign category = site.data.projectCategories | where: "slug", "libraries" | first %}
+{% assign project = category.projects | where: "slug", "unity-assemblies" | first %}
+
 <section id="background" class="row">
     <div class="col">
         <h2 class="text-center">Background</h2>
         <p>
-            <cite>Unity3D</cite> (or <cite>UnityAssemblies</cite>) is an open-source NuGet package that I started in 2019.
+            <cite>Unity3D</cite> (or <cite>{{ project.header }}</cite>) is an open-source NuGet package that I started in 2019.
             Oh, and <em>Unity® and the Unity logo are trademarks of Unity Technologies.</em>
         </p>
         <p>
