@@ -111,7 +111,7 @@
           while the A and D keys rotate the ship counter-clockwise and clockwise.
 
     - slug: body-maintenance
-      header: Body Maintenance
+      header: Body Maintenance (BM)
       links:
       - text: Download (Win64)
         icon: download
