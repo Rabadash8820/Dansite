@@ -115,15 +115,14 @@
       links:
       - text: Download (Win64)
         icon: download
-        href: /projects/game-jams/body-maintenance/body-maintenance-win64-v1.zip
+        href: https://github.com/Rabadash8820/GGJ2020/raw/refs/heads/master/builds/body-maintenance-win64.zip
         isDownload: true
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2020/games/body-movement-bm-9
       - text: Source
-        title: coming soon
         icon: github
-        href:
+        href: https://github.com/Rabadash8820/GGJ2020
       years:
         start: 2020
         end: 2020
