@@ -337,7 +337,7 @@
         alt: Gameplay screenshot of the game's winter skin, with snow covering the grass and presents, trees, and snowmen scattered around
 
     - slug: gravity-copter
-      header: "GravityCopter"
+      header: GravityCopter
       links:
       - text: Download
         icon: download
@@ -425,10 +425,10 @@
         alt: Screenshot of the 2D space shooter game that I built for this talk, with an interactive enemy that looks like Jeff Bezos' head
       embeds:
       - title: Video recording (opens in new tab)
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128554&authkey=!AIzzDE7Yox4vDlo
+        src: https://1drv.ms/v/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBim8AAAAAAIzzDE7Yox4vDlo
         allowFullScreen: true
       - title: PowerPoint slides
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128348&authkey=!AOp-TA7oX7rm7HY&em=2
+        src: https://1drv.ms/p/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBvG4AAAAAAOp-TA7oX7rm7HY
 
     - slug: mobile-ads-less-awful
       header: Making Mobile Ads Less Awful
@@ -440,10 +440,10 @@
         alt: Diagram from the talk, showing how apps connect to SSPs, to ad exchanges, to DSPs, to advertisers
       embeds:
       - title: Video recording (opens in new tab)
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128555&authkey=!ABnQFyyT9begIcc
+        src: https://1drv.ms/v/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBi28AAAAAABnQFyyT9begIcc
         allowFullScreen: true
       - title: PowerPoint slides
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2128354&authkey=!ACv-UMJf4AvgnIM&em=2
+        src: https://1drv.ms/p/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBwm4AAAAAACv-UMJf4AvgnIM
 
     - slug: singletons-doing-them-wrong
       header: "Singletons: You're Doing Them Wrong"
@@ -459,10 +459,10 @@
         alt: UML diagram of a class following the static singleton pattern, one of the (anti)patterns discussed in this talk
       embeds:
       - title: Video recording (opens in new tab)
-        src: https://1drv.ms/v/c/41f178ba39bc3d9c/EUguL0d-FMVOnvFUf76YIuEBN5X3UDql770gKXE__5LQrA?e=pClLtH
+        src: https://1drv.ms/v/c/41f178ba39bc3d9c/IQRILi9HfhTFTp7xVH--mCLhAavAHTVzodaqeUhESBEDbcY
         allowFullScreen: true
       - title: PowerPoint slides
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126998&authkey=!AHX4HJO89gzLt_Y&em=2
+        src: https://1drv.ms/p/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBdmkAAAAAAHX4HJO89gzLt_Y
 
     - slug: advanced-ifs
       header: "Advanced Gameplay Programming: If Statements"
@@ -478,7 +478,7 @@
         alt: Image of deeply nested "hadouken indentation", one of the signs of poor conditional logic discussed in this talk
       embeds:
       - title: PowerPoint slides
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2126772&authkey=!AOQjp_1CToFhPnE&em=2
+        src: https://1drv.ms/p/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBlGgAAAAAAOQjp_1CToFhPnE
 
     - slug: designing-new-lifeforms
       header: Designing New Lifeforms
@@ -490,13 +490,13 @@
         alt: Image of an original creature design from this talk, showing a kangaroo-like animal with wheel-like bones growing out of its shoulders
       embeds:
       - title: Video recording (opens in new tab)
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2146408&authkey=!AF8P8KA5XDCnPKY
+        src: https://1drv.ms/v/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBSLUAAAAAAF8P8KA5XDCnPKY
         allowFullScreen: true
       - title: PowerPoint slides
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121685&authkey=!AAG8Gax-vW7LBm4&em=2
+        src: https://1drv.ms/p/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBtVQAAAAAAAG8Gax-vW7LBm4
 
     - slug: supercharging-unity-workflow
-      header: "Supercharging Your Unity Workflow With Visual Studio and Git"
+      header: Supercharging Your Unity Workflow With Visual Studio and Git
       links:
       - text: Companion repository
         icon: github
@@ -509,4 +509,4 @@
         alt: Image of the Unity, Visual Studio, and Git logos connected by lines with a red heart in the middle
       embeds:
       - title: PowerPoint slides
-        src: https://onedrive.live.com/embed?resid=41F178BA39BC3D9C%2121928&authkey=!AEEvTMgB8xEgphI&em=2
+        src: https://1drv.ms/p/c/41f178ba39bc3d9c/UQScPbw5unjxIIBBqFUAAAAAAEEvTMgB8xEgphI
