@@ -8,14 +8,6 @@
 {% else %}
 
 <div id="projectImgCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators bg-body-tertiary" style="--bs-bg-opacity: .5;">
-        {% for image in include.project.images %}
-        <button type="button" data-bs-target="#projectImgCarousel"
-            data-bs-slide-to="{{ forloop.index0 }}" aria-label="Image {{ forloop.index }}"
-            {% if forloop.first %}class="active" aria-current="true"{% endif %}>
-        </button>
-        {% endfor %}
-    </div>
     <div class="carousel-inner">
         {% for image in include.project.images %}
         <div class="carousel-item
@@ -23,6 +15,16 @@
         ">
             <img src="{{ image.src }}" class="d-block mx-auto mw-100" alt="{{ image.alt }}">
         </div>
+        {% endfor %}
+    </div>
+
+    {% comment %}The `.carousel-indicators` class sets `position: absolute`. We are resetting it to the default `static` here.{% endcomment %}
+    <div class="carousel-indicators bg-body-tertiary position-static mt-3" style="--bs-bg-opacity: .5;">
+        {% for image in include.project.images %}
+        <button type="button" data-bs-target="#projectImgCarousel"
+            data-bs-slide-to="{{ forloop.index0 }}" aria-label="Image {{ forloop.index }}"
+            {% if forloop.first %}class="active" aria-current="true"{% endif %}>
+        </button>
         {% endfor %}
     </div>
 </div>
