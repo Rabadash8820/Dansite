@@ -1,5 +1,7 @@
 # The Dansite
 
+[![Jekyll Build and GitHub Pages Deploy](https://github.com/Rabadash8820/Dansite/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/Rabadash8820/Dansite/actions/workflows/jekyll-gh-pages.yml)
+
 All of the following domains will redirect to the published site at [www.danvicarel.com](https://www.danvicarel.com) hosted on GitHub Pages.
 You can use HTTP or HTTPS, and IPv4 or IPv6.
 
