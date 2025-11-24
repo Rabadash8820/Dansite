@@ -3,9 +3,9 @@
 {
     "name": "Jekyll",
     // Set image (could use a Dockerfile or Docker Compose file instead, see https://containers.dev/guide/dockerfile)
-    // This image includes Jekyll 4.3.4 on Ruby 3.3.5. See https://github.com/devcontainers/images/blob/main/src/jekyll/history/2.1.8.md#variant-33-bookworm
+    // This image includes Jekyll 4.4.1 on Ruby 3.4.7. See https://github.com/devcontainers/images/blob/main/src/jekyll/history/2.2.1.md#variant-34-bookworm
     // Make sure the Jekyll version in Gemfile matches
-    "image": "mcr.microsoft.com/devcontainers/jekyll:2.1.8-3.3-bookworm",
+    "image": "mcr.microsoft.com/devcontainers/jekyll:2.2.1-3.4-bookworm",
     // Features to add to the dev container. More info: https://containers.dev/features.
     "features": {
         "ghcr.io/devcontainers/features/git:1": {
