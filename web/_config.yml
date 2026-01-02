@@ -17,7 +17,7 @@ title: Dansite
 isProduction: true  # Overridden to false in test repo
 copyright:
   startYear: 2017
-  endYear: 2025
+  endYear: 2026
   owner: Daniel Vicarel
 logo:
   alt: Dansite logo. A cartoony image of Dan's face.
