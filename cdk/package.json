@@ -1,6 +1,12 @@
 {
   "name": "github-pages-website-cdk",
   "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Dan Vicarel",
+    "email": "dan.vicarel@gmail.com",
+    "url": "https://danvicarel.com"
+  },
   "bin": {
     "github-pages-website-cdk": "bin/github-pages-website-cdk.js"
   },
@@ -8,10 +14,10 @@
     "compile": "tsc",
     "compile:watch": "tsc -w",
     "test": "jest",
-    "synth": "env=$npm_config_env_name && export NODE_ENV=$env && envFile=../.devcontainer/cdk/secret.$env.env && test -f \"$envFile\" && export $(grep -v '^#' \"$envFile\" | xargs -d '\\n'); cdk synth",
-    "synth:test": "npm run synth --env-name=test -- $@",
-    "synth:prod": "npm run synth --env-name=prod -- $@",
-    "clean": "rm -rf lib/*.js lib/*.d.ts bin/*.js bin/*.d.ts cdk.out/",
+    "synth": "cdk synth -- $@",
+    "synth:test": "export NODE_ENV=test && npm run synth -- $@",
+    "synth:prod": "export NODE_ENV=prod && npm run synth -- $@",
+    "clean": "rm -rf lib/*.js lib/*.d.ts bin/*.js bin/*.d.ts",
     "diff": "cdk diff --app cdk.out/",
     "import": "cdk import --app cdk.out/",
     "deploy": "cdk deploy --app cdk.out/",
@@ -19,17 +25,17 @@
     "deploy:prod": "npm run deploy -- $@"
   },
   "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
     "@types/jest": "^30.0.0",
     "@types/node": "^25.5.0",
-    "aws-cdk": "^2.1111.0",
+    "aws-cdk": "^2.1112.0",
     "jest": "^30.3.0",
     "ts-jest": "^29.4.6",
-    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
     "aws-cdk-lib": "^2.243.0",
     "constructs": "^10.4.5",
-    "source-map-support": "^0.5.21"
+    "dotenv": "^17.3.1"
   }
 }

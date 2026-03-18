@@ -1,46 +1,56 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
-    "name": "CDK",
-    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "image": "mcr.microsoft.com/devcontainers/typescript-node:24-trixie",
-    // Features to add to the dev container. More info: https://containers.dev/features.
-    "features": {
-        "ghcr.io/devcontainers/features/aws-cli:1": {
-            "version": "2.13.15"
-        },
-        "ghcr.io/devcontainers/features/git:1": {
-            "version": "os-provided"
-        },
-        "ghcr.io/devcontainers/features/git-lfs:1": {
-            "version": "latest"
-        }
+  "name": "CDK",
+  // Set image (could use a Dockerfile or Docker Compose file instead, see https://containers.dev/guide/dockerfile)
+  // Tag is <imageVersion>-<osVersion>, see all tags at https://hub.docker.com/r/microsoft/devcontainers-base#about-debian
+  // Should match OS version used to run GitHub Action, and base node config used in tsconfig
+  // This is Debian 13 (Trixie), which approx matches Ubuntu 24.04 LTS (Noble Numbat), see rough Debian/Ubuntu version mapping: https://askubuntu.com/questions/445487/what-debian-version-are-the-different-ubuntu-versions-based-on
+  "image": "mcr.microsoft.com/devcontainers/base:2.1.7-debian13",
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/aws-cli:1": {
+      "version": "2.34.12"
     },
-    "onCreateCommand": "bash .devcontainer/on-create.sh && cd cdk/ && npm install --global npm@11.6.4 && npm install",
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [
-        9229 // Node.js debugging
-    ],
-    // Configure tool-specific properties.
-    "customizations": {
-        "vscode": {
-            // Add the IDs of extensions you want installed when the container is created.
-            "extensions": [
-                "mikestead.dotenv",
-                "mhutchie.git-graph",
-                "eamodio.gitlens",
-                "ms-azuretools.vscode-docker",
-                "GitHub.vscode-github-actions",
-                "streetsidesoftware.code-spell-checker"
-            ]
-        }
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "os-provided"
     },
-    "mounts": [
-        // Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
-        // "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
-        "source=${localEnv:HOME}/.aws/,target=/home/node/.aws/,type=bind",
-        "source=${localEnv:HOME}/.gnupg/,target=/home/node/.gnupg/,type=bind"
-    ]
-    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-    // "remoteUser": "root"
+    "ghcr.io/devcontainers/features/git-lfs:1": {
+      "autoPull": true,
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24" // Should match Node version used by GitHub Action
+    }
+    // CDK is installed via npm, see package.json
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [
+    9229 // Node.js debugging
+  ],
+  // Uncomment the next line to run commands after the container is created.
+  "onCreateCommand": "bash .devcontainer/on-create.sh && cd cdk/ && npm install -g npm@11.11.1 && npm install",
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      // Make sure appropriate common extensions from this list are added to .vscode/extensions.json and all other devcontainer.json files as well.
+      "extensions": [
+        "mikestead.dotenv",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker",
+        "GitHub.vscode-github-actions",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  },
+  "mounts": [
+    // Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
+    // "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws/,target=/home/vscode/.aws/,type=bind",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gnupg/,target=/home/vscode/.gnupg/,type=bind"
+  ]
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
 }

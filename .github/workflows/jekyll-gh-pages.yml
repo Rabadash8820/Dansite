@@ -3,10 +3,10 @@
 name: Jekyll Build and GitHub Pages Deploy
 
 on:
-  # Runs on pushes targeting web content of the default branch
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [main]
-    paths: [web/**]
+    paths: [web/**, ".github/workflows/jekyll-gh-pages.yml"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,7 +26,11 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    # Runs on Ubuntu 22.04 (Jammy Jellyfish), built on Debian 12 (Bookworm), see rough Debian/Ubuntu version mapping: https://askubuntu.com/questions/445487/what-debian-version-are-the-different-ubuntu-versions-based-on
+    # Should match devcontainer OS version.
+    # See available GitHub hosted runners: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#standard-github-hosted-runners-for-public-repositories
+    runs-on: ubuntu-22.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v6
