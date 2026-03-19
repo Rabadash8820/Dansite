@@ -1,18 +1,17 @@
 # The Dansite
 
 [![Jekyll Build and GitHub Pages Deploy](https://github.com/Rabadash8820/Dansite/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/Rabadash8820/Dansite/actions/workflows/jekyll-gh-pages.yml)
+[![CDK Synth and Deploy](https://github.com/Rabadash8820/Dansite/actions/workflows/cdk.yml/badge.svg)](https://github.com/Rabadash8820/Dansite/actions/workflows/cdk.yml)
 
 All of the following domains will redirect to the published site at [www.danvicarel.com](https://www.danvicarel.com) hosted on GitHub Pages.
 You can use HTTP or HTTPS, and IPv4 or IPv6.
 
-- [danvicarel.com](https://danvicarel.com)
-- [www.danvicarel.com](https://www.danvicarel.com)
-- [danvicarel.net](https://danvicarel.net)
-- [www.danvicarel.net](https://www.danvicarel.net)
-- [danvicarel.org](https://danvicarel.org)
-- [www.danvicarel.org](https://www.danvicarel.org)
-
-## Contributing
+- [derploid.com](https://derploid.com)
+- ~~[derploid.net](https://derploid.net)~~ TODO
+- ~~[derploid.org](https://derploid.org)~~ TODO
+- [www.derploid.com](https://www.derploid.com)
+- ~~[www.derploid.net](https://www.derploid.net)~~ TODO
+- ~~[www.derploid.org](https://www.derploid.org)~~ TODO
 
 ## Setup
 
@@ -28,7 +27,7 @@ To work with the devcontainers in this repo:
 1. **Install VS Code along with the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension**,
   if you haven't already.
 1. **Optionally, configure a [dotfile repo](https://code.visualstudio.com/docs/devcontainers/containers#_personalizing-with-dotfile-repositories)**
-  so that your devcontainer has a similar configuration to other machines on which you're used to working.
+  so that your devcontainer has a similar configuration to your other personal machines.
   See [Rabadash8820/dotfiles](https://github.com/Rabadash8820/dotfiles) for an example repo.
 1. **Clone this repo and open the root folder in VS Code.** It will automatically prompt you to re-open the folder in a devcontainer.
 1. **Choose the appropriate devcontainer** for the content/features on which you are working.
@@ -38,7 +37,7 @@ If you're working on a Windows machine, you might first need to symlink `~/.gnup
 so that your host, WSL, and devcontainers are all sharing the same keys
 (alternatively, follow VS Code's [Sharing GPG Keys](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials#_sharing-gpg-keys) docs).
 
-VS Code also automatically copies your host's `~/.gitconfig` file, though your dotfile repo setup may have overridden this.
+VS Code also automatically copies your host's `~/.gitconfig` file, though your dotfile repo setup may override this.
 
-Once the container loads, follow the instructions in [.devcontainer/secret.template.env](.devcontainer/secret.template.env) (if present)
+Once the container loads, follow the instructions in `.devcontainer/<container>/config.template.env` (if present)
 to define any secret values that the container expects.
