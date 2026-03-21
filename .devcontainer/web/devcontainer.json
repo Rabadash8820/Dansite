@@ -34,6 +34,7 @@
         "eamodio.gitlens",
         "ms-azuretools.vscode-docker",
         "GitHub.vscode-github-actions",
+        "DavidAnson.vscode-markdownlint",
         "streetsidesoftware.code-spell-checker"
       ]
     }
