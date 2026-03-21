@@ -68,10 +68,9 @@ jobs:
           npm ci
 
           # These env vars come from the previous AWS creds action. The required CLI profile is defined in cdk.json.
-          awsProfile=dansite
-          aws configure --profile $awsProfile set aws_access_key_id ${{ env.AWS_ACCESS_KEY_ID }}
-          aws configure --profile $awsProfile set aws_secret_access_key ${{ env.AWS_SECRET_ACCESS_KEY }}
-          aws configure --profile $awsProfile set aws_session_token ${{ env.AWS_SESSION_TOKEN }}
+          aws configure set aws_access_key_id ${{ env.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ env.AWS_SECRET_ACCESS_KEY }}
+          aws configure set aws_session_token ${{ env.AWS_SESSION_TOKEN }}
 
           npm run synth:${{ env.NODE_ENV }}
           npm run deploy:${{ env.NODE_ENV }} -- --all --require-approval=never
