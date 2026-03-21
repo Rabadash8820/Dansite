@@ -13,35 +13,26 @@
 # If you look in the HTML files, you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible in the templates via {{ site.myvariable }}.
 
-title: Derploid Entertainment
+title: Dansite
 isProduction: true  # Overridden to false in test repo
 copyright:
   startYear: 2017
   endYear: 2026
-  owner: Derploid® Entertainment, LLC
-contact:
-  twitter: DerploidCo
-  github: DerploidEntertainment
-  email: contact@derploid.com
-  phone: "+13307905917"
-  support: https://github.com/DerploidEntertainment/Website/issues/new
-privacyPolicyUri: https://hhh-legal-docs.s3.us-east-2.amazonaws.com/hhh-privacy.html
-highHandHoldem:
-  productName: High Hand Hold'em™
-  supportUri: https://github.com/DerploidEntertainment/HighHandHoldem-Support
-appAds: # These values are NOT secrets, since they'll end up in the public app-ads.txt file anyway
-  admobPublisherId: pub-4376011031523107
-  facebookBusinessId: "767911241660206"
-  yandexPartnerId: "104431884"
+  owner: Daniel Vicarel
+logo:
+  alt: Dansite logo. A cartoony image of Dan's face.
+supportUri: https://github.com/Rabadash8820/Dansite/issues/new
+externalLinkAttributes: "target=\"_blank\" rel=\"noopener noreferrer\""
+# privacyPolicyUri:
 
 strict_front_matter: true
 defaults:
   - scope: { path: "" }
     values:
-      layout: default
-  - scope: { path: "email/" }
+      layout: default-with-footer
+  - scope: { path: "projects/*/*/index.html" }
     values:
-      layout: simple-page
+      layout: project
 
 # Build settings
 plugins: []
@@ -56,10 +47,10 @@ include: []
 exclude:
   - README.md
 #   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
 #   - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/
