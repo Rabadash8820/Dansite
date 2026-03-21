@@ -18,7 +18,7 @@ const isTestEnv = envName === TEST_ENV_NAME;
 // Read env-specific config options from a file.
 // We can't just use the Node.js --env-file mechanism since `cdk synth` doesn't pass through CLI options,
 // and we can't use CDK context variables as they must be passed one by one in `cdk synth --context` options.
-const cfgFilePath = path.resolve(`../.devcontainer/cdk/config.${envName}.env`);
+const cfgFilePath = path.resolve(`../.devcontainer/config.${envName}.env`);
 addConfigFileToEnv(cfgFilePath, false);
 
 function addConfigFileToEnv(path: string, required: boolean = true): any {

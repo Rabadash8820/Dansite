@@ -11,7 +11,7 @@ This folder makes use of VS Code devcontainers. To work with the CDK project in 
 1. [Install Docker](https://docs.docker.com/get-docker/) and make sure it's running.
 2. Install VS Code along with the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension, if you haven't already.
 3. Open this folder in VS Code. It will automatically prompt you to re-open the folder in a devcontainer.
-4. Follow the instructions in [config.template.env](../.devcontainer/cdk/config.template.env) to define config values for the CDK app.
+4. Follow the instructions in [config.template.env](../.devcontainer/config.template.env) to define config values for the CDK app.
 5. Now you can run [AWS CLI](https://aws.amazon.com/cli/) and [CDK Toolkit](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-ref) commands as usual.
     We've also defined a couple [helpful npm scripts](#useful-commands).
     >[!NOTE]

@@ -88,5 +88,5 @@
         "trixie",
         "Unported"
     ],
-    "html.format": "preserve-aligned"
+    "html.format.wrapAttributes": "preserve-aligned"
 }

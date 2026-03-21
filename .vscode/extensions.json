@@ -1,4 +1,5 @@
 {
+    // These recommendations must match those in the devcontainer
     "recommendations": [
         "eamodio.gitlens",
         "ms-azuretools.vscode-docker",
