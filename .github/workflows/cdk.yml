@@ -20,9 +20,7 @@ permissions:
 
 jobs:
   cdk:
-    # Runs on Ubuntu 24.04 LTS (Noble Numbat), built on Debian 13 (Trixie), see rough Debian/Ubuntu version mapping: https://askubuntu.com/questions/445487/what-debian-version-are-the-different-ubuntu-versions-based-on
-    # Should match devcontainer OS version. See available GitHub hosted runners: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#standard-github-hosted-runners-for-public-repositories
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest  # Ubuntu version doesn't matter, everything will be running in our devcontainer anyway
     environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'test' }}
     env:
       NODE_ENV: ${{ github.ref == 'refs/heads/main' && 'prod' || 'test' }}
@@ -38,12 +36,12 @@ jobs:
         with:
           lfs: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2 
         with:
-          node-version: 24  # Should match Node version used in devcontainer
-          cache: npm
-          cache-dependency-path: cdk/package-lock.json
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7  # v6.0.0
@@ -62,15 +60,25 @@ jobs:
           # use-existing-credentials: # Optional. When enabled, this option will check if there are already valid credentials in the environment. If there are, new credentials will not be fetched. If there are not, the action will run as normal.
           allowed-account-ids: ${{ vars.AWS_ACCOUNT_ID }}  # An optional comma-delimited list of expected AWS account IDs. The action will fail if we receive credentials for the wrong account.
           # action-timeout-s: # Optional. A global timeout in seconds for the action. When the timeout is reached, the action immediately exits. The default is to run without a timeout.
-      - name: CDK synth and deploy
-        run: |
-          cd cdk/
-          npm ci
 
-          # These env vars come from the previous AWS creds action. The required CLI profile is defined in cdk.json.
-          aws configure set aws_access_key_id ${{ env.AWS_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ env.AWS_SECRET_ACCESS_KEY }}
-          aws configure set aws_session_token ${{ env.AWS_SESSION_TOKEN }}
+      # This step builds the devcontainer and runs commands inside it, so CI env matches developer machines.
+      # On success, the devcontainer image is pushed to the GitHub Container Registry to make future runs faster.
+      # See https://github.com/devcontainers/ci/blob/main/docs/github-action.md
+      - name: CDK Synth and Deploy in Devcontainer
+        uses: devcontainers/ci@v0.3
+        env:
+          IMAGE_NAME: ghcr.io/dansite/devcontainer
+        with:
+          imageName: ${{ env.IMAGE_NAME }}
+          cacheFrom: ${{ env.IMAGE_NAME }}  # Pre-build devcontainer image
+          runCmd: |
+            cd cdk/
+            npm ci
 
-          npm run synth:${{ env.NODE_ENV }}
-          npm run deploy:${{ env.NODE_ENV }} -- --all --require-approval=never
+            # These env vars come from the previous AWS creds action. The required CLI profile is defined in cdk.json.
+            aws configure set aws_access_key_id ${{ env.AWS_ACCESS_KEY_ID }}
+            aws configure set aws_secret_access_key ${{ env.AWS_SECRET_ACCESS_KEY }}
+            aws configure set aws_session_token ${{ env.AWS_SESSION_TOKEN }}
+
+            npm run synth:${{ env.NODE_ENV }}
+            npm run deploy:${{ env.NODE_ENV }} -- --all --require-approval=never
