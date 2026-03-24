@@ -37,7 +37,6 @@
   // Object syntax for these commands allows commands to run in parallel (https://containers.dev/implementors/spec/#parallel-exec)
   // Dotfiles are cloned/run _after_ these commands
   "onCreateCommand": {
-    "gitSafeDir": "git config --global --add safe.directory \"$PWD\"",
     "updateNpm": "npm install -g npm@11.11.1",
     "aptUpdate": "sudo apt-get update && sudo apt-get upgrade --yes"
   },
