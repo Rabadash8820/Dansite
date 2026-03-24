@@ -34,6 +34,10 @@
     9229  // Node.js debugging
   ],
 
+  // Ensure the ~/.gnupg dir exists, otherwise the bind mount below will fail.
+  // mkdir -p option ensures no error if the dir already exists.
+  "initializeCommand": "mkdir -p ${localEnv:HOME}${localEnv:USERPROFILE}/.gnupg/",
+
   // Object syntax for these commands allows commands to run in parallel (https://containers.dev/implementors/spec/#parallel-exec)
   // Dotfiles are cloned/run _after_ these commands
   "onCreateCommand": {
