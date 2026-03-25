@@ -6,10 +6,10 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [main]
-    paths: [cdk/**, ".github/workflows/cdk.yml"]
+    paths: [cdk/**, ".github/workflows/cdk.yml", ".devcontainer/**"]
   pull_request:
     branches: [main]
-    paths: [cdk/**, ".github/workflows/cdk.yml"]
+    paths: [cdk/**, ".github/workflows/cdk.yml", ".devcontainer/**"]
 
   # Allow running this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,7 +38,7 @@ jobs:
           lfs: true
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2 
+        uses: docker/login-action@b45d80f862d83dbcd57f89517bcf500b2ab88fb2  # v4.0.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -66,7 +66,7 @@ jobs:
       # On success, the devcontainer image is pushed to the GitHub Container Registry to make future runs faster.
       # See https://github.com/devcontainers/ci/blob/main/docs/github-action.md
       - name: CDK Synth and Deploy in Devcontainer
-        uses: devcontainers/ci@v0.3
+        uses: devcontainers/ci@8bf61b26e9c3a98f69cb6ce2f88d24ff59b785c6 # v0.3.1900000417
         env:
           IMAGE_NAME: ghcr.io/dansite/devcontainer
         with:
