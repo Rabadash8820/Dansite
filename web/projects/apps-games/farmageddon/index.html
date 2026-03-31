@@ -1,9 +1,9 @@
 ---
 ---
-{% assign category = site.data.projectCategories | where: "slug", "pc" | first %}
+{% assign category = site.data.projectCategories | where: "slug", "apps-games" | first %}
 {% assign project = category.projects | where: "slug", "farmageddon" | first %}
 
-{% assign mobileCategory = site.data.projectCategories | where: "slug", "mobile" | first %}
+{% assign mobileCategory = site.data.projectCategories | where: "slug", "apps-games" | first %}
 {% assign hhhProject = mobileCategory.projects | where: "slug", "hhh" | first %}
 
 <section id="background-involvement" class="row">
@@ -66,7 +66,7 @@
         </p>
         <p>
             While there is still occasional bug fixing to do, my involvement in <cite>{{ project.header }}</cite> mostly ended in late 2022,
-            allowing me to get back to developing my own games (particularly <a href="/projects/mobile/hhh"><cite>{{ hhhProject.header }}</cite></a>).
+            allowing me to get back to developing my own games (particularly <a href="/projects/apps-games/hhh"><cite>{{ hhhProject.header }}</cite></a>).
         </p>
     </div>
 </section>

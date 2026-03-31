@@ -1,0 +1,39 @@
+---
+---
+{% assign category = site.data.projectCategories | where: "slug", "apps-games" | first %}
+{% assign project = category.projects | where: "slug", "warptable" | first %}
+{% assign hhhProject = category.projects | where: "slug", "hhh" | first %}
+{% assign linkWebsite = project.links | where: "text", "Website" | first %}
+{% assign fredContact = site.data.contacts.fredWebber %}
+
+<section id="background" class="row">
+    <class="col">
+        <p>
+            <cite>{{ project.header }}</cite> was a Unity desktop application that I worked on as a contractor for WarpTable LLC from 2024-2025.
+            During Origins Game Fair 2023, I was chatting with team members at the Dolphin Hat Games booth about whether they had considered
+            adapting any of their board games into video games, which I said that I could help with as a Unity developer.
+            Another man overheard and asked for my business card.
+            Later, in January 2024, that man, {{ fredContact.name.first }}, reached out asking if I would like to help on <em>his</em> project as a contractor
+            (I initially responded to him thinking that he was a Dolphin Hat team member, which was a bit awkward 😅).
+            He and his father had started WarpTable, LLC to develop the eponymous desktop application and they needed some help
+            fleshing out the UI for the app in Unity.
+            So I worked with them for most of the next year to get the app to an "alpha" state, even helping showcase the game at Origins 2024.
+        </p>
+        <p>
+            I cannot describe many details of this project, since I signed an NDA for this project (which felt pretty cool)
+            and since, as of this writing in March 2026, WarpTable has not released yet.
+            The basic idea (as advertised on <a href="{{ linkWebsite.href }}" {{ site.externalLinkAttributes }}>their website</a>),
+            was to allow players to play card games remotely via webcam.
+            This is normally a challenge, as webcams don't have sufficient quality to make tiny images/text on the cards visible.
+            WarpTable used an intermediary AI system to recognize the played cards against a static background
+            and select a higher-resolution image to display on the other end of the connection.
+            {{ fredContact.name.first }} had already written most of the backend/AI logic,
+            while I designed the Unity frontend for users to select the correct webcam, choose their desired playmat and collection of game cards,
+            zoom and pan around the virtual play area, etc.
+        </p>
+        <p>
+            While they may request more work from me in the future, my involvement on <cite>{{ project.header }}</cite> mostly ended in early 2025,
+            allowing me to get back to my own projects (particularly <a href="/projects/apps-games/hhh"><cite>{{ hhhProject.header }}</cite></a>).
+        </p>
+    </div>
+</section>
