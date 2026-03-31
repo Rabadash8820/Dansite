@@ -361,6 +361,24 @@
       - src: /projects/apps-games/gravity-copter/gravity-copter-gameover-v1.webp
         alt: Gameplay screenshot screenshot of the gameover menu with Play Again and Main Menu buttons
 
+    - slug: warptable
+      header: WarpTable
+      links:
+      - text: Website
+        icon: globe
+        href: https://www.warptable.net/
+      years:
+        start: 2024
+        end: 2025
+      cardImage:
+        src: /projects/apps-games/warptable/warptable-card-v1.webp
+        alt: "The WarpTable logo: a black card with the letters W and T in the corners, with a black meeple surrounded by a blue and purple portal"
+      images:
+      - src: /projects/apps-games/warptable/warptable-playmat-v1.webp
+        alt: Promo image showing cards from an example game being laid on an official WarpTable playmat
+      - src: /projects/apps-games/warptable/warptable-two-screens-v1.webp
+        alt: Promo image showing two different people playing a card game, with the cards on the playmats in front of them rendering on their laptop screens
+
 - slug: websites
   header: Websites
   icon: globe

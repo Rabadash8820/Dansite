@@ -106,3 +106,12 @@ malikAkbar:
     text: serialninja
     uri: https://discordapp.com/users/serialninja
     icon: discord
+fredWebber:
+  name:
+    first: Fred
+    last: Webber
+  links:
+  - slug: fred
+    text: fred@warptable.net
+    uri: mailto:fred@warptable.net
+    icon: envelope-fill

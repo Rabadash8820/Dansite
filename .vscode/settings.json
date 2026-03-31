@@ -68,6 +68,7 @@
         "leaderboard",
         "leaderboards",
         "malik",
+        "meeple",
         "minigame",
         "minigames",
         "nondiegetic",
@@ -86,7 +87,8 @@
         "tilemap",
         "toggleable",
         "trixie",
-        "Unported"
+        "Unported",
+        "warptable"
     ],
     "html.format.wrapAttributes": "preserve-aligned"
 }
