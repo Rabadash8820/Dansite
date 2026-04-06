@@ -115,3 +115,12 @@ fredWebber:
     text: fred@warptable.net
     uri: mailto:fred@warptable.net
     icon: envelope-fill
+tomKildren:
+  name:
+    first: Thomas
+    last: Kildren
+  links:
+  - slug: website
+    text: FletcherStudios.net
+    uri: https://fletcherstudios.net
+    icon: globe

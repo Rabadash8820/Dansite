@@ -379,6 +379,37 @@
       - src: /projects/apps-games/warptable/warptable-two-screens-v1.webp
         alt: Promo image showing two different people playing a card game, with the cards on the playmats in front of them rendering on their laptop screens
 
+    - slug: booper-get-home
+      header: Booper Get Home
+      links:
+      - text: Website
+        icon: globe
+        href: https://www.fletcherstudios.net/aboutus.html
+      - text: Steam page
+        icon: steam
+        href: https://store.steampowered.com/app/631670/Booper_Get_Home
+      - text: Itch.io
+        icon: itch-io
+        href: https://fletcherkildren.itch.io/booper-get-home
+      years:
+        start: 2021
+        end: 2021
+      cardImage:
+        src: /projects/apps-games/booper-get-home/booper-get-home-card-v1.webp
+        alt: Title screen showing Booper, a smiling child with red clothes and a ladybug hat, against a grassy background in the game's hand-drawn crayon art style
+      images:
+      - src: /projects/apps-games/booper-get-home/booper-get-home-opening-v1.gif
+        alt: Gameplay GIF showing Booper run along a street toward a castle surrounded by grass and buildings, with the title overlaid in white letters
+      - src: /projects/apps-games/booper-get-home/booper-get-home-gate-v1.gif
+        alt: Gameplay GIF showing running over red ground in a dark area, being let through a gate by an NPC after solving a puzzle
+      - src: /projects/apps-games/booper-get-home/booper-get-home-boat-v1.gif
+        alt: Gameplay GIF of Booper riding on a dark blue boat across dark blue water at night
+      - src: /projects/apps-games/booper-get-home/booper-get-home-spider-v1.webp
+        alt: Gameplay screenshot of Booper in front of a sad spider near its web, surrounded by a grassy hill
+      - src: /projects/apps-games/booper-get-home/booper-get-home-directions-v1.webp
+        alt: Gameplay screenshot from the game's opening, showing Booper in front of a sign showing the controls for a Quest device and another sign saying "Go to the castle", surrounded by a grass and a rock wall
+
+
 - slug: websites
   header: Websites
   icon: globe

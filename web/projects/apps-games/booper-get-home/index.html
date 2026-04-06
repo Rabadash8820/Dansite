@@ -1,0 +1,65 @@
+---
+---
+{% assign category = site.data.projectCategories | where: "slug", "apps-games" | first %}
+{% assign project = category.projects | where: "slug", "booper-get-home" | first %}
+{% assign linkWebsite = project.links | where: "text", "Website" | first %}
+{% assign tomContact = site.data.contacts.tomKildren %}
+
+<section id="background-involvement" class="row">
+    <div class="col">
+        <h2 class="text-center">How I got involved</h2>
+        <p>
+            <cite>{{ project.header }}</cite> was a VR game that I worked on with Fletcher Studios during early 2021.
+            It was a charming little 3D VR adventure/exploration game, where all visuals were based on
+            the crayon drawings of the lead designer's young son on the autism spectrum.
+            I had played it at GDEX in the past and found it to be both adorable and clever, as the low-resolution crayon art style
+            lent itself naturally to virtual reality, where textures/models typically need to be simplified anyway to achieve 
+            the necessary high frame rates to avoid motion sickness.
+            The owner and founder of Fletcher Studios, {{ tomContact.name.first }} {{ tomContact.name.last }},
+            was a member of the Cleveland Game Developers like me, so we had already met and spoken several times before this.
+        </p>
+        <p>
+            In late 2020, {{ tomContact.name.first }} entered his studio into the Youngstown Business Incubator's Virtual Pitch Competition
+            to raise funds for <cite>Booper</cite>, and I saw his post about it on the CGD Facebook Page.
+            In the promo video for that competition, he mentioned wanting to hire and work with other local talent in the Cleveland area.
+            Intrigued by that, and knowing that the game was pretty impressive,
+            and considering {{ tomContact.name.first }}'s and my common status as dads in game development, I decided to reach out.
+        </p>
+        <p>
+            In December 2020, I sent {{ tomContact.name.first }} a Facebook message asking if he would be interested in collaborating.
+            He was very much interested! We had a video call after New Year's,
+            and just like that he was helping me set up on Oculus Start so I could get a VR headset and start playtesting and optimizing.
+            <cite>{{ project.header }}</cite> would ultimately not win the competition for funding by February 2021,
+            but I still continued to work on the game with {{ tomContact.name.first }} for a time.
+        </p>
+    </div>
+</section>
+
+<section id="background-involvement" class="row">
+    <div class="col">
+        <h2 class="text-center">My Contributions</h2>
+        <p>
+            Most of my early contributions to <cite>{{ project.header }}</cite> were modest, as I had never worked with a Unity VR project before,
+            nor the PlayMaker visual scripting asset, which <cite>Booper</cite> used excessively since {{ tomContact.name.first }} didn't know C# well.
+            I helped him fix some log-related memory leaks, identify rendering optimizations like occlusion culling and reducing post-processing effects,
+            and playtest his demo scene thoroughly.
+        </p>
+        <p>
+            When he gave me the go-ahead to program in C# rather than PlayMaker, I wrote a script for smooth camera follow,
+            which worked very well and actually encouraged {{ tomContact.name.first }} to consider new level designs like cave systems.
+            I later improved this script to use sphere-casting so that the camera still positioned as expected even, e.g.,
+            if the player were standing in front of a hole in a wall that
+            a mere raycast would pass through and put the camera further back than expected.
+            When I received a free Quest headset from the Oculus Start program in March 2021,
+            I was also able to playtest more effectively (than just in the Unity Editor) and
+            suggest design improvements like adding drop shadows to make the platforming sections less frustrating.
+        </p>
+        <p>
+            Unfortunately, after May 2021, {{ tomContact.name.first }} didn't seem to have any other work for me and started being unresponsive.
+            While we still saw each other at GDEX 2021, we didn't see each other at any CGD events thereafter and mostly fell out of contact.
+            As of this page's last update in April 2026, it looks like he has mostly stopped working on <cite>Booper</cite> himself,
+            based on the post dates of the game's website and its Steam/itch.io pages (linked above).
+            Still, this was a pleasant collaboration that taught me a lot about VR design, and got me a free Quest headset! 😅
+        </p>
+    </div>
+</section>
