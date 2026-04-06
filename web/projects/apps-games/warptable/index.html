@@ -7,7 +7,7 @@
 {% assign fredContact = site.data.contacts.fredWebber %}
 
 <section id="background" class="row">
-    <class="col">
+    <div class="col">
         <p>
             <cite>{{ project.header }}</cite> was a Unity desktop application that I worked on as a contractor for WarpTable LLC from 2024-2025.
             During Origins Game Fair 2023, I was chatting with team members at the Dolphin Hat Games booth about whether they had considered
@@ -21,11 +21,11 @@
         </p>
         <p>
             I cannot describe many details of this project, since I signed an NDA for this project (which felt pretty cool)
-            and since, as of this writing in March 2026, WarpTable has not released yet.
+            and since, as of this writing in March 2026, {{ project.header }} has not released yet.
             The basic idea (as advertised on <a href="{{ linkWebsite.href }}" {{ site.externalLinkAttributes }}>their website</a>),
             was to allow players to play card games remotely via webcam.
             This is normally a challenge, as webcams don't have sufficient quality to make tiny images/text on the cards visible.
-            WarpTable used an intermediary AI system to recognize the played cards against a static background
+            {{ project.header }} used an intermediary AI system to recognize the played cards against a static background
             and select a higher-resolution image to display on the other end of the connection.
             {{ fredContact.name.first }} had already written most of the backend/AI logic,
             while I designed the Unity frontend for users to select the correct webcam, choose their desired playmat and collection of game cards,
