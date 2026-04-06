@@ -65,6 +65,7 @@
         "holyninja",
         "insectoid",
         "keyon",
+        "Kildren",
         "leaderboard",
         "leaderboards",
         "malik",
@@ -76,6 +77,7 @@
         "platformer",
         "Platformers",
         "playtest",
+        "playtested",
         "playtesting",
         "PRNG",
         "Rigidbody",
@@ -88,7 +90,8 @@
         "toggleable",
         "trixie",
         "Unported",
-        "warptable"
+        "warptable",
+        "Webber"
     ],
     "html.format.wrapAttributes": "preserve-aligned"
 }
