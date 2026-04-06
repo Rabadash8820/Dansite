@@ -24,21 +24,15 @@ danVicarel:
     text: Rabadash8820
     uri: https://twitter.com/Rabadash8820
     icon: twitter-x
-mattSamardge:
+alexSierputowski:
   name:
-    first: Matt
-    last: Samardge
-  links: []
-zacPierce:
-  name:
-    first: Zac
-    last: Pierce
+    first: Alex
+    last: Sierputowski
   links:
-  - slug: website
-    text: "ZacFierce: The Ginger Indie"
-    uri: https://www.zacfierce.com/
+  - slug: Website
+    text: GameDirection.net
+    uri: https://gamedirection.net
     icon: globe
-    title: Personal website
 bexMoss:
   name:
     first: Rebekah
@@ -48,15 +42,6 @@ bexMoss:
     text: Bekah Moss
     uri: https://www.facebook.com/profile.php?id=100072623508178
     icon: facebook
-kateTriantafelow:
-  name:
-    first: Kate
-    last: Triantafelow
-  links:
-  - slug: website
-    text: KT Design & Illustration, LLC
-    uri: https://www.ktdesign.llc/
-    icon: globe
 chrisParkinson:
   name:
     first: Chris
@@ -66,6 +51,15 @@ chrisParkinson:
     text: christopher-parkinson
     uri: https://www.linkedin.com/in/christopher-parkinson/
     icon: linkedin
+fredWebber:
+  name:
+    first: Fred
+    last: Webber
+  links:
+  - slug: fred
+    text: fred@warptable.net
+    uri: mailto:fred@warptable.net
+    icon: envelope-fill
 julieHirt:
   name:
     first: Julie
@@ -79,14 +73,14 @@ julieHirt:
     text: juliehirt
     uri: https://juliehirt.itch.io
     icon: itch-io
-alexSierputowski:
+kateTriantafelow:
   name:
-    first: Alex
-    last: Sierputowski
+    first: Kate
+    last: Triantafelow
   links:
-  - slug: Website
-    text: GameDirection.net
-    uri: https://gamedirection.net
+  - slug: website
+    text: KT Design & Illustration, LLC
+    uri: https://www.ktdesign.llc/
     icon: globe
 keyonCohen:
   name:
@@ -106,15 +100,11 @@ malikAkbar:
     text: serialninja
     uri: https://discordapp.com/users/serialninja
     icon: discord
-fredWebber:
+mattSamardge:
   name:
-    first: Fred
-    last: Webber
-  links:
-  - slug: fred
-    text: fred@warptable.net
-    uri: mailto:fred@warptable.net
-    icon: envelope-fill
+    first: Matt
+    last: Samardge
+  links: []
 tomKildren:
   name:
     first: Thomas
@@ -124,3 +114,8 @@ tomKildren:
     text: FletcherStudios.net
     uri: https://fletcherstudios.net
     icon: globe
+zacPierce:
+  name:
+    first: Zac
+    last: Pierce
+  links:
