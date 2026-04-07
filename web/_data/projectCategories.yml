@@ -164,13 +164,12 @@
     - slug: send-them-home
       header: Send Them Home
       links:
-      - text: Download (Win64)
-        icon: download
-        href: /projects/game-jams/send-them-home/send-them-home-win64-v1.zip
-        isDownload: true
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2019/games/send-them-home
+      - text: Source
+        icon: github
+        href: https://github.com/Milkomatic/DemonGame
       years:
         start: 2019
         end: 2019
