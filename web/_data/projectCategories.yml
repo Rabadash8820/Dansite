@@ -300,6 +300,24 @@
           Gameplay GIF of scrolling the Stats screen, revealing many statistics like number of games played, average round seconds broken down by number of hands,
           and correct choice percent broken down by winning rank.
 
+    - slug: warptable
+      header: WarpTable
+      links:
+      - text: Website
+        icon: globe
+        href: https://www.warptable.net/
+      years:
+        start: 2024
+        end: 2025
+      cardImage:
+        src: /projects/apps-games/warptable/warptable-card-v1.webp
+        alt: "The WarpTable logo: a black card with the letters W and T in the corners, with a black meeple surrounded by a blue and purple portal"
+      images:
+      - src: /projects/apps-games/warptable/warptable-playmat-v1.webp
+        alt: Promo image showing cards from an example game being laid on an official WarpTable playmat
+      - src: /projects/apps-games/warptable/warptable-two-screens-v1.webp
+        alt: Promo image showing two different people playing a card game, with the cards on the playmats in front of them rendering on their laptop screens
+
     - slug: farmageddon
       header: "Farmageddon: A Cattle Royale"
       links:
@@ -331,53 +349,6 @@
       - src: /projects/apps-games/farmageddon/farmageddon-winter-v1.webp
         alt: Gameplay screenshot of the game's winter skin, with snow covering the grass and presents, trees, and snowmen scattered around
 
-    - slug: gravity-copter
-      header: GravityCopter
-      links:
-      - text: Download
-        icon: download
-        href: https://github.com/Rabadash8820/GravityCopter/raw/master/builds/gravity-copter-win64.zip
-      - text: Source
-        icon: github
-        href: https://github.com/Rabadash8820/GravityCopter
-      years:
-        start: 2019
-        end: 2019
-      cardImage:
-        src: /projects/apps-games/gravity-copter/gravity-copter-card-v1.webp
-        alt: Gameplay screenshot of a silly low-resolution helicopter flying between grassy columns against a blue background
-      images:
-      - src: /projects/apps-games/gravity-copter/gravity-copter-flying-v1.gif
-        alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background
-      - src: /projects/apps-games/gravity-copter/gravity-copter-flying-debris-v1.gif
-        alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background amid purple pieces of physics debris
-      - src: /projects/apps-games/gravity-copter/gravity-copter-accelerate-v1.gif
-        alt: Gameplay GIF of world speed being manually increased at runtime
-      - src: /projects/apps-games/gravity-copter/gravity-copter-main-menu-v1.webp
-        alt: Gameplay screenshot screenshot of the main menu, just a title, play/quit buttons, and the controls
-      - src: /projects/apps-games/gravity-copter/gravity-copter-statistics-v1.webp
-        alt: Gameplay screenshot of the toggleable statistics overlay, showing world speed, gravity direction and magnitude, etc.
-      - src: /projects/apps-games/gravity-copter/gravity-copter-gameover-v1.webp
-        alt: Gameplay screenshot screenshot of the gameover menu with Play Again and Main Menu buttons
-
-    - slug: warptable
-      header: WarpTable
-      links:
-      - text: Website
-        icon: globe
-        href: https://www.warptable.net/
-      years:
-        start: 2024
-        end: 2025
-      cardImage:
-        src: /projects/apps-games/warptable/warptable-card-v1.webp
-        alt: "The WarpTable logo: a black card with the letters W and T in the corners, with a black meeple surrounded by a blue and purple portal"
-      images:
-      - src: /projects/apps-games/warptable/warptable-playmat-v1.webp
-        alt: Promo image showing cards from an example game being laid on an official WarpTable playmat
-      - src: /projects/apps-games/warptable/warptable-two-screens-v1.webp
-        alt: Promo image showing two different people playing a card game, with the cards on the playmats in front of them rendering on their laptop screens
-
     - slug: booper-get-home
       header: Booper Get Home
       links:
@@ -408,30 +379,40 @@
       - src: /projects/apps-games/booper-get-home/booper-get-home-directions-v1.webp
         alt: Gameplay screenshot from the game's opening, showing Booper in front of a sign showing the controls for a Quest device and another sign saying "Go to the castle", surrounded by a grass and a rock wall
 
+        
+    - slug: gravity-copter
+      header: GravityCopter
+      links:
+      - text: Download
+        icon: download
+        href: https://github.com/Rabadash8820/GravityCopter/raw/master/builds/gravity-copter-win64.zip
+      - text: Source
+        icon: github
+        href: https://github.com/Rabadash8820/GravityCopter
+      years:
+        start: 2019
+        end: 2019
+      cardImage:
+        src: /projects/apps-games/gravity-copter/gravity-copter-card-v1.webp
+        alt: Gameplay screenshot of a silly low-resolution helicopter flying between grassy columns against a blue background
+      images:
+      - src: /projects/apps-games/gravity-copter/gravity-copter-flying-v1.gif
+        alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background
+      - src: /projects/apps-games/gravity-copter/gravity-copter-flying-debris-v1.gif
+        alt: Gameplay GIF of a silly low-resolution helicopter dodging between grassy columns against a blue background amid purple pieces of physics debris
+      - src: /projects/apps-games/gravity-copter/gravity-copter-accelerate-v1.gif
+        alt: Gameplay GIF of world speed being manually increased at runtime
+      - src: /projects/apps-games/gravity-copter/gravity-copter-main-menu-v1.webp
+        alt: Gameplay screenshot screenshot of the main menu, just a title, play/quit buttons, and the controls
+      - src: /projects/apps-games/gravity-copter/gravity-copter-statistics-v1.webp
+        alt: Gameplay screenshot of the toggleable statistics overlay, showing world speed, gravity direction and magnitude, etc.
+      - src: /projects/apps-games/gravity-copter/gravity-copter-gameover-v1.webp
+        alt: Gameplay screenshot screenshot of the gameover menu with Play Again and Main Menu buttons
 
 - slug: websites
   header: Websites
   icon: globe
   projects:
-    - slug: derploid-site
-      header: Derploid Website
-      links:
-      - text: Website
-        icon: globe
-        href: https://www.derploid.com
-      - text: Source
-        icon: github
-        href: https://github.com/DerploidEntertainment/Website
-      years:
-        start: 2021
-        end: present
-      cardImage:
-        src: /projects/websites/derploid-site/derploid-site.png
-        alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
-      images:
-      - src: /projects/websites/derploid-site/derploid-site.png
-        alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
-
     - slug: dansite
       header: The Dansite
       links:
@@ -450,6 +431,25 @@
       images:
       - src: /projects/websites/dansite/dansite.png
         alt: Dansite logo. A cartoony image of Dan's face.
+
+    - slug: derploid-site
+      header: Derploid Website
+      links:
+      - text: Website
+        icon: globe
+        href: https://www.derploid.com
+      - text: Source
+        icon: github
+        href: https://github.com/DerploidEntertainment/Website
+      years:
+        start: 2021
+        end: present
+      cardImage:
+        src: /projects/websites/derploid-site/derploid-site.png
+        alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
+      images:
+      - src: /projects/websites/derploid-site/derploid-site.png
+        alt: Derploid logo. A big, smiling, derpy face with X-shaped eyes like chromosomes.
 
 - slug: talks
   header: Talks
