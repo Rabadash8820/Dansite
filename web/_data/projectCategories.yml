@@ -7,7 +7,7 @@
       links:
       - text: Download (Win64)
         icon: download
-        href: /projects/game-jams/stink-bubble/stink-bubble-win64-v1.zip
+        href: https://github.com/Rabadash8820/GGJ2025/raw/refs/heads/main/builds/stink-bubble-win64.zip
         isDownload: true
       - text: Play Online
         icon: itch-io
@@ -164,6 +164,10 @@
     - slug: send-them-home
       header: Send Them Home
       links:
+      - text: Download (Win64)
+        icon: download
+        href: https://github.com/Milkomatic/DemonGame/raw/refs/heads/master/builds/send-them-home-win64.zip
+        isDownload: true
       - text: Global Game Jam page
         icon: globe
         href: https://globalgamejam.org/2019/games/send-them-home
