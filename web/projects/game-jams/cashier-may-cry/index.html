@@ -1,0 +1,76 @@
+---
+---
+{% assign mattContact = site.data.contacts.mattSamardge %}
+{% assign category = site.data.projectCategories | where: "slug", "game-jams" | first %}
+{% assign project = category.projects | where: "slug", "cashier-may-cry" | first %}
+
+<section id="background" class="row">
+    <div class="col">
+        <h2 class="text-center">Background</h2>
+        <p>
+            I built <cite>{{ project.header }}</cite> with a team during Global Game Jam in January 2026.
+            This year's theme was "Mask". As usual, I didn't go in with any specific team or gameplay concept in mind, yet as usual,
+            a team and game idea formed spontaneously and serendipitously on the first night!
+            I was just starting to get worried that I wouldn't find the right mix of folks who were talented and open to forming a team,
+            when I bumped into a small group saying that they needed a programmer. I said I might be able to help,
+            and then a few other people asked if they could join, and the team was born!
+        </p>
+        <p>The final team included (in order from left to right in the above GGJ team image):</p>
+        <ul>
+            <li><b>Jalon Lee</b>: our musician and SFX designer</li>
+            <li><b>Madison Smith</b>: Cleveland Institute of Arts (CIA) student who did several character designs</li>
+            <li><b>Abigail Quintana</b>: another CIA student and friend of Madison who some other character/background designs</li>
+            <li>
+                <b>Chloe Clark</b>: our game designer and UI artist
+                (incidentally, she worked for OverDrive, the company that makes the reading app, Libby, for which I had also worked back in 2018-19!)
+            </li>
+            <li><b>Myself</b>: a programmer and Unity generalist</li>
+            <li><b>Sean Dunlap</b>: our other programmer, who got most of the note-timing system working</li>
+        </ul>
+    </div>
+</section>
+
+<section id="game-overview" class="row">
+    <div class="col">
+        <h2 class="text-center">Game Concept</h2>
+        <p>
+            Chloe pitched the idea of a rhythm game based on "putting on a mask" as a retail worker,
+            where following the notes of the game was like a retail worker "following the script" of their job 
+            and trying not to lose their cool with obnoxious customers (something that everyone in the group could relate to).
+            This idea seemed charming, and it gave our musician, Jalon, a fun composing challenge.
+            Due to time constraints (both in the jam and in the final presentation), we decided to implement just a single song,
+            but with multiple sections tied to different "characters" that a retail worker might experience:
+            a nice old lady with an annoying little dog, a blank-faced delivery driver who just shows their phone and then leaves,
+            a distracted businessman talking into his ear piece and never making eye contact, etc.
+            Missing a note would mean "letting the mask" of polite customer service fall, leading to a wince of frustration from the character.
+            If the player could maintain some minimum accuracy for the whole song, then they could clock out and be done;
+            if not, they would lose and presumably go have an anxiety attack.
+        </p>
+        <p>
+            The game came together pretty well, and despite its scrappiness, seemed to be one of the more complete games at our venue that year.
+            The name "Cashier May Cry" is of course a play on the game "Devil May Cry", which gave our audience a good chuckle.
+            Sean and I quickly learned that timing the moving notes with the music in a reliable/reproducible way was very tricky,
+            especially when the notes had to move at different speeds and across screens of different widths, or be held for some amount of time;
+            we really never got the "feel" of it quite right, despite it taking up almost all of Sean's time,
+            and I have a new-found respect for the makers of rhythm games like <cite>Guitar Hero</cite> and <cite>Rock Band</cite>!
+        </p>
+    </div>
+</section>
+
+<section id="details" class="row">
+    <div class="col">
+        <h2 class="text-center">Technical Details</h2>
+        <p>
+            I programmed the "note spawner" logic (which Sean's code then called in sync with the music),
+            as well as the logic to keep track of player accuracy and win/lose states.
+            As the main Unity engineer, I also spent a lot of time importing the artists' and musician's assets and setting up character animations,
+            all of which distracted from programming a little more than I would've liked.
+        </p>
+        <p>
+            I also set up the git repo and Unity project for this game in advance of the actual jam weekend,
+            which made the opening night a lot more productive than in years past.
+            I was able to include my <a href="/projects/libraries/unity-util">UnityUtil</a> UPM packages again,
+            and also messed with Unity's UI Toolkit and Input System again.
+        </p>
+    </div>
+</section>
