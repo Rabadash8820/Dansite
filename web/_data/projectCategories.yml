@@ -2,6 +2,65 @@
   header: Game Jams
   icon: controller
   projects:
+    - slug: cashier-may-cry
+      header: Cashier May Cry
+      links:
+      - text: Download (Win64)
+        icon: download
+        href: https://github.com/Rabadash8820/GGJ2026/raw/refs/heads/main/builds/cashier-may-cry-win64.zip
+        isDownload: true
+      - text: Global Game Jam page
+        icon: globe
+        href: https://globalgamejam.org/games/2026/mask-game-5-1
+      - text: Source
+        icon: github
+        href: https://github.com/Rabadash8820/GGJ2026
+      years:
+        start: 2026
+        end: 2026
+      cardImage:
+        src: /projects/game-jams/cashier-may-cry/cashier-may-cry-card-v1.webp
+        alt: asdfd
+      images:
+      - src: /projects/game-jams/cashier-may-cry/cashier-may-cry-menu-v1.webp
+        alt: >
+          Screenshot of the main menu, showing the title "Cashier May Cry" in black text over a red background next to a white mask
+          with similarly colored buttons down below for "Start", "Credits", and "Quit", all over a dark red textured background
+      - src: /projects/game-jams/cashier-may-cry/cashier-may-cry-old-lady-v1.gif
+        alt: >
+          Gameplay GIF from the beginning of the game, with music notes indicated by red triangles appearing somewhat infrequently.
+          Status UI in the upper-right indicates the player's mental state with text (e.g., "Getting Heated") and an image of a face with a mask coming off.
+          The background is a cartoonish grocery store with items bouncing on the shelves, and the first character shown overtop
+          is a nice old lady with an annoying little chihuahua; every time the player misses a note, the old lady winces and the dog snarls.
+      - src: /projects/game-jams/cashier-may-cry/cashier-may-cry-door-dasher-v1.gif
+        alt: >
+          Gameplay GIF from some time into the game, still with music notes indicated by red triangles but now appearing more frequently.
+          The status UI in the upper-right still indicates the player's mental state with text (now "Doing Okay") and an image of a face with a mask coming off.
+          The background is still a cartoonish grocery store with items bouncing on the shelves, and the second character shown overtop
+          is a blank-faced DoorDasher guy holding up a phone saying "Order for Bob"; every time the player misses a note, the guy winces and his phone says "ERROR".
+      - src: /projects/game-jams/cashier-may-cry/cashier-may-cry-businessman-v1.gif
+        alt: >
+          Gameplay GIF from the middle of the game, still with music notes indicated by red triangles but now appearing very rapidly.
+          The status UI in the upper-right still indicates the player's mental state with text (still "Doing Okay") and an image of a face with a mask coming off.
+          The background is still a cartoonish grocery store with items bouncing on the shelves, and the third character shown overtop
+          is a distracted businessman listening to his earpiece; every time the player misses a note, the man scowls at the player.
+      - src: /projects/game-jams/cashier-may-cry/cashier-may-cry-all-v1.gif
+        alt: >
+          Gameplay GIF from the end of the game, still with music notes indicated by red triangles but now appearing multiple at a time (in chords).
+          The status UI in the upper-right still indicates the player's mental state with text (e.g., "Deep Breaths") and an image of a face with a mask coming off.
+          The background is still a cartoonish grocery store with items bouncing on the shelves, and all three characters show overtop,
+          animating in unison when the player misses a note.
+      - src: /projects/game-jams/cashier-may-cry/cashier-may-cry-win-v1.webp
+        alt: >
+          Screenshot of the gameover screen, with a big red box on the left with white letters saying "Clocked out! Way to mask your feelings!".
+          There is white text on the right showing how many notes the player hit, how many were shown, and their accuracy percent,
+          with red buttons for "Menu" and Quit below.
+      - src: /projects/game-jams/cashier-may-cry/cashier-may-cry-team-v1.webp
+        alt: >
+          Photo of the team that I worked with at the game jam venue.
+          From left to right: Jalon (our musician and sound designer), Madison and Abby (our two character/background artists), Chloe (our game designer and UI artist),
+          myself (programmer and Unity generalist), and Sean (our other programmer).
+
     - slug: stink-bubble
       header: Stink Bubble
       links:
