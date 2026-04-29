@@ -23,7 +23,7 @@
       "version": "2.34.12"
     },
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "24" // Should match Node version used by GitHub Action
+      "version": "24"
     }
     // CDK is installed via npm, see package.json
     // Also there's no devcontainer feature for Jekyll, it's just in our devcontainer base image
@@ -34,11 +34,18 @@
     9229  // Node.js debugging
   ],
 
+  // Ensure the ~/.gnupg dir exists, otherwise the bind mount below will fail.
+  // mkdir -p option ensures no error if the dir already exists.
+  "initializeCommand": "mkdir -p ${localEnv:HOME}${localEnv:USERPROFILE}/.gnupg/",
+
   // Object syntax for these commands allows commands to run in parallel (https://containers.dev/implementors/spec/#parallel-exec)
   // Dotfiles are cloned/run _after_ these commands
   "onCreateCommand": {
-    "updateNpm": "npm install -g npm@11.12.0",
-    "aptUpdate": "sudo apt-get update && sudo apt-get upgrade --yes"
+    "aptUpdate": "sudo apt-get update && sudo apt-get upgrade --yes",
+    
+    // Update npm, but not in GitHub Actions runners; that always seems to fail due to weird permissions errors
+    // See https://github.com/devcontainers/ci/issues/437
+    "updateNpm": "test -z $GITHUB_ACTIONS && npm install --global npm@11.12.0 || echo \"Not updating npm in GitHub Actions runner\""
   },
   "updateContentCommand": {
     "npm": "cd cdk/ && npm install",
