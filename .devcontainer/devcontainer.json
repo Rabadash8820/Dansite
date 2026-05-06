@@ -22,8 +22,9 @@
     "ghcr.io/devcontainers/features/aws-cli:1": {
       "version": "2.34.12"
     },
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "24" // Should match Node version used by GitHub Action
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "24",  // Should match Node version used by GitHub Action
+      "npmVersion": "11.13.0"
     }
     // CDK is installed via npm, see package.json
     // Also there's no devcontainer feature for Jekyll, it's just in our devcontainer base image
@@ -37,7 +38,6 @@
   // Object syntax for these commands allows commands to run in parallel (https://containers.dev/implementors/spec/#parallel-exec)
   // Dotfiles are cloned/run _after_ these commands
   "onCreateCommand": {
-    "updateNpm": "npm install -g npm@11.12.0",
     "aptUpdate": "sudo apt-get update && sudo apt-get upgrade --yes"
   },
   "updateContentCommand": {
