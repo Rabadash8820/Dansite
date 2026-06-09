@@ -12,14 +12,18 @@ danVicarel:
     text: daniel-vicarel
     uri: https://www.linkedin.com/in/daniel-vicarel
     icon: linkedin
-  - slug: discord
-    text: rabadash8820
-    uri: https://discordapp.com/users/rabadash8820
-    icon: discord
+  - slug: buymeacoffee
+    text: Dan Vicarel
+    uri: https://buymeacoffee.com/shundra882n
+    icon: buymeacoffee
   - slug: github
     text: Rabadash8820
     uri: https://github.com/Rabadash8820
     icon: github
+  - slug: discord
+    text: rabadash8820
+    uri: https://discordapp.com/users/rabadash8820
+    icon: discord
   - slug: twitter
     text: Rabadash8820
     uri: https://twitter.com/Rabadash8820
