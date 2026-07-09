@@ -6,12 +6,12 @@
 All of the following domains will redirect to the published site at [www.danvicarel.com](https://www.danvicarel.com) hosted on GitHub Pages.
 You can use HTTP or HTTPS, and IPv4 or IPv6.
 
-- [derploid.com](https://derploid.com)
-- ~~[derploid.net](https://derploid.net)~~ TODO
-- ~~[derploid.org](https://derploid.org)~~ TODO
-- [www.derploid.com](https://www.derploid.com)
-- ~~[www.derploid.net](https://www.derploid.net)~~ TODO
-- ~~[www.derploid.org](https://www.derploid.org)~~ TODO
+- [danvicarel.com](https://danvicarel.com)
+- ~~[danvicarel.net](https://danvicarel.net)~~ TODO
+- ~~[danvicarel.org](https://danvicarel.org)~~ TODO
+- [www.danvicarel.com](https://www.danvicarel.com)
+- ~~[www.danvicarel.net](https://www.danvicarel.net)~~ TODO
+- ~~[www.danvicarel.org](https://www.danvicarel.org)~~ TODO
 
 ## Setup
 
