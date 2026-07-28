@@ -2,7 +2,7 @@ import { Duration, RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as route53 from 'aws-cdk-lib/aws-route53';
-import DnsChallenge from "../dns-challenge";
+import DnsChallenge from "../DnsChallenge";
 
 export interface GithubPagesWebsiteProps extends StackProps {
     /**

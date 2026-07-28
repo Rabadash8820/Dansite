@@ -15,9 +15,11 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "resolveJsonModule": true,
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "typeRoots": [ "./node_modules/@types" ],
+    "types": ["jest", "node"]
   },
   "exclude": [
     "node_modules",
