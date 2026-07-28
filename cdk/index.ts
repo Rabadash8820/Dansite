@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
 import { Aspects, Duration, Environment } from 'aws-cdk-lib';
-import { DnssecStack } from '../lib/stacks/dnssec-stack';
-import { GithubPagesWebsiteStack } from '../lib/stacks/github-pages-website-stack';
-import { WebsiteRedirectStack } from '../lib/stacks/website-redirect-stack';
-import { CdkAppTaggingAspect } from '../lib/cdk-app-tagging-aspect';
-import { HealthCheckAlarmStack } from '../lib/stacks/health-check-alarm-stack';
+import { DnssecStack } from './lib/stacks/dnssec-stack';
+import { GithubPagesWebsiteStack } from './lib/stacks/github-pages-website-stack';
+import { WebsiteRedirectStack } from './lib/stacks/website-redirect-stack';
+import { CdkAppTaggingAspect } from './lib/cdk-app-tagging-aspect';
+import { HealthCheckAlarmStack } from './lib/stacks/health-check-alarm-stack';
 import * as dotenv from 'dotenv';
 import * as path from 'path';
 
